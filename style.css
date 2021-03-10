@@ -8,6 +8,10 @@
     color           : #dea702;
 }
 
+.btn:hover {
+    color: white;
+}
+
 footer {
     background-color: #dea702;
 }
@@ -31,6 +35,7 @@ a.nav-link {
 a.nav-link:hover {
     color: #dea702;
 }
+
 
 #connect {
     padding: 0;
