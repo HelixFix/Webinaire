@@ -4,9 +4,34 @@
 
 .btn {
     background-color: #083B4C;
-    color: #dea702;
+    color           : #dea702;
 }
 
 .btn:hover {
     color: white;
+}
+
+footer {
+    background-color: #dea702;
+}
+
+footer h5 {
+    color: white;
+}
+
+p {
+
+color: #083B4C;
+}
+
+a {
+    color: #083B4C;
+}
+
+a:hover {
+    color: white;
+}
+
+li.btn {
+    background-color: #dea702;
 }
