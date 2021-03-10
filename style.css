@@ -8,10 +8,6 @@
     color           : #dea702;
 }
 
-.btn:hover {
-    color: white;
-}
-
 footer {
     background-color: #dea702;
 }
@@ -25,12 +21,23 @@ p {
     color: #083B4C;
 }
 
-a {
-    color: #083B4C;
+a.nav-link {
+    display       : block;
+    color         : #083B4C;
+    padding-top   : 18px;
+    padding-bottom: 16px
 }
 
-a:hover {
-    color: white;
+a.nav-link:hover {
+    color: #dea702;
+}
+
+#connect {
+    padding: 0;
+}
+
+#connect:hover {
+    background-color: white;
 }
 
 li.btn {
@@ -63,7 +70,7 @@ h2 {
         background-image     : url('images/Hero.png');
         height               : 400px;
         background-attachment: fixed;
-        background-size: contain;
+        background-size      : contain;
         /* background-position  : 0% 160%; */
     }
 }
