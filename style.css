@@ -21,7 +21,7 @@ footer h5 {
 
 p {
 
-color: #083B4C;
+    color: #083B4C;
 }
 
 a {
@@ -34,4 +34,14 @@ a:hover {
 
 li.btn {
     background-color: #dea702;
+}
+
+h1 {
+    text-transform: uppercase;
+    color         : #dea702;
+}
+
+h2 {
+    text-transform: uppercase;
+    color         : #083B4C;
 }
