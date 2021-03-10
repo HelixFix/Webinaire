@@ -1,5 +1,5 @@
 .card {
-    border: 3px solid #dea702;
+    border       : 3px solid #dea702;
     margin-bottom: 25px;
 }
 
@@ -47,9 +47,23 @@ h2 {
     color         : #083B4C;
 }
 
-.bg-image {
-    background-image: url('images/Hero.png');
-    height: 400px;
-    background-attachment: fixed;
-    background-position: 0% 160%;
+
+@media screen and (max-width: 1000px) {
+    .bg-image {
+        background-image     : url('images/Hero.png');
+        height               : 400px;
+        background-attachment: fixed;
+        /* background-size: contain; */
+        /* background-position  : 0% 160%; */
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .bg-image {
+        background-image     : url('images/Hero.png');
+        height               : 400px;
+        background-attachment: fixed;
+        background-size: contain;
+        /* background-position  : 0% 160%; */
+    }
 }
