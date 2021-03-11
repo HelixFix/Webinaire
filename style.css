@@ -25,6 +25,10 @@ p {
     color: #083B4C;
 }
 
+p>b {
+    text-transform: uppercase;
+}
+
 a.nav-link {
     display       : block;
     color         : #083B4C;
