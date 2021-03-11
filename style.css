@@ -1,4 +1,4 @@
-* {
+/* * {
   box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
   padding: 0;
@@ -12,10 +12,12 @@ body {
     rgba(222, 167, 2, 1) 100%
   );
 }
+
 header {
   text-align: center;
   padding-top: 57px;
-}
+} */
+
 #icone {
   font-size: 159px;
   color: beige;
@@ -28,9 +30,10 @@ section {
   justify-content: center;
 }
 
-.container {
+/* .container {
   width: 14%;
-}
+} */
+
 label {
   color: white;
   font-size: 20px;
@@ -96,4 +99,95 @@ label {
 .fleche {
   color: white;
   font-size: 82px;
+}
+.card {
+    border       : 3px solid #dea702;
+    margin-bottom: 25px;
+}
+
+.btn {
+    background-color: #083B4C;
+    color           : #dea702;
+}
+
+.btn:hover {
+    color: white;
+}
+
+footer {
+    background-color: #dea702;
+}
+
+footer h5 {
+    color: white;
+}
+
+p {
+
+    color: #083B4C;
+}
+
+p>b {
+    text-transform: uppercase;
+}
+
+a.nav-link {
+    display       : block;
+    color         : #083B4C;
+    padding-top   : 18px;
+    padding-bottom: 16px
+}
+
+a.nav-link:hover {
+    color: #dea702;
+}
+
+
+#connect {
+    padding: 0;
+}
+
+#connect:hover {
+    background-color: white;
+}
+
+li.btn {
+    background-color: #dea702;
+}
+
+h1 {
+    text-transform: uppercase;
+    color         : #dea702;
+}
+
+h2 {
+    text-transform: uppercase;
+    color         : #083B4C;
+}
+
+.card-text {
+    overflow          : hidden;
+    display           : -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    height            : 100px;
+}
+
+
+@media screen and (max-width: 1000px) {
+    .bg-image {
+        background-image     : url('images/Hero.png');
+        height               : 400px;
+        background-attachment: fixed;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .bg-image {
+        background-image     : url('images/Hero.png');
+        height               : 400px;
+        background-attachment: fixed;
+        background-size      : contain;
+        /* background-position  : 0% 160%; */
+    }
 }
