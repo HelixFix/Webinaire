@@ -59,14 +59,20 @@ h2 {
     color         : #083B4C;
 }
 
+.card-text {
+    overflow          : hidden;
+    display           : -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    height            : 100px;
+}
+
 
 @media screen and (max-width: 1000px) {
     .bg-image {
         background-image     : url('images/Hero.png');
         height               : 400px;
         background-attachment: fixed;
-        /* background-size: contain; */
-        /* background-position  : 0% 160%; */
     }
 }
 
