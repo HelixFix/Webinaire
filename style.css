@@ -1,0 +1,99 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-image: linear-gradient(
+    180deg,
+    rgba(8, 59, 76, 1) 19%,
+    rgba(222, 167, 2, 1) 100%
+  );
+}
+header {
+  text-align: center;
+  padding-top: 57px;
+}
+#icone {
+  font-size: 159px;
+  color: beige;
+}
+section {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  width: 14%;
+}
+label {
+  color: white;
+  font-size: 20px;
+}
+
+.control input {
+  width: 100%;
+  height: 25px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  margin: 1em 0;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+.control input:hover {
+  opacity: 1;
+}
+
+.button {
+  text-align: center;
+}
+
+.button input {
+  height: 27px;
+  width: 71px;
+  border-radius: 18px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  color: white;
+  background: rgba(8, 59, 76, 1);
+}
+.wrapper {
+  display: flex;
+}
+
+.rejoindre p {
+  padding-left: 71px;
+  color: white;
+}
+.rejoindre a {
+  text-decoration: none;
+  color: white;
+}
+.link a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+.link a:hover {
+  opacity: 1;
+}
+
+.control,
+.button,
+.link {
+  margin-bottom: 35px;
+}
+
+.fleche {
+  color: white;
+  font-size: 82px;
+}
