@@ -1,9 +1,15 @@
 <?php
 $db = new PDO('mysql:host=localhost;dbname=webinaire', 'root', '');
 
-$requete = "SELECT * FROM `webinar`";
+$requete = "SELECT * FROM `webinar` WHERE `date` >= CURDATE()";
+
 
 $tblWebinaire = $db->query($requete); // Enregistre la requete efectuer sur la db dans une variable
+var_dump($tblWebinaire);
+
+$tblWebinaire2 = $db->query($requete);
+$test = $tblWebinaire2->fetch();
+
 
 ?>
 
@@ -75,25 +81,33 @@ $tblWebinaire = $db->query($requete); // Enregistre la requete efectuer sur la d
         <h2>
             Les prochains webinaires
         </h2>
+
+        <?php if (!$test) { ?>
+            <p id="empty">Aucun événement à venir pour le moment</p>
+        <?php } ?>
+
+
         <div class="row">
             <?php
 
-            while ($ligne = $tblWebinaire->fetch()) { ?>
+            while ($ligne = $tblWebinaire->fetch()) {
+                // var_dump($ligne)
+            ?>
 
                 <div class="col-lg-4 col-md-6 col-sm-6 col-12">
                     <div class="card">
                         <img class="card-img-top" src="https://loremflickr.com/640/360" alt="Card image cap">
                         <div class="card-body">
                             <h5 class="card-title"><?php echo $ligne['nomLive'] ?></h5>
-                            <p class="card-text"><?php echo $ligne['rseumer'] ?></p>
-                            <!-- <a href="index.php?page=formwebinaire&idwebinaire=<?php echo $ligne['id_webinaire']; ?>" class="btn">Rejoindre le webinaire</a> -->
+                            <p class="card-text"><?php echo $ligne['resumer'] ?></p>
+                            <a href="index.php?page=formwebinaire&idwebinaire=<?php echo $ligne['id']; ?>" class="btn">Rejoindre le webinaire</a>
                         </div>
                     </div>
                 </div>
             <?php } ?>
 
 
-            <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+            <!-- <div class="col-lg-4 col-md-6 col-sm-6 col-12">
                 <div class="card">
                     <img class="card-img-top" src="https://loremflickr.com/640/360" alt="Card image cap">
                     <div class="card-body">
@@ -117,7 +131,7 @@ $tblWebinaire = $db->query($requete); // Enregistre la requete efectuer sur la d
                         <a href="#" class="btn">Rejoindre le webinaire</a>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
         <br>
     </body>
