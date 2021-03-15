@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost:3306
--- Généré le : jeu. 11 mars 2021 à 09:29
+-- Généré le : lun. 15 mars 2021 à 15:21
 -- Version du serveur :  8.0.22
 -- Version de PHP : 8.0.3
 
@@ -24,149 +24,46 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Structure de la table `avoir`
---
-
-CREATE TABLE `avoir` (
-  `mail` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
-  `numeroAutorisation` int NOT NULL,
-  `mail_Utilisateur` varchar(50) COLLATE utf8mb4_general_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
--- --------------------------------------------------------
-
---
--- Structure de la table `droit_acces`
---
-
-CREATE TABLE `droit_acces` (
-  `numeroAutorisation` int NOT NULL,
-  `NomDroitAcces` varchar(100) COLLATE utf8mb4_general_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
--- --------------------------------------------------------
-
---
--- Structure de la table `participe`
---
-
-CREATE TABLE `participe` (
-  `nomLive` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
-  `mail` varchar(50) COLLATE utf8mb4_general_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
--- --------------------------------------------------------
-
---
--- Structure de la table `personne`
---
-
-CREATE TABLE `personne` (
-  `mail` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
-  `nom` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
-  `prenom` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
-  `motDePasse` varchar(50) COLLATE utf8mb4_general_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
--- --------------------------------------------------------
-
---
--- Structure de la table `utilisateur`
---
-
-CREATE TABLE `utilisateur` (
-  `mail` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
-  `Ville` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
-  `Emploie` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
-  `Telephone` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
-  `Paiment` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
-  `nom` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
-  `prenom` varchar(50) COLLATE utf8mb4_general_ci NOT NULL,
-  `motDePasse` varchar(50) COLLATE utf8mb4_general_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
--- --------------------------------------------------------
-
---
 -- Structure de la table `webinar`
 --
 
 CREATE TABLE `webinar` (
+  `id` int NOT NULL,
   `nomLive` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
   `date` date NOT NULL,
   `photo` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
   `duree` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
   `lienZoom` varchar(100) COLLATE utf8mb4_general_ci NOT NULL,
-  `rseumer` longtext COLLATE utf8mb4_general_ci NOT NULL
+  `resumer` longtext COLLATE utf8mb4_general_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Déchargement des données de la table `webinar`
+--
+
+INSERT INTO `webinar` (`id`, `nomLive`, `date`, `photo`, `duree`, `lienZoom`, `resumer`) VALUES
+(2, 'Pas de nom', '2021-03-12', '', '60', 'https://www.crazy-stuff.net/fr/articles/lolcat-les-videos-de-chats-les-plus-marrantes', 'Les chats sont les rois d\'internet et sont en bonne voie pour conquérir le monde et prendre le pouvoir sur les humains. Enfin, plus tard, car là c\'est l\'heure de la sieste.'),
+(4, 'Pas de nom', '2021-03-16', '', '60', 'https://www.crazy-stuff.net/fr/articles/lolcat-les-videos-de-chats-les-plus-marrantes', 'Les chats sont les rois d\'internet et sont en bonne voie pour conquérir le monde et prendre le pouvoir sur les humains. Enfin, plus tard, car là c\'est l\'heure de la sieste.');
 
 --
 -- Index pour les tables déchargées
 --
 
 --
--- Index pour la table `avoir`
---
-ALTER TABLE `avoir`
-  ADD PRIMARY KEY (`mail`,`numeroAutorisation`,`mail_Utilisateur`),
-  ADD KEY `Avoir_Droit_Acces0_FK` (`numeroAutorisation`),
-  ADD KEY `Avoir_Utilisateur1_FK` (`mail_Utilisateur`);
-
---
--- Index pour la table `droit_acces`
---
-ALTER TABLE `droit_acces`
-  ADD PRIMARY KEY (`numeroAutorisation`);
-
---
--- Index pour la table `participe`
---
-ALTER TABLE `participe`
-  ADD PRIMARY KEY (`nomLive`,`mail`),
-  ADD KEY `participe_Utilisateur0_FK` (`mail`);
-
---
--- Index pour la table `personne`
---
-ALTER TABLE `personne`
-  ADD PRIMARY KEY (`mail`);
-
---
--- Index pour la table `utilisateur`
---
-ALTER TABLE `utilisateur`
-  ADD PRIMARY KEY (`mail`);
-
---
 -- Index pour la table `webinar`
 --
 ALTER TABLE `webinar`
-  ADD PRIMARY KEY (`nomLive`);
+  ADD PRIMARY KEY (`id`);
 
 --
--- Contraintes pour les tables déchargées
+-- AUTO_INCREMENT pour les tables déchargées
 --
 
 --
--- Contraintes pour la table `avoir`
+-- AUTO_INCREMENT pour la table `webinar`
 --
-ALTER TABLE `avoir`
-  ADD CONSTRAINT `Avoir_Droit_Acces0_FK` FOREIGN KEY (`numeroAutorisation`) REFERENCES `droit_acces` (`numeroAutorisation`),
-  ADD CONSTRAINT `Avoir_Personne_FK` FOREIGN KEY (`mail`) REFERENCES `personne` (`mail`),
-  ADD CONSTRAINT `Avoir_Utilisateur1_FK` FOREIGN KEY (`mail_Utilisateur`) REFERENCES `utilisateur` (`mail`);
-
---
--- Contraintes pour la table `participe`
---
-ALTER TABLE `participe`
-  ADD CONSTRAINT `participe_Utilisateur0_FK` FOREIGN KEY (`mail`) REFERENCES `utilisateur` (`mail`),
-  ADD CONSTRAINT `participe_Webinar_FK` FOREIGN KEY (`nomLive`) REFERENCES `webinar` (`nomLive`);
-
---
--- Contraintes pour la table `utilisateur`
---
-ALTER TABLE `utilisateur`
-  ADD CONSTRAINT `Utilisateur_Personne_FK` FOREIGN KEY (`mail`) REFERENCES `personne` (`mail`);
+ALTER TABLE `webinar`
+  MODIFY `id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
