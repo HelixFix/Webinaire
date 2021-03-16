@@ -5,7 +5,7 @@ $requete = "SELECT * FROM `webinar` WHERE `date` >= CURDATE()";
 
 
 $tblWebinaire = $db->query($requete); // Enregistre la requete efectuer sur la db dans une variable
-var_dump($tblWebinaire);
+// var_dump($tblWebinaire);
 
 $tblWebinaire2 = $db->query($requete);
 $test = $tblWebinaire2->fetch();
@@ -98,6 +98,7 @@ $test = $tblWebinaire2->fetch();
                     <div class="card">
                         <img class="card-img-top" src="https://loremflickr.com/640/360" alt="Card image cap">
                         <div class="card-body">
+                            <p class=""><small class="text-muted">Diffusé le <?php echo $ligne['date'] ?></small></p>
                             <h5 class="card-title"><?php echo $ligne['nomLive'] ?></h5>
                             <p class="card-text"><?php echo $ligne['resumer'] ?></p>
                             <a href="index.php?page=formwebinaire&idwebinaire=<?php echo $ligne['id']; ?>" class="btn">Rejoindre le webinaire</a>
@@ -148,7 +149,7 @@ $test = $tblWebinaire2->fetch();
 
                         <p>
                             <b>
-                                Siège social - SITE SCHLUMBERGER
+                                SITE SCHLUMBERGER - Siège social
                             </b>
                         </p>
 
