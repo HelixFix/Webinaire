@@ -4,46 +4,56 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media-login.css">
+    
+    
+
     <title>Lognin</title>
   </head>
-  <body>
-    <div class="main">
-    <header class="top">
-      <ion-icon id="icone" name="lock-closed-outline"></ion-icon>
-    </header>
-    <section> 
-        <div class="fleche">
-     <a href="index.html"> <ion-icon name="arrow-back-outline"></ion-icon></a>
-    </div>
+  <body class="body">
+      <header>
+        
+        <div class="head-fleche">
+    
+    <div class="fleche ">
+   <ion-icon name="arrow-back-outline"></ion-icon>
+   </div>
+  </div>      
+      </header>
+      <div class="image"> 
+        <div class="lock">  
+         <ion-icon id="icone" name="lock-closed-outline"></ion-icon>
+        </div>
+      </div>
+     
+    <div class="forms">
       <div class="form-container">
-        <form action="#" method="get">
-          <div class="control">
-            <label for="mail">E-mail</label>
-            <input type="email" name="user-mail" id="mail" required />
+        <form action="#" method="get" class="validate-form">
+          <div class="group-input  validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+              <label for="mail">E-mail</label>
+              <input class="input-style" type="email" name="user-mail" id="mail" autocomplete="off">
+              <hr class="focus-input">
           </div>
-          <div class="control">
-            <label for="password">Mot de passe</label>
-            <input type="password" name="user-password" id="password" required />
+          <div class="group-input validate-input" data-validate = "Password is required" >
+              <label for="password">Mot de passe</label>
+              <input class="input-style" type="password" name="user-password" id="password" placeholder="*************">
+              <hr class="focus-input">
           </div>
           <div class="button">
             <input type="submit" value="Valider" />
           </div>
         </form>
-        <div class="wrapper">
-          <div class="link">
-            <a href="#">Mot de passe oublié ? </a>
-          </div>
-          <div class="rejoindre">
-            <p>Inscrivez-vous <a href="#">Click ici</a></p>
-          </div>
         </div>
+     <div class="wrapper">
+         <div class="link flex">
+            <a href="#">Mot de passe oublié ? </a>
+        </div>
+        <div class="compte flex">
+            <a href="#">Créer un compte</a>
+    </div>
       </div>
-    
-    </section>
-
-   
-  </div>
+    </div>
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
   </body>
 </html>

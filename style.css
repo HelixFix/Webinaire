@@ -1,131 +1,12 @@
- * {
-  box-sizing: border-box;
+* {
+  border: border-box;
   font-family: Arial, Helvetica, sans-serif;
   padding: 0;
   margin: 0;
 }
 
-
-
-
-/**Code Mickael Formulaire Compte***/
-
-.compte-contenair {
-  background-image: url(image/praxis.jpg);
+.body {
   height: 100vh;
-  background-size: cover;
-  display: flex;
-  justify-content: flex-end;
-  /* align-items: center;*/
-}
-
- .compte-form {
-  background-color: rgba(222, 167, 2, 1);
-  width: 33%;
-  min-width: 301px;
-  height: 100vh;
-  padding-top: 26px;
-  
-}
-
-.titre {
-  text-align: center;
-  margin: 0;
-  margin-bottom: 36px;
-  font-size: 1.5em;
-  font-weight: normal;
-  color:rgba(8, 59, 76, 1);
-}
-form{
-
-  width: 87%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 68%;
-    justify-content: space-evenly;
-}
-/***INPUT***/
-.input-group {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 39px;
-  
-}
-
-.input-group label {
-  color: rgba(8, 59, 76, 1);
-  font-weight: lighter;
-  padding-bottom: 6px;
-  font-size: 19px;
-}
-
-.input-group input {
-  background: none;
-  outline: none;
-  border: none;
-  color: black;
-  font-size: 16px;
-}
-
-/* .input-group input:focus{
-  transition: all 0.4s;
-
-  background: #d5007d;
-  background: linear-gradient(45deg, #d5007d, #e53935);
-} */
-
-/***HR******/
-
-hr{
-  border: 1px solid darkslategray;
-}
-
-hr::before{
-  content: "";
- display: block;
- height: 2px;
- transition: all 0.4s;
- background: linear-gradient(45deg, #d5007d, #e53935);
- /* background: #d5007d; */
- transform: scaleX(0);
-
-}
-
-hr:hover::before,
-hr:focus::before {
-transform: scaleX(1);
-
-}  
-
-.button{
-    height: 18px;
-   
-}
-/*****FLECHE****/
-.fleche2{
-  height: 17%;
-    display: flex;
-    align-items: flex-end;
-    padding-left: 9px;
-    font-size: 37px;
-    color: white;
-    
-} 
-
-.fleche2 .bas {
-   color:white;
-  transition: color 1s ease-in-out;
-}
-
-.fleche2 .bas:hover{
-  color:  rgba(8, 59, 76, 1);
- }
-
-
-
-/****Code Mickael Login*/
-.main {
   background-image: linear-gradient(
     180deg,
     rgba(8, 59, 76, 1) 19%,
@@ -133,79 +14,90 @@ transform: scaleX(1);
   );
 }
 
-.top {
-  text-align: center;
-  padding-top: 57px;
-} 
-
-#icone {
-  font-size: 159px;
-  color: beige;
+/** HEADER****/
+header {
+  height: 101px;
 }
-section {
-  height: 100vh;
+.fleche {
+  color: white;
+  font-size: 46px;
+  padding-top: 7px;
+  padding-left: 5px;
+ 
+}
+.fleche ion-icon {
+   color:white;
+  transition: color 1s ease-in-out;
+}
+
+.fleche ion-icon:hover{
+  color:  rgba(222, 167, 2, 1);
+ }
+/**LOCK (IMAGE)**/
+.image {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 14px;
+}
+.lock #icone {
+  font-size: 159px;
+  color: white;
+  transition: color 1s ease-in-out;
+}
+
+
+.lock #icone:hover{
+ color:  rgba(222, 167, 2, 1);
+}
+
+/**FORMULAIRE D'INSCRIPTION***/
+
+.forms {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
 
 .form-container {
-  width: 32%;
+  padding-top: 25px;
 }
-
 label {
   color: white;
-  font-size: 20px;
+  font-size: 18px;
 }
 
-.control input {
+.group-input .input-style {
   width: 100%;
   height: 25px;
-  border-radius: 20px;
   border: none;
   outline: none;
-  margin: 1em 0;
-  opacity: 0.7;
-  transition: opacity 0.3s ease;
+  background: none;
+  font-size: 16px;
+  color: white;
 }
-.control input:hover {
+.group-input .input-style:hover {
   opacity: 1;
 }
 
-.button {
-  text-align: center;
-}
-.btn {
-    background-color: #083B4C;
-    color           : #dea702;
-}
-
-.btn:hover {
-    color: white;
-}
-
-.button input {
-  height: 27px;
-  width: 71px;
-  border-radius: 18px;
-  border: none;
-  outline: none;
-  font-size: 14px;
-  color: white;
-  background: rgba(8, 59, 76, 1);
-}
+/**********LINK****/
 .wrapper {
   display: flex;
+  justify-content: center;
+}
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 235px;
 }
 
-.rejoindre p {
-  padding-left: 71px;
-  color: white;
-}
-.rejoindre a {
+.compte a {
   text-decoration: none;
   color: white;
+  opacity: 0.7;
+  transition: opacity 0.3s ease-in-out;
 }
 .link a {
   text-decoration: none;
@@ -228,6 +120,72 @@ label {
   color: white;
   font-size: 82px;
 }
+
+.link a:hover,
+.compte a:hover {
+  opacity: 2;
+}
+/**BOUTON VALIDER**/
+
+.group-input,
+.button {
+  margin-bottom: 35px;
+}
+
+.button {
+  text-align: center;
+}
+
+.button input {
+  height: 27px;
+  width: 71px;
+  border-radius: 18px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  color: white;
+  background: rgba(8, 59, 76, 1);
+}
+
+/*! effet hr */
+
+.focus-input::before{
+     content: "";
+    display: block;
+    height: 2px;
+    transition: all 0.4s;
+    background: linear-gradient(45deg, #d5007d, #e53935);
+    /* background: #d5007d; */
+    transform: scaleX(0);
+
+}
+
+.focus-input:hover::before,
+.focus-input:focus::before {
+   transform: scaleX(1);
+   
+  }  
+
+    .input-style:focus + .focus-input::before {
+    width: 100%;
+  } 
+  
+   .has-val.input-style + .focus-input::before {
+    width: 100%;
+  } 
+  
+  /* .focus::after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 100%;
+    transition: all 0.4s;
+    background: #d5007d;
+    background: linear-gradient(45deg, #d5007d, #e53935);
+  }
+   */
+
+
 /****Code Jerome Homepage***/
 .card {
     border       : 3px solid #dea702;
@@ -320,3 +278,5 @@ h2 {
         /* background-position  : 0% 160%; */
     }
 }
+
+
