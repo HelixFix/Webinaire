@@ -5,6 +5,126 @@
   margin: 0;
 }
 
+
+
+
+/**Code Mickael Formulaire Compte***/
+
+.compte-contenair {
+  background-image: url(image/praxis.jpg);
+  height: 100vh;
+  background-size: cover;
+  display: flex;
+  justify-content: flex-end;
+  /* align-items: center;*/
+}
+
+ .compte-form {
+  background-color: rgba(222, 167, 2, 1);
+  width: 33%;
+  min-width: 301px;
+  height: 100vh;
+  padding-top: 26px;
+  
+}
+
+.titre {
+  text-align: center;
+  margin: 0;
+  margin-bottom: 36px;
+  font-size: 1.5em;
+  font-weight: normal;
+  color:rgba(8, 59, 76, 1);
+}
+form{
+
+  width: 87%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 68%;
+    justify-content: space-evenly;
+}
+/***INPUT***/
+.input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 39px;
+  
+}
+
+.input-group label {
+  color: rgba(8, 59, 76, 1);
+  font-weight: lighter;
+  padding-bottom: 6px;
+  font-size: 19px;
+}
+
+.input-group input {
+  background: none;
+  outline: none;
+  border: none;
+  color: black;
+  font-size: 16px;
+}
+
+/* .input-group input:focus{
+  transition: all 0.4s;
+
+  background: #d5007d;
+  background: linear-gradient(45deg, #d5007d, #e53935);
+} */
+
+/***HR******/
+
+hr{
+  border: 1px solid darkslategray;
+}
+
+hr::before{
+  content: "";
+ display: block;
+ height: 2px;
+ transition: all 0.4s;
+ background: linear-gradient(45deg, #d5007d, #e53935);
+ /* background: #d5007d; */
+ transform: scaleX(0);
+
+}
+
+hr:hover::before,
+hr:focus::before {
+transform: scaleX(1);
+
+}  
+
+.button{
+    height: 18px;
+   
+}
+/*****FLECHE****/
+.fleche2{
+  height: 17%;
+    display: flex;
+    align-items: flex-end;
+    padding-left: 9px;
+    font-size: 37px;
+    color: white;
+    
+} 
+
+.fleche2 .bas {
+   color:white;
+  transition: color 1s ease-in-out;
+}
+
+.fleche2 .bas:hover{
+  color:  rgba(8, 59, 76, 1);
+ }
+
+
+
+/****Code Mickael Login*/
 .main {
   background-image: linear-gradient(
     180deg,
@@ -108,6 +228,7 @@ label {
   color: white;
   font-size: 82px;
 }
+/****Code Jerome Homepage***/
 .card {
     border       : 3px solid #dea702;
     margin-bottom: 25px;
