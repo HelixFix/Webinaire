@@ -65,7 +65,7 @@ $test = $tblWebinaire2->fetch();
                     <div class="text-white">
                         <h1 class="mb-3">Journées Portes Ouvertes </h1>
                         <!-- <h4 class="mb-3">Subheading</h4> -->
-                        <a class="btn btn-outline-light btn-lg" href="#!" role="button">Inscription</a>
+                        <a class="btn btn-outline-light btn-lg" href="form-compte.html" role="button">Inscription</a>
                     </div>
                 </div>
             </div>
