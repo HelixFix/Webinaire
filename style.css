@@ -182,7 +182,7 @@ label {
 
 /*******Formulaire-compte***/
 .compte-contenair {
-  background-image: url(image/praxis.jpg);
+  background-image: url(images/praxis.jpg);
   height          : 100vh;
   background-size : cover;
   display         : flex;
