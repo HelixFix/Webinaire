@@ -8,19 +8,23 @@
     <title>Lognin</title>
   </head>
   <body>
-    <header>
+    <div class="main">
+    <header class="top">
       <ion-icon id="icone" name="lock-closed-outline"></ion-icon>
     </header>
-    <section>
+    <section> 
+        <div class="fleche">
+     <a href="index.html"> <ion-icon name="arrow-back-outline"></ion-icon></a>
+    </div>
       <div class="form-container">
         <form action="#" method="get">
           <div class="control">
             <label for="mail">E-mail</label>
-            <input type="email" name="user-mail" id="mail" />
+            <input type="email" name="user-mail" id="mail" required />
           </div>
           <div class="control">
             <label for="password">Mot de passe</label>
-            <input type="password" name="user-password" id="password" />
+            <input type="password" name="user-password" id="password" required />
           </div>
           <div class="button">
             <input type="submit" value="Valider" />
@@ -35,11 +39,11 @@
           </div>
         </div>
       </div>
+    
     </section>
 
-    <div class="fleche">
-      <ion-icon name="arrow-back-outline"></ion-icon>
-    </div>
+   
+  </div>
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
   </body>
 </html>
