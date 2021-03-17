@@ -56,6 +56,14 @@ label {
 .button {
   text-align: center;
 }
+.btn {
+    background-color: #083B4C;
+    color           : #dea702;
+}
+
+.btn:hover {
+    color: white;
+}
 
 .button input {
   height: 27px;
