@@ -1,0 +1,116 @@
+/*******Petit Ecran height*****/
+
+@media screen and (max-height: 667px) {
+  .titre {
+    margin-bottom: 5px;
+  }
+  .compte-form {
+    height: none;
+    padding-top: none;
+    min-width: none;
+    width: 100%;
+    padding-top: 1px;
+  }
+
+  .input-group {
+    margin-bottom: 2px;
+  }
+
+  input {
+    font-size: 14px;
+  }
+  .input-group label {
+    padding-bottom: 0px;
+    padding-top: 1px;
+  }
+  .button {
+    padding-top: 8px;
+    height: 11px;
+  }
+}
+
+/****Petit Ecran width***/
+
+@media screen and (min-width: 200px) and (max-width: 320px) {
+  .input-group {
+    margin-bottom: 27px;
+  }
+}
+
+@media all and (max-width: 375px) {
+  .compte-form {
+    padding-top: 4px;
+    width: 100%;
+    min-width: none;
+  }
+
+  .titre {
+    margin-bottom: 16px;
+  }
+
+  .fleche {
+    padding-left: 16px;
+  }
+}
+
+@media screen and (min-width: 411px) and (max-width: 540px) {
+  .input-group {
+    margin-bottom: 27px;
+  }
+
+  .compte-form {
+    padding-top: 4px;
+    width: 100%;
+    min-width: none;
+  }
+
+  .fleche {
+    padding-left: 16px;
+    height: 87px;
+  }
+}
+
+@media screen and (min-width: 710px) and (max-width: 720px) {
+  .wrapper {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .input-group {
+    margin-bottom: 13px;
+  }
+
+  .compte-form {
+    width: 100%;
+    min-width: none;
+  }
+
+  .fleche {
+    padding-left: 16px;
+    height: 87px;
+  }
+}
+
+@media screen and (min-width: 722px) and (max-width: 1024px) {
+  .wrapper {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .input-group {
+    margin-bottom: 27px;
+  }
+
+  .compte-form {
+    width: 100%;
+    min-width: none;
+  }
+
+  .fleche {
+    padding-left: 16px;
+    height: 87px;
+  }
+}
