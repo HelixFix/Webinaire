@@ -101,7 +101,7 @@ $test = $tblWebinaire2->fetch();
                         <img class="card-img-top" src="https://loremflickr.com/640/360" alt="Card image cap">
                         <div class="card-body">
                             <p class=""><small class="text-muted">Diffusé le <?php echo $ligne['date'] ?></small></p>
-                            <h5 class="card-title"><?php echo $ligne['nomLive'] ?></h5>
+                            <h3 class="card-title"><?php echo $ligne['nomLive'] ?></h3>
                             <p class="card-text"><?php echo $ligne['resumer'] ?></p>
                             <a href="index.php?page=formwebinaire&idwebinaire=<?php echo $ligne['id']; ?>" class="btn">Rejoindre le webinaire</a>
                         </div>
@@ -147,23 +147,23 @@ $test = $tblWebinaire2->fetch();
                 <div class="row">
                     <!--Grid column-->
                     <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
-                        <h5 class="text-uppercase">Où nous trouver ?</h5>
+                        <h5>Où nous trouver ?</h5>
 
-                        <p>
+                        <span>
                             <b>
                                 SITE SCHLUMBERGER - Siège social
                             </b>
-                        </p>
+                        </span>
 
                         <p>
                             4 rue Schlumberger 68200 Mulhouse
                         </p>
 
-                        <p>
+                        <span>
                             <b>
                                 SITE KENNEDY
                             </b>
-                        </p>
+                        </span>
 
                         <p>
                             22 avenue Kennedy 68200 Mulhouse
@@ -174,17 +174,13 @@ $test = $tblWebinaire2->fetch();
 
                     <!--Grid column-->
                     <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
-                        <h5 class="text-uppercase">Contact </h5>
+                        <h5>Contact </h5>
 
                         <p>
                             Sabrina Tedjiza, Assistante de formation
-                        </p>
-
-                        <p>
+<br>
                             s.tedjiza@praxis.alsace
-                        </p>
-
-                        <p>
+<br>
                             03 89 60 67 85
                         </p>
                     </div>

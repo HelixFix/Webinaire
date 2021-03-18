@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;800;900&display=swap');
 
 
 /**********LOGIN*********/
@@ -314,8 +314,6 @@ hr:: focus:: before {
   margin-bottom: 25px;
 }
 
-
-
 body {
   font-family: 'Barlow', sans-serif;
   font-weight: 400;
@@ -334,14 +332,14 @@ footer h5 {
 }
 
 p {
-  font-family: 'Barlow', sans-serif;
   font-weight: 400;
   color: #083B4C;
   font-size: 1.2rem;
+
 }
 
-p>b {
-  text-transform: uppercase;
+footer>p {
+  margin-bottom: 3rem;
 }
 
 a.nav-link {
@@ -366,23 +364,38 @@ a.nav-link:hover {
 
 li.btn {
   background-color: #dea702;
+  font-weight: 800;
+  font-size: .8rem;
+  letter-spacing: .15rem;
 }
 
 .btn {
   background-color: #083B4C;
   color: #dea702;
+  font-weight: 900;
+  font-size: .95rem;
+  letter-spacing: .13rem;
 }
 
 .btn:hover {
   color: white;
+
 }
 
-li.btn, a.btn {
+li.btn,
+a.btn,
+h1,
+h2,
+span>b {
   text-transform: uppercase;
-  font-family: 'Barlow', sans-serif;
-  font-weight: 800;
+
+}
+
+span>b {
   font-size: .8rem;
   letter-spacing: .15rem;
+  font-weight: 800;
+
 }
 
 h1 {
@@ -400,12 +413,24 @@ h2 {
   line-height: 1.3;
 }
 
+h3 {
+  font-size: 26px;
+  letter-spacing: 0.1em;
+  font-weight: 500;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
 h1,
-h2,
-h5 {
-  text-transform: uppercase;
-  font-family: 'Barlow', sans-serif;
+h2 {
   font-weight: 800;
+}
+
+h5 {
+  font-size: 2.5rem;
+  letter-spacing: .1rem;
+  margin-bottom: 1.5rem;
+  font-weight: 300;
 }
 
 .card-text {
