@@ -30,7 +30,6 @@ $test = $tblWebinaire2->fetch();
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;800;900&display=swap" rel="stylesheet">
     <title>Webinaire</title>
 </head>
 <div class="container">
