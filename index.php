@@ -1,7 +1,9 @@
 <?php
 $db = new PDO('mysql:host=localhost;dbname=webinaire', 'root', '');
 
-$requete = "SELECT * FROM `webinar` WHERE `date` >= CURDATE()";
+setlocale(LC_TIME, "fr_FR", "French");
+
+$requete = "SELECT * FROM `webinar` WHERE `date` >= CURDATE() ORDER BY `date`";
 
 
 $tblWebinaire = $db->query($requete); // Enregistre la requete efectuer sur la db dans une variable
@@ -14,7 +16,7 @@ $test = $tblWebinaire2->fetch();
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
@@ -94,13 +96,14 @@ $test = $tblWebinaire2->fetch();
 
             while ($ligne = $tblWebinaire->fetch()) {
                 // var_dump($ligne)
+                $date = utf8_encode(strftime("%A %d %B %G", strtotime($ligne['date'])));
             ?>
 
                 <div class="col-lg-4 col-md-6 col-sm-6 col-12">
                     <div class="card">
                         <img class="card-img-top" src="https://loremflickr.com/640/360" alt="Card image cap">
                         <div class="card-body">
-                            <p class=""><small class="text-muted">Diffusé le <?php echo $ligne['date'] ?></small></p>
+                            <p class=""><small class="text-muted">Diffusé le <?php echo $date ?></small></p>
                             <h3 class="card-title"><?php echo $ligne['nomLive'] ?></h3>
                             <p class="card-text"><?php echo $ligne['resumer'] ?></p>
                             <a href="index.php?page=formwebinaire&idwebinaire=<?php echo $ligne['id']; ?>" class="btn">Rejoindre le webinaire</a>
