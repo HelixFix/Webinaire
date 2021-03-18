@@ -27,6 +27,8 @@ $test = $tblWebinaire2->fetch();
     <!-- MDB -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;800;900&display=swap" rel="stylesheet">
     <title>Webinaire</title>
 </head>
 <div class="container">
@@ -194,8 +196,8 @@ $test = $tblWebinaire2->fetch();
 
             <!-- Copyright -->
             <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-                © 2020 Copyright:
-                <a class="text-dark" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+                © 2021 Copyright:
+                <a class="text-dark" href="http://www.serfa.fr/">Serfa</a>
             </div>
             <!-- Copyright -->
         </footer>
