@@ -335,7 +335,6 @@ p {
   font-weight: 400;
   color      : #083B4C;
   font-size  : 1.2rem;
-
 }
 
 footer>p {
@@ -414,7 +413,7 @@ h2 {
 }
 
 h3 {
-  font-size: 26px;
+  font-size  : 26px;
   font-weight: 500;
   overflow   : hidden;
   white-space: nowrap;
@@ -438,6 +437,7 @@ h5 {
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   height            : 100px;
+  text-align        : justify;
 }
 
 #empty {
