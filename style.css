@@ -415,7 +415,7 @@ h2 {
 
 h3 {
   font-size: 26px;
-  letter-spacing: 0.1em;
+  /* letter-spacing: 0.1em; */
   font-weight: 500;
   overflow: hidden;
   white-space: nowrap;
