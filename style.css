@@ -4,18 +4,16 @@
 /**********LOGIN*********/
 
 * {
-  border: border-box;
+  border : border-box;
   padding: 0;
   margin : 0;
 }
 
 .body {
-  height: 100vh;
-  background-image: linear-gradient(
-    180deg,
-    rgba(8, 59, 76, 1) 19%,
-    rgba(222, 167, 2, 1) 100%
-  );
+  height          : 100vh;
+  background-image: linear-gradient(180deg,
+      rgba(8, 59, 76, 1) 19%,
+      rgba(222, 167, 2, 1) 100%);
 }
 
 /** HEADER LOGIN****/
@@ -24,14 +22,14 @@ header .head {
 }
 
 .fleche {
-  color: white;
-  font-size: 46px;
-  padding-top: 7px;
+  color       : white;
+  font-size   : 46px;
+  padding-top : 7px;
   padding-left: 5px;
 }
 
 .fleche ion-icon {
-  color: white;
+  color     : white;
   transition: color 1s ease-in-out;
 }
 
@@ -41,14 +39,14 @@ header .head {
 
 /**LOCK (IMAGE)LOGIN**/
 .image {
-  display: flex;
+  display        : flex;
   justify-content: center;
-  margin-bottom: 14px;
+  margin-bottom  : 14px;
 }
 
 .lock #icone {
-  font-size: 159px;
-  color: white;
+  font-size : 159px;
+  color     : white;
   transition: color 1s ease-in-out;
 }
 
@@ -59,11 +57,11 @@ header .head {
 /**FORMS LOGIN***/
 
 .forms {
-  width: 100%;
-  display: flex;
-  align-items: center;
+  width          : 100%;
+  display        : flex;
+  align-items    : center;
   justify-content: center;
-  flex-direction: column;
+  flex-direction : column;
 }
 
 .form-container {
@@ -71,19 +69,19 @@ header .head {
 }
 
 label {
-  color: white;
+  color    : white;
   font-size: 18px;
-  
+
 }
 
 .group-input .input-style {
-  width: 100%;
-  height: 25px;
-  border: none;
-  outline: none;
+  width     : 100%;
+  height    : 25px;
+  border    : none;
+  outline   : none;
   background: none;
-  font-size: 16px;
-  color: white;
+  font-size : 16px;
+  color     : white;
 }
 
 .group-input .input-style:hover {
@@ -92,35 +90,35 @@ label {
 
 /**********LINK LOGIN****/
 .wrapper {
-  display: flex;
+  display        : flex;
   justify-content: center;
 }
 
 .flex {
-  display: flex;
-  align-items: center;
+  display        : flex;
+  align-items    : center;
   justify-content: space-around;
-  width: 235px;
+  width          : 235px;
 }
 
 .compte a {
   text-decoration: none;
-  color: white;
-  font-size: 16px;
-  opacity: 0.7;
-  transition: opacity 0.3s ease-in-out;
+  color          : white;
+  font-size      : 16px;
+  opacity        : 0.7;
+  transition     : opacity 0.3s ease-in-out;
 }
 
 .link a {
   text-decoration: none;
-  color: white;
-  font-size: 16px;
-  opacity: 0.7;
-  transition: opacity 0.3s ease-in-out;
+  color          : white;
+  font-size      : 16px;
+  opacity        : 0.7;
+  transition     : opacity 0.3s ease-in-out;
 }
 
-.link a:hover,
-.compte a:hover {
+.link   a: hover,
+.compte a: hover {
   opacity: 2;
 }
 
@@ -136,46 +134,47 @@ label {
 }
 
 .button input {
-  height: 27px;
-  width: 76px;
+  height       : 27px;
+  width        : 76px;
   border-radius: 6px;
-  border: none;
-  outline: none;
-  font-size: 15px;
-  color: #ecc13fde;
-  background:rgba(8, 59, 76, 1);
-  border:  2px solid white;
-  transition: all 0.4s ease-in;
+  border       : none;
+  outline      : none;
+  font-size    : 15px;
+  color        : #ecc13fde;
+  background   : rgba(8, 59, 76, 1);
+  border       : 2px solid white;
+  transition   : all 0.4s ease-in;
 }
 
-.button input:hover{
+.button input:hover {
   background-color: #ecc13fde;
-    color:white ;
+  color           : white;
 }
 
 /***EFFET HR LOGIN ****/
-.focus-input{
+.focus-input {
   width: 92%;
 }
+
 .focus-input::before {
-  content: "";
-  display: block;
-  height: 2px;
+  content   : "";
+  display   : block;
+  height    : 2px;
   transition: all 0.4s;
   background: linear-gradient(45deg, #d5007d, #e53935);
-  transform: scaleX(0);
+  transform : scaleX(0);
 }
 
-.focus-input:hover::before,
-.focus-input:focus::before {
+.focus-input: hover:: before,
+.focus-input: focus:: before {
   transform: scaleX(1);
 }
 
-.input-style:focus + .focus-input::before {
+.input-style:focus+.focus-input::before {
   width: 100%;
 }
 
-.has-val.input-style + .focus-input::before {
+.has-val.input-style+.focus-input::before {
   width: 100%;
 }
 
@@ -183,61 +182,63 @@ label {
 /*******PAGE CREATION DE COMPTE ***/
 .compte-contenair {
   background-image: url(images/praxis.jpg);
-  height: 100vh;
-  background-size: cover;
-  display: flex;
-  justify-content: flex-end;
+  height          : 100vh;
+  background-size : cover;
+  display         : flex;
+  justify-content : flex-end;
 }
 
 .compte-form {
   background-color: rgba(222, 167, 2, 1);
-  width: 33%;
-  padding-top: 26px;
+  width           : 33%;
+  padding-top     : 26px;
 }
+
 .wrapper2 {
-  display: flex;
+  display       : flex;
   flex-direction: column;
-  align-items: center;
+  align-items   : center;
 }
+
 .titre {
-  text-align: center;
-  margin: 0;
+  text-align   : center;
+  margin       : 0;
   margin-bottom: 36px;
-  font-size: 24px;
-  font-weight: normal;
-  color: rgba(8, 59, 76, 1);
+  font-size    : 24px;
+  font-weight  : normal;
+  color        : rgba(8, 59, 76, 1);
 }
 
 form {
-  width: 87%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 68%;
+  width          : 87%;
+  display        : flex;
+  flex-direction : column;
+  align-items    : center;
+  height         : 68%;
   justify-content: space-evenly;
 }
 
 /***INPUT CREATION COMPTE***/
 .input-group {
-  display: flex;
+  display       : flex;
   flex-direction: column;
-  margin-bottom: 39px;
+  margin-bottom : 39px;
 }
 
 .input-group label {
-  color: rgba(8, 59, 76, 1);
-  font-weight: lighter;
+  color         : rgba(8, 59, 76, 1);
+  font-weight   : lighter;
   padding-bottom: 6px;
-  font-size: 19px;
-  
+  font-size     : 19px;
+
 }
 
 .input-group input {
   background: none;
-  outline: none;
-  border: none;
-  color: black;
-  font-size: 16px;
+  outline   : none;
+  border    : none;
+  color     : black;
+  font-size : 16px;
 }
 
 /* .input-group input:focus{
@@ -251,58 +252,59 @@ form {
 
 hr {
   border: 1px solid darkslategray;
-  
+
 }
 
 hr::before {
-  content: "";
-  display: block;
-  height: 2px;
+  content   : "";
+  display   : block;
+  height    : 2px;
   transition: all 0.4s;
   background: linear-gradient(45deg, #d5007d, #e53935);
-  transform: scaleX(0);
+  transform : scaleX(0);
 }
 
-hr:hover::before,
-hr:focus::before {
+hr: hover:: before,
+hr: focus:: before {
   transform: scaleX(1);
 }
 
 .button2 {
   height: 18px;
 }
+
 .button2 input {
-  height: 27px;
-  width: 76px;
+  height       : 27px;
+  width        : 76px;
   border-radius: 6px;
-  border: none;
-  outline: none;
-  font-size: 15px;
-  color: #ecc13fde;
-  background: rgba(8, 59, 76, 1);
-  border:  2px solid white;
-  transition: all 0.4s ease-in;
+  border       : none;
+  outline      : none;
+  font-size    : 15px;
+  color        : #ecc13fde;
+  background   : rgba(8, 59, 76, 1);
+  border       : 2px solid white;
+  transition   : all 0.4s ease-in;
 }
 
-.button2 input:hover{
-  background-color:#ecc13fde;
-    color:white;
+.button2 input:hover {
+  background-color: #ecc13fde;
+  color           : white;
 }
 
 
 /*****FLECHE CREATION COMPTE****/
 .fleche2 {
-  height: 67px;
-  display: flex;
-  align-items: flex-end;
+  height      : 67px;
+  display     : flex;
+  align-items : flex-end;
   padding-left: 7px;
-  font-size: 34px;
-  color: white;
-  align-self: end;
+  font-size   : 34px;
+  color       : white;
+  align-self  : end;
 }
 
 .bas {
-  color: white;
+  color     : white;
   transition: color 1s ease-in-out;
 }
 
@@ -321,7 +323,7 @@ hr:focus::before {
 /*****Home Page ******/
 
 .card {
-  border: 3px solid #dea702;
+  border       : 3px solid #dea702;
   margin-bottom: 25px;
 }
 
@@ -353,9 +355,9 @@ footer>p {
 }
 
 a.nav-link {
-  display: block;
-  color: #083b4c;
-  padding-top: 18px;
+  display       : block;
+  color         : #083b4c;
+  padding-top   : 18px;
   padding-bottom: 16px;
 }
 
@@ -451,26 +453,26 @@ h5 {
 }
 
 #empty {
-  padding: 60px 30px;
-  text-align: center;
-  font-size: 26px;
+  padding    : 60px 30px;
+  text-align : center;
+  font-size  : 26px;
   line-height: 1.5;
 }
 
 @media screen and (max-width: 1000px) {
   .bg-image {
-    background-image: url("images/Hero.png");
-    height: 400px;
+    background-image     : url("images/Hero.png");
+    height               : 400px;
     background-attachment: fixed;
   }
 }
 
 @media screen and (min-width: 1000px) {
   .bg-image {
-    background-image: url("images/Hero.png");
-    height: 400px;
+    background-image     : url("images/Hero.png");
+    height               : 400px;
     background-attachment: fixed;
-    background-size: contain;
+    background-size      : contain;
     /* background-position  : 0% 160%; */
   }
 }
