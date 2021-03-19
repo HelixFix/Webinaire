@@ -68,7 +68,7 @@ $test = $tblWebinaire2->fetch();
                     <div class="text-white">
                         <h1 class="mb-3">Journées Portes Ouvertes </h1>
                         <!-- <h4 class="mb-3">Subheading</h4> -->
-                        <a class="btn btn-outline-light btn-lg" href="form-compte.html" role="button">Inscription</a>
+                        <a class="btn btn-outline-light btn-lg" href="form-compte.html" role="button">S'inscrire</a>
                     </div>
                 </div>
             </div>
@@ -195,7 +195,7 @@ $test = $tblWebinaire2->fetch();
             <!-- Copyright -->
             <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
                 © 2021 Copyright:
-                <a class="text-dark" href="http://www.serfa.fr/">Serfa</a>
+                <a class="text-dark" href=#">Web Service</a>
             </div>
             <!-- Copyright -->
         </footer>
