@@ -180,9 +180,9 @@ $test = $tblWebinaire2->fetch();
 
                         <p>
                             Sabrina Tedjiza, Assistante de formation
-<br>
+                            <br>
                             s.tedjiza@praxis.alsace
-<br>
+                            <br>
                             03 89 60 67 85
                         </p>
                     </div>
@@ -196,6 +196,7 @@ $test = $tblWebinaire2->fetch();
             <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
                 © 2021 Copyright:
                 <a class="text-dark" href=#">Web Service</a>
+                SIRET 778 952 176 00023 Code APE 8559B
             </div>
             <!-- Copyright -->
         </footer>
@@ -203,5 +204,7 @@ $test = $tblWebinaire2->fetch();
 </div>
 <!-- MDB -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
 
 </html>
