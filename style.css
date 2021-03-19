@@ -444,13 +444,24 @@ h5 {
 }
 
 .card-text {
+
+  text-align        : justify;
+}
+
+.clamp {
   overflow          : hidden;
   display           : -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
-  height            : 100px;
-  text-align        : justify;
+  min-height: 100px;
 }
+.clamp:hover {
+
+  display           : -webkit-box;
+  -webkit-line-clamp: initial;
+  -webkit-box-orient: vertical;
+}
+
 
 #empty {
   padding    : 60px 30px;

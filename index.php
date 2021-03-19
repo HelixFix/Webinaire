@@ -102,7 +102,10 @@ $test = $tblWebinaire2->fetch();
                         <div class="card-body">
                             <p class=""><small class="text-muted">Diffusé le <?php echo $date ?></small></p>
                             <h3 class="card-title"><?php echo $ligne['nomLive'] ?></h3>
-                            <p class="card-text"><?php echo $ligne['resumer'] ?></p>
+                            <p class="card-text clamp" onclick="(function(){classList.toggle('clamp')})()" id="<?php echo $ligne['id'] ?>"><?php echo $ligne['resumer'] ?>
+                            </p>
+
+
                             <a href="index.php?page=formwebinaire&idwebinaire=<?php echo $ligne['id']; ?>" class="btn">Rejoindre le webinaire</a>
                         </div>
                     </div>
@@ -202,7 +205,5 @@ $test = $tblWebinaire2->fetch();
 </div>
 <!-- MDB -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.js"></script>
-
-<script src="https://code.jquery.com/jquery-3.6.0.slim.min.js" integrity="sha256-u7e5khyithlIdTpu22PHhENmPcRdFiHRjhAuHcs05RI=" crossorigin="anonymous"></script>
 
 </html>
