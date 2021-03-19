@@ -102,7 +102,7 @@ $test = $tblWebinaire2->fetch();
                         <div class="card-body">
                             <p class=""><small class="text-muted">Diffusé le <?php echo $date ?></small></p>
                             <h3 class="card-title"><?php echo $ligne['nomLive'] ?></h3>
-                            <p class="card-text clamp" onclick="(function(){classList.toggle('clamp')})()" id="<?php echo $ligne['id'] ?>"><?php echo $ligne['resumer'] ?>
+                            <p class="card-text clamp" onclick="(function(){classList.toggle('clamp')})()" ?>"><?php echo $ligne['resumer'] ?>
                             </p>
 
 
