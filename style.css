@@ -445,7 +445,7 @@ h5 {
 
 .card-text {
 
-  text-align        : justify;
+  text-align: justify;
 }
 
 .clamp {
@@ -453,10 +453,10 @@ h5 {
   display           : -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
-  min-height: 100px;
+  min-height        : 100px;
 }
-.clamp:hover {
 
+.clamp:hover {
   display           : -webkit-box;
   -webkit-line-clamp: initial;
   -webkit-box-orient: vertical;
