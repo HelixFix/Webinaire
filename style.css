@@ -73,7 +73,7 @@ header .head {
 label {
   color: white;
   font-size: 18px;
-  font-family   : 'Barlow', sans-serif;
+  
 }
 
 .group-input .input-style {
@@ -107,7 +107,6 @@ label {
   text-decoration: none;
   color: white;
   font-size: 16px;
-  font-family   : 'Barlow', sans-serif;
   opacity: 0.7;
   transition: opacity 0.3s ease-in-out;
 }
@@ -116,7 +115,6 @@ label {
   text-decoration: none;
   color: white;
   font-size: 16px;
-  font-family   : 'Barlow', sans-serif;
   opacity: 0.7;
   transition: opacity 0.3s ease-in-out;
 }
@@ -144,16 +142,15 @@ label {
   border: none;
   outline: none;
   font-size: 15px;
-  font-family: 'Barlow', sans-serif;
-  color: #0a0a0a;
-  background:#ecc13fde;
+  color: #ecc13fde;
+  background:rgba(8, 59, 76, 1);
   border:  2px solid white;
   transition: all 0.4s ease-in;
 }
 
 .button input:hover{
-  background-color: rgba(8, 59, 76, 1);
-    color: white;
+  background-color: #ecc13fde;
+    color:white ;
 }
 
 /***EFFET HR LOGIN ****/
@@ -232,7 +229,7 @@ form {
   font-weight: lighter;
   padding-bottom: 6px;
   font-size: 19px;
-  font-family   : 'Barlow', sans-serif;
+  
 }
 
 .input-group input {
@@ -281,16 +278,15 @@ hr:focus::before {
   border: none;
   outline: none;
   font-size: 15px;
-  font-family : 'Barlow', sans-serif;
-  color: #0a0a0a;
-  background:#ecc13fde;
+  color: #ecc13fde;
+  background: rgba(8, 59, 76, 1);
   border:  2px solid white;
   transition: all 0.4s ease-in;
 }
 
 .button2 input:hover{
-  background-color: rgba(8, 59, 76, 1);
-    color: white;
+  background-color:#ecc13fde;
+    color:white;
 }
 
 
