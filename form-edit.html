@@ -15,21 +15,22 @@
 
   </head>
 
-  <body>
-    <form>
+  <body class="fond-editer">
+    <div class="contour-form">
+    <form class="monform">
   <!-- lien du zoom -->
-  <div class="form-outline mb-4">
-    <input type="url" id="form1Example1" class="form-control" />
-    <label class="form-label" for="form1Example1">Lien vers le zoom</label>
+  <div class="form-outline col-md-3 mb-4">
+    <input type="text" id="titre" class="form-control" />
+    <label class="form-label" for="form1Example1">Titre du webinaire</label>
   </div>
 
   <!-- Titre du zoom -->
-  <div class="form-outline mb-4">
-    <input type="text" id="form1Example2" class="form-control" />
-    <label class="form-label" for="form1Example2">Titre du webinaire</label>
+  <div class="form-outline col-md-3 mb-4">
+    <input type="url" id="lien" class="form-control" />
+    <label class="form-label" for="form1Example2">Lien vers le zoom</label>
   </div>
 <!--Date et heure-->
-<div class="date">
+<div class="date col-md-3 mb-4" >
   <label for="start">Date du zoom :</label>
 
 <input type="date" id="start" name="trip-start"
@@ -37,14 +38,14 @@
        min="2021-03-17" max="2030-03-17">
 </div>
 
-<div class="heure">
-  <label for="appt">Heure de début du zoom :</label>
+<div class="heure col-md-3 mb-3">
+  <label class="form-label" for="appt">Heure de début du zoom :</label>
 
 <input type="time" id="appt" name="appt"
-       min="09:00" max="18:00" required>
+       min="09:00" max="20:00" required>
 </div>
 
-<div class="descriptif">
+<div class="descriptif col-md-3 mb-3">
   <div class="form-outline">
   <textarea class="form-control" id="textAreaExample" rows="4"></textarea>
   <label class="form-label" for="textAreaExample">Dscriptif de la réunion :</label>
@@ -53,7 +54,7 @@
 
 <!--Ajouter une image-->
 
-<div class="ajouter-image">
+<div class="ajouter-image col-md-3 mb-3">
   <label for="avatar">Image pour le webinaire:</label>
 
 <input type="file"
@@ -61,7 +62,8 @@
        accept="image/png, image/jpeg">
 </div>
 
-
+<button id="btn-confirmer" type="button">Confirmer</button>
+</div>
 
   <!-- 2 column grid layout for inline styling -->
   <div class="row mb-4">
@@ -70,6 +72,7 @@
     </div>
   </div>
 </form>
+</div>
 
   </body>
 
