@@ -1,3 +1,19 @@
+.fond-editer{
+ background-color: #083B4C;
+ color : #FFFFFF
+}
+.fond-editer label
+{
+  color: #FFFFFF;
+}
+
+
+
+
+
+
+
+
 .card {
     border       : 3px solid #dea702;
     margin-bottom: 25px;
