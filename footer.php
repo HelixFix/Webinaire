@@ -53,7 +53,7 @@
             <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
                 © 2021 Copyright:
                 <a class="text-dark" href=#">Web Service</a>
-                SIRET 778 952 176 00023 Code APE 8559B
+                SIRET 778 952 176 00023
             </div>
             <!-- Copyright -->
         </footer>
