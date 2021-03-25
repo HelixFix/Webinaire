@@ -12,8 +12,10 @@ $tblWebinaire = $db->query($requete); // Enregistre la requete efectuer sur la d
 $tblWebinaire2 = $db->query($requete);
 $test = $tblWebinaire2->fetch();
 
+if (!isset($_GET['page'])) $_GET['page'] = 'home'; ?>
+<!--Si la valeur n'existe pas attribue la valeur home par défault -->
 
-?>
+
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -32,3 +34,10 @@ $test = $tblWebinaire2->fetch();
 </head>
 
 
+<?php include('menu.php'); ?>
+<br>
+<br>
+<?php if (file_exists('pages/' . $_GET['page'] . '.php')) include('pages/' . $_GET['page'] . '.php');
+else echo "404 La page " . $_GET['page'] . " n'existe pas."; ?>
+
+<?php include('footer.php'); ?>
