@@ -1,4 +1,6 @@
-<?php
+<?php session_start();
+
+
 $db = new PDO('mysql:host=localhost;dbname=webinaire', 'root', '');
 
 setlocale(LC_TIME, "fr_FR", "French");
@@ -35,8 +37,7 @@ if (!isset($_GET['page'])) $_GET['page'] = 'home'; ?>
 
 
 <?php include('menu.php'); ?>
-<br>
-<br>
+
 <?php if (file_exists('pages/' . $_GET['page'] . '.php')) include('pages/' . $_GET['page'] . '.php');
 else echo "404 La page " . $_GET['page'] . " n'existe pas."; ?>
 
