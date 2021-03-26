@@ -3,70 +3,87 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet"/>
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet"/>
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.css" rel="stylesheet"/>
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="media-login.css" />
     <title>Se connecter</title>
   </head>
-  <body class="body">
-    <header class="head">
-      <div class="head-fleche">
-        <div class="fleche">
-         <a href="index.php"> <ion-icon name="arrow-back-outline"></ion-icon></a>
-        </div>
-      </div>
-    </header>
-    <div class="image">
-      <div class="lock">
-        <ion-icon id="icone" name="lock-closed-outline"></ion-icon>
-      </div>
-    </div>
 
-    <div class="forms">
-      <div class="form-container">
-        <form action="#" method="get" class="validate-form">
-          <div
-            class="group-input validate-input"
-            data-validate="Valid email is required: ex@abc.xyz"
-          >
-            <label for="mail">E-mail</label>
-            <input
-              class="input-style"
-              type="email"
-              name="user-mail"
-              id="mail"
-              autocomplete="off"
-            />
-            <hr class="focus-input" />
-          </div>
-          <div
-            class="group-input validate-input"
-            data-validate="Password is required"
-          >
-            <label for="password">Mot de passe</label>
-            <input
-              class="input-style"
-              type="password"
-              name="user-password"
-              id="password"
-              placeholder="*************"
-            />
-            <hr class="focus-input" />
-          </div>
-          <div class="button">
-            <input type="submit" value="Valider" />
-          </div>
-        </form>
-      </div>
-      <div class="wrapper">
-        <div class="link flex">
-          <a href="#">Mot de passe oublié ? </a>
+  <body class="body ">
+<header>
+<div class="fleche">
+  <i class="fas fa-arrow-left fa-2x top"></i>
+</div>
+</header>
+
+<main>
+    <div class="container-fluid bg">
+           <div class="row justify-content-end w100 conten">
+ <div class="col-md-4 col-sm-6 col-xs-12">
+    <form class="form-container bg ">
+      <h1 class="titre">Se Connecter</h1>
+        <!-- Email input -->
+        <div class="form-outline mb-4">
+          <input type="email" id="mail" class="form-control" required />
+          <label class="form-label" for="mail">Adresse mail</label>
         </div>
-        <div class="compte flex">
-          <a href="form-compte.html">S'inscrire</a>
+      
+        <!-- Password input -->
+        <div class="form-outline mb-4">
+          <input type="password" id="password" class="form-control" required />
+          <label class="form-label" for="password">Mot de passe</label>
         </div>
-      </div>
-    </div>
-    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+      
+        <!-- Lien -->
+        <div class="row text-center mb-4">
+          <div class="col-mb-1 lien">
+            <!-- Checkbox -->
+            <div class="col">
+                <!-- Simple link -->
+                <a href="#!">Mot de passe oublié?</a>
+              </div>
+          </div>
+      
+          <div class="col-mb-1 lien">
+            <!-- lien -->
+            <a href="#!">Créer un compte</a>
+          </div>
+        </div>
+      
+        <!-- Submit button -->
+   <div class="button-valider text-center">
+
+      <button  type="submit" class=" btn btn-primary btn-sm " data-mdb-ripple-color="#083b4c" style="border-color:white">Se connecter</button>
+      
+   </div>
+      
+      </form>
+ </div>
+
+<div class="col-md-4 col-sm-4 col-xs-12"></div>
+  </div>
+ 
+    </div> 
+</div>
+</main>
+<footer >
+<div class="copyright">
+<!--Background du site freepik-->
+   <a href="http://www.freepik.com" id="free">Designed by starline / Freepik</a>
+</div>
+ 
+</footer>
+
+    <!-- MDB -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.js"
+    ></script>
   </body>
 </html>
