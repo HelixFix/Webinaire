@@ -19,8 +19,8 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#">Pricing</a>
                         </li> -->
-                        <li class="btn" id="connect">
-                            <a class="nav-link" href="login.html" tabindex="-1" aria-disabled="" style="padding-left: 32px; padding-right: 32px;">Se connecter</a>
+                        <li class="btn btnHome" id="connect">
+                            <a class="nav-link nav-link-home" href="login.html" tabindex="-1" aria-disabled="" style="padding-left: 32px; padding-right: 32px;">Se connecter</a>
                         </li>
                     </ul>
                 </div>
@@ -32,9 +32,9 @@
             <div class=" mask" style="background-color: rgba(0, 0, 0, 0.6)">
                 <div class="d-flex justify-content-center align-items-center h-100">
                     <div class="text-white">
-                        <h1 class="mb-3">Journées Portes Ouvertes </h1>
+                        <h1 class="mb-3 h1Home">Journées Portes Ouvertes </h1>
                         <!-- <h4 class="mb-3">Subheading</h4> -->
-                        <a class="btn btn-outline-light btn-lg" href="form-compte.html" role="button">S'inscrire</a>
+                        <a class="btn btnHome btn-outline-light btn-lg" href="form-compte.html" role="button">S'inscrire</a>
                     </div>
                 </div>
             </div>

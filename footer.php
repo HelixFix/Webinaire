@@ -1,4 +1,4 @@
-<footer>
+<footer class="footerHome">
         <footer class="text-center text-lg-start">
             <!-- Grid container -->
             <div class="container p-4">

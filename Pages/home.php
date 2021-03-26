@@ -1,6 +1,6 @@
 
 
-    <body>
+    <body class="bodyHome">
         <h2>
             Les prochains webinaires
         </h2>
@@ -28,7 +28,7 @@
                             </p>
 
 
-                            <a href="index.php?page=formwebinaire&idwebinaire=<?php echo $ligne['id']; ?>" class="btn">Rejoindre le webinaire</a>
+                            <a href="index.php?page=formwebinaire&idwebinaire=<?php echo $ligne['id']; ?>" class="btn btnHome">Rejoindre le webinaire</a>
                         </div>
                     </div>
                 </div>
