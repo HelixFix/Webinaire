@@ -1,6 +1,6 @@
 .body{
 
-   background: url('/images/jaune.jpg') no-repeat;
+   background: url('images/jaune.jpg') no-repeat;
     width: 100%;
     height: 100vh;
     background-size: cover;
@@ -89,3 +89,381 @@ box-shadow: 0px 6px 21px 3px rgba(0,0,0,1);
 
 
 
+.button input {
+  height       : 27px;
+  width        : 76px;
+  border-radius: 6px;
+  border       : none;
+  outline      : none;
+  font-size    : 15px;
+  color        : #ecc13fde;
+  background   : rgba(8, 59, 76, 1);
+  border       : 2px solid white;
+  transition   : all 0.4s ease-in;
+}
+
+.button input:hover {
+  background-color: #ecc13fde;
+  color           : white;
+}
+
+/***EFFET HR LOGIN ****/
+.focus-input {
+  width: 92%;
+}
+
+.focus-input::before {
+  content   : "";
+  display   : block;
+  height    : 2px;
+  transition: all 0.4s;
+  background: linear-gradient(45deg, #d5007d, #e53935);
+  transform : scaleX(0);
+}
+
+.focus-input: hover:: before,
+.focus-input: focus:: before {
+  transform: scaleX(1);
+}
+
+.input-style:focus+.focus-input::before {
+  width: 100%;
+}
+
+.has-val.input-style+.focus-input::before {
+  width: 100%;
+}
+
+
+/*******PAGE CREATION DE COMPTE ***/
+.compte-contenair {
+  background-image: url(images/praxis.jpg);
+  height          : 100vh;
+  background-size : cover;
+  display         : flex;
+  justify-content : flex-end;
+}
+
+.compte-form {
+  background-color: rgba(222, 167, 2, 1);
+  width           : 33%;
+  padding-top     : 26px;
+}
+
+.wrapper2 {
+  display       : flex;
+  flex-direction: column;
+  align-items   : center;
+}
+
+.titre {
+  text-align   : center;
+  margin       : 0;
+  margin-bottom: 36px;
+  font-size    : 24px;
+  font-weight  : normal;
+  color        : rgba(8, 59, 76, 1);
+}
+
+form {
+  width          : 87%;
+  display        : flex;
+  flex-direction : column;
+  align-items    : center;
+  height         : 68%;
+  justify-content: space-evenly;
+}
+
+/***INPUT CREATION COMPTE***/
+.input-group {
+  display       : flex;
+  flex-direction: column;
+  margin-bottom : 39px;
+}
+
+.input-group label {
+  color         : rgba(8, 59, 76, 1);
+  font-weight   : lighter;
+  padding-bottom: 6px;
+  font-size     : 19px;
+
+}
+
+.input-group input {
+  background: none;
+  outline   : none;
+  border    : none;
+  color     : black;
+  font-size : 16px;
+}
+
+/* .input-group input:focus{
+        transition: all 0.4s;
+      
+        background: #d5007d;
+        background: linear-gradient(45deg, #d5007d, #e53935);
+      } */
+
+/***HR CREATION COMPTE******/
+
+hr {
+  border: 1px solid darkslategray;
+
+}
+
+hr::before {
+  content   : "";
+  display   : block;
+  height    : 2px;
+  transition: all 0.4s;
+  background: linear-gradient(45deg, #d5007d, #e53935);
+  transform : scaleX(0);
+}
+
+hr: hover:: before,
+hr: focus:: before {
+  transform: scaleX(1);
+}
+
+.button2 {
+  height: 18px;
+}
+
+.button2 input {
+  height       : 27px;
+  width        : 76px;
+  border-radius: 6px;
+  border       : none;
+  outline      : none;
+  font-size    : 15px;
+  color        : #ecc13fde;
+  background   : rgba(8, 59, 76, 1);
+  border       : 2px solid white;
+  transition   : all 0.4s ease-in;
+}
+
+.button2 input:hover {
+  background-color: #ecc13fde;
+  color           : white;
+}
+
+
+/*****FLECHE CREATION COMPTE****/
+.fleche2 {
+  height      : 67px;
+  display     : flex;
+  align-items : flex-end;
+  padding-left: 7px;
+  font-size   : 34px;
+  color       : white;
+  align-self  : end;
+}
+
+.bas {
+  color     : white;
+  transition: color 1s ease-in-out;
+}
+
+.bas:hover {
+  color: rgba(8, 59, 76, 1);
+}
+
+/* input:invalid {
+          box-shadow: 0 0 5px 1px red;
+        }
+        
+        input:focus:invalid {
+          outline: none;
+        } */
+
+/*****Home Page ******/
+
+.card {
+  border       : 3px solid #dea702;
+  margin-bottom: 25px;
+}
+
+body {
+  font-family   : 'Barlow', sans-serif;
+  font-weight   : 400;
+  color         : #083B4C;
+  font-size     : 1.35rem;
+  letter-spacing: .01rem;
+  line-height   : 1.7;
+}
+
+footer {
+  background-color: #dea702;
+}
+
+footer h5 {
+  color: white;
+}
+
+p {
+  font-weight: 400;
+  color      : #083B4C;
+  font-size  : 1.2rem;
+}
+
+footer>p {
+  margin-bottom: 3rem;
+}
+
+a.nav-link {
+  display       : block;
+  color         : #083b4c;
+  padding-top   : 18px;
+  padding-bottom: 16px;
+}
+
+a.nav-link:hover {
+  color: #dea702;
+}
+
+#connect {
+  padding: 0;
+}
+
+#connect:hover {
+  background-color: white;
+}
+
+li.btn {
+  background-color: #dea702;
+  font-weight     : 800;
+  font-size       : .8rem;
+  letter-spacing  : .15rem;
+}
+
+.btn {
+  background-color: #083B4C;
+  color           : #dea702;
+  font-weight     : 900;
+  font-size       : .95rem;
+  letter-spacing  : .13rem;
+}
+
+.btn:hover {
+  color: white;
+
+}
+
+li.btn,
+a.btn,
+h1,
+h2,
+span>b {
+  text-transform: uppercase;
+
+}
+
+span>b {
+  font-size     : .8rem;
+  letter-spacing: .15rem;
+  font-weight   : 800;
+
+}
+
+h1 {
+  color         : #dea702;
+  font-size     : 3.5rem;
+  letter-spacing: .4rem;
+  margin-bottom : 3rem;
+  line-height   : 1.1;
+}
+
+h2 {
+  color         : #083B4C;
+  font-size     : 2rem;
+  letter-spacing: .1rem;
+  line-height   : 1.3;
+}
+
+h3 {
+  font-size  : 26px;
+  font-weight: 500;
+  overflow   : hidden;
+  white-space: nowrap;
+}
+
+h1,
+h2 {
+  font-weight: 800;
+}
+
+h5 {
+  font-size     : 2.5rem;
+  letter-spacing: .1rem;
+  margin-bottom : 1.5rem;
+  font-weight   : 300;
+}
+
+.card-text {
+
+  text-align: justify;
+}
+
+.clamp {
+  overflow          : hidden;
+  display           : -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  min-height        : 100px;
+}
+
+.clamp:hover {
+  display           : -webkit-box;
+  -webkit-line-clamp: initial;
+  -webkit-box-orient: vertical;
+}
+
+
+#empty {
+  padding    : 60px 30px;
+  text-align : center;
+  font-size  : 26px;
+  line-height: 1.5;
+}
+
+@media screen and (max-width: 1000px) {
+  .bg-image {
+    background-image     : url("images/Hero.png");
+    height               : 400px;
+    background-attachment: fixed;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .bg-image {
+    background-image     : url("images/Hero.png");
+    height               : 400px;
+    background-attachment: fixed;
+    background-size      : contain;
+    /* background-position  : 0% 160%; */
+  }
+}
+
+/****** gestion webinaire ******/
+
+
+.btn-supprimer {
+  width : 32px;
+  height: 32px;
+}
+
+.btn-editer {
+  width : 32px;
+  height: 32px;
+}
+
+.btn-ajouter {
+  width : 64px;
+  height: 64px;
+}
+
+.ajouter-webinaire {
+  border       : 3px solid #dea702;
+  margin-bottom: 25px;
+  padding      : 30px;
+}
