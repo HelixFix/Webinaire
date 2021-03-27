@@ -26,7 +26,7 @@
     <header>
       <div class="fleche2">
 
-          <i class="fas fa-arrow-left fa-2x top"></i>
+        <a href="index.php"><i class="fas fa-arrow-left fa-2x top"></i></a>
       
       </div>
     </header>
@@ -36,16 +36,14 @@
         <div class="container">
           <div class="row cadre">
             <div class="picture col-lg-5">
-              <img
-                src="images/Students.jpg"
-                alt="Image d'un membre de praxis"
+              <img src="images/Students.jpg" alt="Image d'un membre de praxis"
                 class="img-fluid"
               />
             </div>
 
             <div class="englobe col-lg-7">
               <h1 class="titre-creation">Créer un compte</h1>
-              <form id="goupes-input" action="#">
+              <form action="#" class="groupe-form">
                 <div class="form-row col-lg-7">
                   <div class="form-outline mb-4">
                     <input type="text" id="nom" class="form-control" />

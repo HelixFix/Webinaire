@@ -18,12 +18,13 @@
   <body class="body ">
 <header>
 <div class="fleche">
-  <i class="fas fa-arrow-left fa-2x top"></i>
+
+  <a href="index.php"><i class="fas fa-arrow-left fa-2x top"></i></a>
 </div>
 </header>
 
 <main>
-    <div class="container-fluid bg">
+    <div class="container-fluid ">
            <div class="row justify-content-end w100 conten">
  <div class="col-md-4 col-sm-6 col-xs-12">
     <form class="form-container bg ">
@@ -35,9 +36,9 @@
         </div>
       
         <!-- Password input -->
-        <div class="form-outline mb-4">
-          <input type="password" id="password" class="form-control" required />
-          <label class="form-label" for="password">Mot de passe</label>
+        <div class="form-outline mb-4 .champ">
+          <input type="password" id="password" class="form-control controle-champ" required />
+          <label class="form-label label" for="password">Mot de passe</label>
         </div>
       
         <!-- Lien -->
@@ -46,13 +47,13 @@
             <!-- Checkbox -->
             <div class="col">
                 <!-- Simple link -->
-                <a href="#!">Mot de passe oublié?</a>
+                <a class="a" href="#!">Mot de passe oublié?</a>
               </div>
           </div>
       
           <div class="col-mb-1 lien">
             <!-- lien -->
-            <a href="#!">Créer un compte</a>
+            <a class="a" href="#!">Créer un compte</a>
           </div>
         </div>
       
