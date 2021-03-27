@@ -17,6 +17,12 @@
 
   <body class="body ">
 <header>
+<div class="logo">
+
+<a href="index.php"><img class="logop" src="images/logop.png" alt="Logo Praxis"></a>
+</div>
+</header>
+
 <main>
     <div class="container-fluid ">
            <div class="row justify-content-end w100 conten">
@@ -67,13 +73,13 @@
     </div> 
 </div>
 </main>
-<footer >
+<div class="footer1" >
 <div class="copyright">
 <!--Background du site freepik-->
    <a href="http://www.freepik.com" id="free">Designed by starline / Freepik</a>
 </div>
  
-</footer>
+</div>
 
     <!-- MDB -->
     <script

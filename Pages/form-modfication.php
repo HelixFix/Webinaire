@@ -28,7 +28,7 @@
         <div class="container">
           <div class="row cadre">
               <div class=" picture col-lg-5">
-                 <img src="images/universite.jpg" alt="Image d'un membre de praxis" class="img-fluid"/>
+                 <img src="images/universite.jpg" alt="Image de etudiant praxis" class="img-fluid"/>
               </div>
             
             <div class=" englobe col-lg-7 ">
@@ -111,11 +111,11 @@
         </div>
     </div>
     </main>
-<footer>
+<div class="footer">
     <div class="copyrigth">
         <a href="http://www.freepik.com" id="foot">Designed by pch.vector / Freepik</a> 
         </div>
-</footer>
+</div>
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
     <!-- MDB -->
     <script

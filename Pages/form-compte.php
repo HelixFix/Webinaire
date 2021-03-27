@@ -28,7 +28,7 @@
         <div class="container">
           <div class="row cadre">
             <div class="picture col-lg-5">
-              <img src="images/Students.jpg" alt="Image d'un membre de praxis"
+              <img src="images/Students.jpg" alt="Image de etudiant de praxis"
                 class="img-fluid"
               />
             </div>
@@ -122,11 +122,11 @@
         </div>
       </div>
     </main>
-    <footer>
+    <div class="footer">
         <div class="copyrigth">
             <a href='https://fr.freepik.com/vecteurs/ecole' id="foot">École vecteur créé par pch.vector - fr.freepik.com</a>
     </div>
-    </footer>
+    </div>
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
     <!-- MDB -->
     <script
