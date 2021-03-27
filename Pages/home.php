@@ -3,7 +3,7 @@
     <div class=" mask" style="background-color: rgba(0, 0, 0, 0.6)">
         <div class="d-flex justify-content-center align-items-center h-100">
             <div class="text-white">
-                <h1 class="mb-3 h1Home">Journées Portes Ouvertes </h1>
+                <h1 class="mb-3 h1Home">Journées Portes Ouvertes</h1>
                 <!-- <h4 class="mb-3">Subheading</h4> -->
                 <a class="btn btnHome btn-outline-light btn-lg" href="index.php?page=form-compte" role="button">S'inscrire</a>
             </div>

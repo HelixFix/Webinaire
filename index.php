@@ -37,9 +37,9 @@ if (!isset($_GET['page'])) $_GET['page'] = 'home'; ?>
 </head>
 
 
-<?php include('menu.php'); ?>
+<?php if ($_GET['page'] != 'login') include('menu.php'); ?>
 
 <?php if (file_exists('pages/' . $_GET['page'] . '.php')) include('pages/' . $_GET['page'] . '.php');
 else echo "404 La page " . $_GET['page'] . " n'existe pas."; ?>
 
-<?php include('footer.php'); ?>
+<?php if ($_GET['page'] != 'login') include('footer.php'); ?>
