@@ -23,14 +23,6 @@
     <title>S'inscrire</title>
   </head>
   <body class="corp">
-    <header>
-      <div class="fleche2">
-
-        <a href="index.php"><i class="fas fa-arrow-left fa-2x top"></i></a>
-      
-      </div>
-    </header>
-
     <main>
       <div class="wrapper">
         <div class="container">

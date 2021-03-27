@@ -17,12 +17,6 @@
 
   <body class="body ">
 <header>
-<div class="fleche">
-
-  <a href="index.php"><i class="fas fa-arrow-left fa-2x top"></i></a>
-</div>
-</header>
-
 <main>
     <div class="container-fluid ">
            <div class="row justify-content-end w100 conten">

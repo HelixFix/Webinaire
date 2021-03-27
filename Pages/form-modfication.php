@@ -22,27 +22,11 @@
     />
     <title>Modification</title>
   </head>
-  <body class="corp"> 
-      
-    
-    
-    <header>
-            
-                      <div class="fleche2">
-                          
-        <a href="index.php"><i class="fas fa-arrow-left fa-2x top"></i></a>
-                      </div>
-                    
-            </header>
-            
-            
+  <body class="corp">       
     <main>
  <div class="wrapper">
         <div class="container">
           <div class="row cadre">
-              
-            
-          
               <div class=" picture col-lg-5">
                  <img src="images/universite.jpg" alt="Image d'un membre de praxis" class="img-fluid"/>
               </div>
