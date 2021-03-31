@@ -4,12 +4,12 @@
 
 .body{
 
-  background: url('images/jaune.jpg') no-repeat;
-   width: 100%;
-   height: 100vh;
-   background-size: cover;
-   background-repeat: repeat;
-   background-position: left;
+  background         : url('images/jaune.jpg') no-repeat;
+  width              : 100%;
+  height             : 100vh;
+  background-size    : cover;
+  background-repeat  : repeat;
+  background-position: left;
 
 }
 
@@ -17,7 +17,7 @@
 /**header logo Login**/
 
  .logo{
-  padding-top: 5px;
+  padding-top : 5px;
   padding-left: 5px;
  }
  .logop{
@@ -28,31 +28,31 @@
 
 /**section Formulaire login**/
 .titre{
- color: white;
+ color        : white;
  margin-bottom: 32px;
- font-size: 39px;
+ font-size    : 39px;
 
 }
 
 .bg{
- background:rgb(0 0 0 / 71%) ;
-   border:1px solid;
-   padding: 44px 30px;
-   margin-top:20vh;
-   -webkit-box-shadow: 0px 6px 21px 3px rgba(0,0,0,1);
--moz-box-shadow: 0px 6px 21px 3px rgba(0,0,0,1);
-box-shadow: 0px 6px 21px 3px rgba(0,0,0,1);
+ background        : rgb(0 0 0 / 71%) ;
+ border            : 1px solid;
+ padding           : 44px 30px;
+ margin-top        : 20vh;
+ -webkit-box-shadow: 0px 6px 21px 3px rgba(0,0,0,1);
+ -moz-box-shadow   : 0px 6px 21px 3px rgba(0,0,0,1);
+ box-shadow        : 0px 6px 21px 3px rgba(0,0,0,1);
 
 }
 
 .conten{
  max-width: 105%;
-   min-width: 60%;
+ min-width: 60%;
 }
 
 .champ .controle-champ{
 
- color:white;
+ color     : white;
  background: rgb(0 0 0 / 23%);
 }
 .form-outline .form-control~.form-label {
@@ -62,13 +62,13 @@ box-shadow: 0px 6px 21px 3px rgba(0,0,0,1);
  
 /**Lien  login**/
 .lien .a  {
- color: white;
+ color     : white;
  transition: color 1s ease-in-out;
 }
 
 #free{
  transition: color 1s ease-in-out;
- color: black;
+ color     : black;
 }
 
 .lien .a:hover {
@@ -76,15 +76,15 @@ box-shadow: 0px 6px 21px 3px rgba(0,0,0,1);
 }
 
 #free:hover{
- color:white;
+ color: white;
 }
 
  
 /**footer login**/
  .copyright{
 
-   height: 100px;
-   display: flex;
+   height     : 100px;
+   display    : flex;
    align-items: flex-end;
    
 }
@@ -94,32 +94,32 @@ box-shadow: 0px 6px 21px 3px rgba(0,0,0,1);
 
 .corp{
 
-  background: #dea702;
+  background     : #dea702;
   background-size: cover;
   
 }
 
 .cadre{
 
-  background: white;
+  background   : white;
   border-radius: 5px;
 }
 
 .pic{
-height:100px;
+height: 100px;
 
 }
 .titre-creation{
-  text-align: center;
+  text-align : center;
   padding-top: 10px;
 }
 
 .groupe-form{
 
- display: flex;
+ display       : flex;
  flex-direction: column;
- align-items: center;
-  padding-top: 10px;
+ align-items   : center;
+ padding-top   : 10px;
 }
 
 
@@ -131,17 +131,17 @@ height:100px;
 
 .copyrigth{
  
-  display: flex;
-  height: 46px;
+  display    : flex;
+  height     : 46px;
   align-items: flex-end;
   
 }
 #foot  {
-  color: black;
+  color     : black;
   transition: color 1s ease-in-out;
 }
 #foot:hover{
-  color:white;
+  color: white;
 }
  
 
@@ -345,7 +345,7 @@ h5 {
 
 .fond-editer{
   background-color: #083B4C;
-  color : #FFFFFF
+  color           : #FFFFFF
  }
  .fond-editer label
  {
@@ -353,20 +353,13 @@ h5 {
  }
  
  .monform{
-   /*margin-right: 20%;
-   margin-top: 15%;
-   margin-left: 20%;*/
- /*  border: 2px red solid;*/
-   width: 100%;
-   height: 100vh;
-   /*margin-top: 10px;*/
-   display: flex;
-   flex-direction: column;
+   width          : 100%;
+   height         : 100vh;
+   display        : flex;
+   flex-direction : column;
    justify-content: center;
-   align-items: center;
-   text-align: center;
-   /*oui*/
- 
+   align-items    : center;
+   text-align     : center;
  }
  
  .form-label{
@@ -379,12 +372,12 @@ h5 {
  
  .contour-form
   {
-    display: flex;
-    flex-direction: column;
+    display        : flex;
+    flex-direction : column;
     justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: 100%;
-    height: 100vh;
+    align-items    : center;
+    text-align     : center;
+    width          : 100%;
+    height         : 100vh;
  
   }
