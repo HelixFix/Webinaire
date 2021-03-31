@@ -5,7 +5,9 @@
             <div class="text-white">
                 <h1 class="mb-3 h1Home">Journées Portes Ouvertes</h1>
                 <!-- <h4 class="mb-3">Subheading</h4> -->
-                <a class="btn btnHome btn-outline-light btn-lg" href="index.php?page=form-compte" role="button">S'inscrire</a>
+                <?php if (!$_SESSION) { ?>
+                    <a class="btn btnHome btn-outline-light btn-lg" href="index.php?page=form-compte" role="button">S'inscrire</a>
+                <?php } ?>
             </div>
         </div>
     </div>
