@@ -15,18 +15,21 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Features</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Pricing</a>
                         </li> -->
-                        <?php if (!isset($_SESSION['user']['nom'])) { ?>
-                        <li class="btn btnHome" id="connect">
-                            <a class="nav-link nav-link-home" href="index.php?page=login" tabindex="-1" aria-disabled="" style="padding-left: 32px; padding-right: 32px;">Se connecter</a>
-                        </li>
+                        <?php if ($_SESSION) { ?>
+                            <li class="profil">
+                                <a class="nav-link" href="index.php?page=form-modfication"><img height="58px" src="images/profile-default.svg"></img>
+                                </a>
+                            </li>
+                        <?php } ?>
+                        <?php if (!$_SESSION) { ?>
+                            <li class="btn btnHome" id="connect">
+                                <a class="nav-link nav-link-home" href="index.php?page=login" tabindex="-1" aria-disabled="" style="padding-left: 32px; padding-right: 32px;">Se connecter</a>
+                            </li>
                         <?php } else { ?>
                             <li class="btn btnHome" id="connect">
-                            <a class="nav-link nav-link-home" href="index.php?page=deconnect" tabindex="-1" aria-disabled="" style="padding-left: 32px; padding-right: 32px;">Se déconnecter</a>
-                        </li>
+                                <a class="nav-link nav-link-home" href="index.php?page=deconnect" tabindex="-1" aria-disabled="" style="padding-left: 32px; padding-right: 32px;">Se déconnecter</a>
+                            </li>
                         <?php } ?>
                     </ul>
                 </div>
