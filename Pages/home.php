@@ -37,10 +37,10 @@
                 <?php if (isset($_SESSION['user']['nom'])) { ?>
 
                     <!-- Supression -->
-                    <a href="index.php?page=formwebinaire&idwebinaire=<?php echo $ligne['id']; ?>" class="btn btnhome"><img class="btn-supprimer" src="images\x-supp.png" alt="supprimer"></a>
+                    <a href="index.php?page=form-edit&idwebinaire=<?php echo $ligne['id']; ?>" class="btn btnhome"><img class="btn-supprimer" src="images\x-supp.png" alt="supprimer"></a>
 
                     <!-- Edition -->
-                    <a href="index.php?page=formwebinaire&idwebinaire=<?php echo $ligne['id']; ?>" class="btn btnhome"><img class="btn-editer" src="images\edition.png" alt="editer"></a>
+                    <a href="index.php?page=form-edit&idwebinaire=<?php echo $ligne['id']; ?>" class="btn btnhome"><img class="btn-editer" src="images\edition.png" alt="editer"></a>
                 <?php } ?>
 
                 <div class="card">
