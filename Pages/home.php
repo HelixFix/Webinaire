@@ -33,6 +33,10 @@
 
 
             <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                <?php if (isset($_SESSION['user']['nom'])) { ?>
+                    <a href="index.php?page=formwebinaire&idwebinaire=<?php echo $ligne['id']; ?>" class="btn"><img class="btn-supprimer" src="images\x-supp.png" alt="supprimer"></a>
+                    <a href="index.php?page=formwebinaire&idwebinaire=<?php echo $ligne['id']; ?>" class="btn"><img class="btn-editer" src="images\edition.png" alt="editer"></a>
+                <?php } ?>
                 <div class="card">
                     <img class="card-img-top" src="https://loremflickr.com/640/360" alt="Card image cap">
                     <div class="card-body">
@@ -48,32 +52,8 @@
             </div>
         <?php } ?>
 
+        <?php if (isset($_SESSION['user']['nom'])) echo "Ma variable de session " . $_SESSION['user']['nom']; ?>
 
-        <!-- <div class="col-lg-4 col-md-6 col-sm-6 col-12">
-                <div class="card">
-                    <img class="card-img-top" src="https://loremflickr.com/640/360" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This card has supporting text below as a natural lead-in to additional
-                            content.
-                        </p>
-                        <a href="#" class="btn">Rejoindre le webinaire</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-6 col-12">
-                <div class="card">
-                    <img class="card-img-top" src="https://placekitten.com/640/360" alt="Card image cap">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                            additional content. This card has even longer content than the first to show that equal
-                            height
-                            action.</p>
-                        <a href="#" class="btn">Rejoindre le webinaire</a>
-                    </div>
-                </div>
-            </div> -->
     </div>
     <br>
 </body>

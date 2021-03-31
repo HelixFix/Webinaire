@@ -1,6 +1,7 @@
 <?php session_start();
+$_SESSION['user']['nom'] = "Dupont";
 
-
+ if (isset($_SESSION['user']['nom'])) echo "Ma variable de session " . $_SESSION['user']['nom'];
 $db = new PDO('mysql:host=localhost;dbname=webinaire', 'root', '');
 
 setlocale(LC_TIME, "fr_FR", "French");
