@@ -42,4 +42,4 @@ if (!isset($_GET['page'])) $_GET['page'] = 'home'; ?>
 <?php if (file_exists('pages/' . $_GET['page'] . '.php')) include('pages/' . $_GET['page'] . '.php');
 else echo "404 La page " . $_GET['page'] . " n'existe pas."; ?>
 
-<?php if ($_GET['page'] != 'login') include('footer.php'); ?>
+<?php if ($_GET['page'] == 'home') include('footer.php'); ?>
