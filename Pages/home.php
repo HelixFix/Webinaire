@@ -29,13 +29,21 @@
 
         <?php if (isset($_SESSION['user']['nom'])) { ?>
             <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+
+              <!--ajouter webinaire-->
+              <div class="ajouter-webinaire">
+                  <a href="index.php?page=form-edit" class="btn btnhome"><img class="btn-ajouter" src="images\add.png" alt="ajouter un webiniare"></a>
+              </div>
+              <!--supprimer webinaire
+              <div class="spprimer-webinaire">
                 <a href="#" class="btn btnhome"><img class="btn-supprimer" src="images\x-supp.png" alt="supprimer"></a>
-
+              </div>
+              <!-editer webinaire
+              <div class="editer-webinaire">
                 <a href="#" class="btn btnhome"><img class="btn-editer" src="images\edition.png" alt="editer"></a>
+              </div>*-->
 
-                <div class="ajouter-webinaire">
-                    <a href="index.php?page=form-edit" class="btn btnhome"><img class="btn-ajouter" src="images\add.png" alt="ajouter un webiniare"></a>
-                </div>
+
             </div>
         <?php } ?>
 
