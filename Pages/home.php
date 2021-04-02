@@ -75,4 +75,8 @@
         <!-- Ajout -->
 
         <br>
+<<<<<<< HEAD
 </body>
+=======
+</body>
+>>>>>>> ebcc1a8dedd87fba82aa84a51164be2c96785d01

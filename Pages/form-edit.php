@@ -16,17 +16,33 @@
   </head>
 
   <body class="fond-editer">
+    <?php require_once 'editer.php'; ?>
+    <?php
+    $mysqli = new mysqli('localhost', 'root','', 'webinaire' ) or die(mysqli_error($mysqli));
+    $result = $mysqli->query("SELECT * FROM webinar") or die($mysqli->error);
+//sert voir à quoi ça ressemble dans la bdd entre /**/ ci dessous
+    //pre_r($result);
+    //pre_r($result->fetch_assoc());
+
+    function pre_r($array)
+    {
+      echo '<pre>';
+      print_r($array);
+      echo'</pre>';
+    }
+     ?>
+
     <div class="contour-form">
-    <form class="monform">
+    <form class="monform" action="editer.php" method="POST">
   <!-- lien du zoom -->
   <div class="form-outline col-md-3 mb-4">
-    <input type="text" id="titre" class="form-control" />
+    <input type="text" id="titre" class="form-control" name="titre" />
     <label class="form-label" for="form1Example1">Titre du webinaire</label>
   </div>
 
   <!-- Titre du zoom -->
   <div class="form-outline col-md-3 mb-4">
-    <input type="url" id="lien" class="form-control" />
+    <input type="url" id="lien" class="form-control" name="lien" />
     <label class="form-label" for="form1Example2">Lien vers le zoom</label>
   </div>
 <!--Date et heure-->
@@ -47,7 +63,7 @@
 
 <div class="descriptif col-md-3 mb-3">
   <div class="form-outline">
-  <textarea class="form-control" id="textAreaExample" rows="4"></textarea>
+  <textarea class="form-control" id="textAreaExample" rows="4" name="description"></textarea>
   <label class="form-label" for="textAreaExample">Dscriptif de la réunion :</label>
 </div>
 </div>
@@ -62,7 +78,7 @@
        accept="image/png, image/jpeg">
 </div>
 
-<button id="btn-confirmer" type="button">Confirmer</button>
+<button id="btn-confirmer" type="submit"name="confirmer">Confirmer</button>
 </div>
 
   <!-- 2 column grid layout for inline styling -->
@@ -73,9 +89,6 @@
   </div>
 </form>
 </div>
-
   </body>
-
-
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.js"></script>
 </html>
