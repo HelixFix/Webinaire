@@ -1,0 +1,387 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;800;900&display=swap');
+
+/******Login ******M*/
+
+.body{
+
+  background         : url('images/jaune.jpg') no-repeat;
+  width              : 100%;
+  height             : 100vh;
+  background-size    : cover;
+  background-repeat  : repeat;
+  background-position: left;
+
+}
+
+
+/**header logo Login**/
+
+ .logo{
+  padding-top : 5px;
+  padding-left: 5px;
+ }
+ .logop{
+
+  height: 40px;
+ }
+
+
+/**section Formulaire login**/
+.titre{
+ color        : white;
+ margin-bottom: 32px;
+ font-size    : 39px;
+
+}
+
+.bg{
+ background        : rgb(0 0 0 / 71%) ;
+ border            : 1px solid;
+ padding           : 44px 30px;
+ margin-top        : 20vh;
+ -webkit-box-shadow: 0px 6px 21px 3px rgba(0,0,0,1);
+ -moz-box-shadow   : 0px 6px 21px 3px rgba(0,0,0,1);
+ box-shadow        : 0px 6px 21px 3px rgba(0,0,0,1);
+
+}
+
+.conten{
+ max-width: 105%;
+ min-width: 60%;
+}
+
+.champ .controle-champ{
+
+ color     : white;
+ background: rgb(0 0 0 / 23%);
+}
+.form-outline .form-control~.form-label {
+
+ color: white;
+}
+ 
+/**Lien  login**/
+.lien .a  {
+ color     : white;
+ transition: color 1s ease-in-out;
+}
+
+#free{
+ transition: color 1s ease-in-out;
+ color     : black;
+}
+
+.lien .a:hover {
+ color: #dea702;
+}
+
+#free:hover{
+ color: white;
+}
+
+ 
+/**footer login**/
+ .copyright{
+
+   height     : 100px;
+   display    : flex;
+   align-items: flex-end;
+   
+}
+
+/*****form-compte-modificaion et form- compte****/
+
+
+.corp{
+
+  background     : #dea702;
+  background-size: cover;
+  
+}
+
+.cadre{
+
+  background   : white;
+  border-radius: 5px;
+}
+
+.pic{
+height: 100px;
+
+}
+.titre-creation{
+  text-align : center;
+  padding-top: 10px;
+}
+
+.groupe-form{
+
+ display       : flex;
+ flex-direction: column;
+ align-items   : center;
+ padding-top   : 10px;
+}
+
+
+.groupe-button{
+
+ text-align: center;
+}
+
+
+.copyrigth{
+ 
+  display    : flex;
+  height     : 46px;
+  align-items: flex-end;
+  
+}
+#foot  {
+  color     : black;
+  transition: color 1s ease-in-out;
+}
+#foot:hover{
+  color: white;
+}
+ 
+
+
+
+
+
+
+
+/*****Home Page ******/
+
+.card {
+  border       : 3px solid #dea702;
+  margin-bottom: 25px;
+}
+
+.bodyHome {
+  font-family   : 'Barlow', sans-serif;
+  font-weight   : 400;
+  color         : #083B4C;
+  font-size     : 1.35rem;
+  letter-spacing: .01rem;
+  line-height   : 1.7;
+}
+
+.footerHome {
+  background-color: #dea702;
+}
+
+.footerHome h5 {
+  color: white;
+} 
+
+p {
+  font-weight: 400;
+  color      : #083B4C;
+  font-size  : 1.2rem;
+}
+
+.footerHome>p {
+  margin-bottom: 3rem;
+} 
+
+a.nav-link-home {
+  display       : block;
+  color         : #083b4c;
+  padding-top   : 18px;
+  padding-bottom: 16px;
+}
+
+a.nav-link-home:hover {
+  color: #dea702;
+}
+
+#connect {
+  padding: 0;
+}
+
+#connect:hover {
+  background-color: white;
+}
+
+li.btnHome {
+  background-color: #dea702;
+  font-weight     : 800;
+  font-size       : .8rem;
+  letter-spacing  : .15rem;
+}
+
+.btnHome {
+  background-color: #083B4C;
+  color           : #dea702;
+  font-weight     : 900;
+  font-size       : .95rem;
+  letter-spacing  : .13rem;
+} 
+
+.btnHome:hover {
+  color: white;
+
+}
+
+li.btnHome,
+a.btnHome,
+.h1Home,
+h2,
+span>b {
+  text-transform: uppercase;
+
+} 
+
+span>b {
+  font-size     : .8rem;
+  letter-spacing: .15rem;
+  font-weight   : 800;
+
+}
+
+.h1Home {
+  color         : #dea702;
+  font-size     : 3.5rem;
+  letter-spacing: .4rem;
+  margin-bottom : 3rem;
+  line-height   : 1.1;
+}
+
+ h2 {
+  color         : #083B4C;
+  font-size     : 2rem;
+  letter-spacing: .1rem;
+  line-height   : 1.3;
+} 
+
+h3 {
+  font-size  : 26px;
+  font-weight: 500;
+  overflow   : hidden;
+  white-space: nowrap;
+}
+
+.h1Home,
+h2 {
+  font-weight: 800;
+} 
+
+h5 {
+  font-size     : 2.5rem;
+  letter-spacing: .1rem;
+  margin-bottom : 1.5rem;
+  font-weight   : 300;
+}
+
+.card-text {
+
+  text-align: justify;
+}
+
+.clamp {
+  overflow          : hidden;
+  display           : -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  min-height        : 100px;
+}
+
+.clamp:hover {
+  display           : -webkit-box;
+  -webkit-line-clamp: initial;
+  -webkit-box-orient: vertical;
+}
+
+
+#empty {
+  padding    : 60px 30px;
+  text-align : center;
+  font-size  : 26px;
+  line-height: 1.5;
+}
+
+.profil > a {
+  padding: 0;
+}
+
+@media screen and (max-width: 1000px) {
+  .bg-image {
+    background-image     : url("images/Hero.png");
+    height               : 400px;
+    background-attachment: fixed;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .bg-image {
+    background-image     : url("images/Hero.png");
+    height               : 400px;
+    background-attachment: fixed;
+    background-size      : contain;
+    /* background-position  : 0% 160%; */
+  }
+}
+
+/****** gestion webinaire ******/
+
+
+.btn-supprimer {
+  width : 32px;
+  height: 32px;
+}
+
+.btn-editer {
+  width : 32px;
+  height: 32px;
+}
+
+.btn-ajouter {
+  width : 64px;
+  height: 64px;
+}
+
+.ajouter-webinaire {
+  border       : 3px solid #dea702;
+  margin-bottom: 25px;
+  padding      : 30px;
+}
+
+.fond-editer{
+  background-color: #083B4C;
+  color           : #FFFFFF
+ }
+ .fond-editer label
+ {
+   color: #FFFFFF;
+ }
+ 
+ .monform{
+   width          : 100%;
+   height         : 100vh;
+   display        : flex;
+   flex-direction : column;
+   justify-content: center;
+   align-items    : center;
+   text-align     : center;
+ }
+ 
+ .form-label{
+   color: #FFFFFF;
+ }
+ 
+ .form-outline .form-control~.form-label{
+   color: #FFFFFF;
+ }
+ 
+ .contour-form
+  {
+    display        : flex;
+    flex-direction : column;
+    justify-content: center;
+    align-items    : center;
+    text-align     : center;
+    width          : 100%;
+    height         : 100vh;
+ 
+  }
