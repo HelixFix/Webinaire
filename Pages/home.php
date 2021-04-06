@@ -30,7 +30,7 @@
         <?php if (isset($_SESSION['admin']['nom'])) { ?>
             <div class="col-lg-4 col-md-6 col-sm-6 col-12">
                 <div class="ajouter-webinaire">
-                    <a href="index.php?page=form-edit" class="btn btnhome"><img class="btn-ajouter" src="images\add.png" alt="ajouter un webiniare"></a>
+                    <a href="index.php?page=form-edit" class="btn btnHome"><img class="btn-ajouter" src="images\add.png" alt="ajouter un webiniare"></a>
                 </div>
             </div>
         <?php } ?>
@@ -49,10 +49,10 @@
                 <?php if (isset($_SESSION['admin']['nom'])) { ?>
 
                     <!-- Supression -->
-                    <a href="index.php?page=form-edit&idwebinaire=<?php echo $ligne['id']; ?>" class="btn btnhome"><img class="btn-supprimer" src="images\x-supp.png" alt="supprimer"></a>
+                    <a href="index.php?page=form-edit&idwebinaire=<?php echo $ligne['id']; ?>" class="btn btnHome"><img class="btn-supprimer" src="images\x-supp.png" alt="supprimer"></a>
 
                     <!-- Edition -->
-                    <a href="index.php?page=form-edit&idwebinaire=<?php echo $ligne['id']; ?>" class="btn btnhome"><img class="btn-editer " src="images\edition.png" alt="editer"></a>
+                    <a href="index.php?page=form-edit&idwebinaire=<?php echo $ligne['id']; ?>" class="btn btnHome"><img class="btn-editer " src="images\edition.png" alt="editer"></a>
                 <?php } ?>
 
                 <?php if (isset($_SESSION)) { ?>
@@ -68,7 +68,7 @@
                         <p class="card-text clamp" onclick="(function(){classList.toggle('clamp')})()" ?><?php echo $ligne['resumer'] ?>
                         </p>
 
-                        <a href="index.php?page=formwebinaire&idwebinaire=<?php echo $ligne['id']; ?>" class="btn btnHome">Rejoindre le webinaire</a>
+                        <a href="index.php?page=rejoindre&idwebinaire=<?php echo $ligne['id']; ?>" class="btn btnHome">Rejoindre le webinaire</a>
                     </div>
                 </div>
                 <?php } ?>
