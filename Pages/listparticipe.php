@@ -36,27 +36,27 @@ include('menu.php');
 
 
         <?php
-        while ($ligneparticipe = $tblparticipe->fetch()) {
-            
-                // var_dump($ligneparticipe)
-                // $date = utf8_encode(strftime("%A %d %B %G", strtotime($date['date'])));
+        while ($ligne = $tblWebinaire->fetch()) {
+
+            // var_dump($ligneparticipe)
+            $date = utf8_encode(strftime("%A %d %B %G", strtotime($ligne['date'])));
         ?>
 
 
-                <div class="col-lg-4 col-md-6 col-sm-6 col-12">
-                    <?php 
-while ($ligne = $tblWebinaire->fetch()) { ?>
-                    <?php if (isset($_SESSION['admin']['nom'])) { ?>
+            <div class="col-lg-4 col-md-6 col-sm-6 col-12">
 
-                        <!-- Supression -->
-                        <a href="index.php?page=form-edit&idwebinaire=<?php echo $ligne['id']; ?>" class="btn btnHome"><img class="btn-supprimer" src="images\x-supp.png" alt="supprimer"></a>
+                <?php if (isset($_SESSION['admin']['nom'])) { ?>
 
-                        <!-- Edition -->
-                        <a href="index.php?page=form-edit&idwebinaire=<?php echo $ligne['id']; ?>" class="btn btnHome"><img class="btn-editer " src="images\edition.png" alt="editer"></a>
-                    <?php } ?>
+                    <!-- Supression -->
+                    <a href="index.php?page=form-edit&idwebinaire=<?php echo $ligne['id']; ?>" class="btn btnHome"><img class="btn-supprimer" src="images\x-supp.png" alt="supprimer"></a>
 
-                    <?php if (isset($_SESSION)) { ?>
+                    <!-- Edition -->
+                    <a href="index.php?page=form-edit&idwebinaire=<?php echo $ligne['id']; ?>" class="btn btnHome"><img class="btn-editer " src="images\edition.png" alt="editer"></a>
+                <?php } ?>
 
+                <?php if (isset($_SESSION)) { ?>
+                    
+                  
                         <div class="card">
                             <img class="card-img-top" src="https://loremflickr.com/640/360" alt="Card image cap">
 
@@ -68,17 +68,17 @@ while ($ligne = $tblWebinaire->fetch()) { ?>
                                 <p class="card-text clamp" onclick="(function(){classList.toggle('clamp')})()" ?><?php echo $ligne['resumer'] ?>
                                 </p>
 
-                                <a href="index.php?page=rejoindre&idwebinaire=<?php echo $ligne['id']; ?>" class="btn btnHome">Rejoindre le webinaire</a>
+                                <a href="<?php echo $ligne['lienZoom']; ?>" class="btn btnHome">Ouvrir le webinaire</a>
                             </div>
                         </div>
                     <?php } ?>
-                <?php } ?>
-                </div>
-            <?php } ?>
+        
+            </div>
+        <?php } ?>
 
-            <!-- Ajout -->
+        <!-- Ajout -->
 
-            <br>
+        <br>
 </body>
 <?php
 
