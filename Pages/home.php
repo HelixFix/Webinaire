@@ -25,7 +25,7 @@
     <?php } ?>
 
 
-    <udiv class="row">
+    <div class="row">
 
         <?php if (isset($_SESSION['admin']['nom'])) { ?>
             <div class="col-lg-4 col-md-6 col-sm-6 col-12">
