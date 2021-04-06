@@ -68,7 +68,7 @@ include('menu.php');
                                 <p class="card-text clamp" onclick="(function(){classList.toggle('clamp')})()" ?><?php echo $ligne['resumer'] ?>
                                 </p>
 
-                                <a href="<?php echo $ligne['lienZoom']; ?>" class="btn btnHome">Ouvrir le webinaire</a>
+                                <a target="_blank rel=noopener" href="<?php echo $ligne['lienZoom']; ?>" class="btn btnHome">Ouvrir le webinaire</a>
                             </div>
                         </div>
                     <?php } ?>
