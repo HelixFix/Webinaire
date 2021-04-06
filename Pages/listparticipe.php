@@ -1,12 +1,11 @@
 <?php
-$participe = "SELECT * FROM `participe` WHERE `id_utilisateur` = 9";
-
-$tblparticipe = $db->query($participe);
-
-$requete2 = " SELECT * FROM participe, webinar WHERE participe.id_Utilisateur = 9 AND participe.id = webinar.id ";
+$requete2 = "SELECT * FROM participe, webinar WHERE participe.id_Utilisateur = 9 AND participe.id = webinar.id AND webinar.date >= CURDATE() ORDER BY `date` ";
 
 
 $tblWebinaire = $db->query($requete2);
+
+$tblWebinaire2 = $db->query($requete2);
+$test = $tblWebinaire2->fetch();
 
 
 include('menu.php');
@@ -15,11 +14,11 @@ include('menu.php');
 
 <body class="bodyHome">
     <h2>
-        Les prochains webinaires
+        Mes webinaires
     </h2>
 
     <?php if (!$test) { ?>
-        <p id="empty">Aucun événement à venir pour le moment</p>
+        <p id="empty">Aucun événement suivi</p>
     <?php } ?>
 
 
