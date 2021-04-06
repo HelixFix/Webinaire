@@ -1,5 +1,6 @@
 <?php session_start();
-$_SESSION['user']['nom'] = "Dupont";
+// $_SESSION['user']['nom'] = "Utilisateur";
+$_SESSION['admin']['nom'] = "Admin";
 
  if (isset($_SESSION['user']['nom'])) echo "Ma variable de session " . $_SESSION['user']['nom'];
 $db = new PDO('mysql:host=localhost;dbname=webinaire', 'root', '');

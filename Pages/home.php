@@ -25,9 +25,9 @@
     <?php } ?>
 
 
-    <div class="row">
+    <udiv class="row">
 
-        <?php if (isset($_SESSION['user']['nom'])) { ?>
+        <?php if (isset($_SESSION['admin']['nom'])) { ?>
             <div class="col-lg-4 col-md-6 col-sm-6 col-12">
                 <div class="ajouter-webinaire">
                     <a href="index.php?page=form-edit" class="btn btnhome"><img class="btn-ajouter" src="images\add.png" alt="ajouter un webiniare"></a>
@@ -46,14 +46,16 @@
 
             <div class="col-lg-4 col-md-6 col-sm-6 col-12">
 
-                <?php if (isset($_SESSION['user']['nom'])) { ?>
+                <?php if (isset($_SESSION['admin']['nom'])) { ?>
 
                     <!-- Supression -->
                     <a href="index.php?page=form-edit&idwebinaire=<?php echo $ligne['id']; ?>" class="btn btnhome"><img class="btn-supprimer" src="images\x-supp.png" alt="supprimer"></a>
 
                     <!-- Edition -->
-                    <a href="index.php?page=form-edit&idwebinaire=<?php echo $ligne['id']; ?>" class="btn btnhome"><img class="btn-editer" src="images\edition.png" alt="editer"></a>
+                    <a href="index.php?page=form-edit&idwebinaire=<?php echo $ligne['id']; ?>" class="btn btnhome"><img class="btn-editer " src="images\edition.png" alt="editer"></a>
                 <?php } ?>
+
+                <?php if (isset($_SESSION)) { ?>
 
                 <div class="card">
                     <img class="card-img-top" src="https://loremflickr.com/640/360" alt="Card image cap">
@@ -69,6 +71,7 @@
                         <a href="index.php?page=formwebinaire&idwebinaire=<?php echo $ligne['id']; ?>" class="btn btnHome">Rejoindre le webinaire</a>
                     </div>
                 </div>
+                <?php } ?>
             </div>
         <?php } ?>
 
