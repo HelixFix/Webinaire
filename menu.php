@@ -16,9 +16,9 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#">Features</a>
                         </li> -->
-                        <?php if (isset($_SESSION['user']['nom'])) { ?>
+                        <?php if (isset($_SESSION['user']['id'])) { ?>
                             <li class="profil">
-                                <a class="nav-link" href="index.php?page=form-modfication"><img height="58px" src="images/profile-default.svg"></img>
+                                <a class="nav-link" href="index.php?page=form-modfication&userID=<?php echo $_SESSION['user']['id']; ?>"><img height="58px" src="images/profile-default.svg"></img>
                                 </a>
                             </li>
                         <?php } ?>

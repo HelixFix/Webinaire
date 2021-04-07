@@ -1,5 +1,5 @@
 <?php
-$requete2 = "SELECT * FROM participe, webinar WHERE participe.id_Utilisateur = 9 AND participe.id = webinar.id AND webinar.date >= CURDATE() ORDER BY `date` ";
+$requete2 = "SELECT * FROM participe, webinar WHERE participe.id_Utilisateur = ".$_SESSION['user']['id']." AND participe.id = webinar.id AND webinar.date >= CURDATE() ORDER BY `date` ";
 
 
 $tblWebinaire = $db->query($requete2);
