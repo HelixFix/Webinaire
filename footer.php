@@ -24,7 +24,7 @@
                             </b>
                         </span>
 
-                        <p>
+                        <p class="para">
                             22 avenue Kennedy 68200 Mulhouse
                         </p>
 
