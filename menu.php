@@ -17,8 +17,12 @@
                             <a class="nav-link" href="#">Features</a>
                         </li> -->
                         <?php if (isset($_SESSION['user']['id'])) { ?>
-                            <li class="profil">
+                            <li class="profil-icon">
                                 <a class="nav-link" href="index.php?page=form-modfication&userID=<?php echo $_SESSION['user']['id']; ?>"><img height="58px" src="images/profile-default.svg"></img>
+                                </a>
+                            </li>
+                            <li class="profil-text nav-item">
+                                <a class="nav-link" href="index.php?page=form-modfication&userID=<?php echo $_SESSION['user']['id']; ?>">Mon profil
                                 </a>
                             </li>
                         <?php } ?>

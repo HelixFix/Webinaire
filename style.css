@@ -301,7 +301,7 @@ h5 {
   line-height: 1.5;
 }
 
-.profil > a {
+.profil-icon > a {
   padding: 0;
 }
 
@@ -310,6 +310,10 @@ h5 {
     background-image     : url("images/Hero.png");
     height               : 400px;
     background-attachment: fixed;
+  }
+
+  .profil-icon {
+    display: none;
   }
 }
 
@@ -320,6 +324,10 @@ h5 {
     background-attachment: fixed;
     background-size      : contain;
     /* background-position  : 0% 160%; */
+  }
+
+  .profil-text {
+    display: none;
   }
 }
 
