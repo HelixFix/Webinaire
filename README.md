@@ -1,0 +1,16 @@
+# Projet de stage
+
+Projet réaliser par trois apprenants
+
+##Cachier des charges
+
+• Réaliser un site qui référence des webinaires avec une gestion par ajout, édition, suppresion par un administateur.
+
+• Donner la possibilité aux utilisateurs de se créer un compte ainsi que de suivre les webinaires sur lesquels ils se sont inscrits.
+
+
+
+> Echéances : 01/03/2021 au 09/04/2021
+
+# Collaborateurs
+[Mickael](https://github.com/Mik08) - [Enrico](https://github.com/RYKOLATA) - [Jérôme](https://github.com/HelixFix)
