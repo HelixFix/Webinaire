@@ -1,4 +1,4 @@
-![GitHub Logo](/images/logo-entreprise-4.png =50x50)
+![GitHub Logo](/images/logo-entreprise-4.png = 50x50)
 
 # Projet de stage
 
