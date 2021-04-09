@@ -2,7 +2,7 @@
 
 Projet réaliser par trois apprenants
 
-# Cachier des charges
+# Cahier des charges
 
 • Réaliser un site qui référence des webinaires avec une gestion par ajout, édition, suppression par un administateur.
 
