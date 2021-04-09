@@ -22,7 +22,7 @@
                                         <i class="fa fa-video" aria-hidden="true"></i>
                                         <i class="fa fa-video" aria-hidden="true"></i>
                                     </div>
-                                    <div class="name" data-text="Profil">Mes webinaires</div>
+                                    <div class="name"><span data-text="Mes webinaires">Mes webinaires</span></div>
                                 </a>
                             </li>
                             <li class="nav-item ">
@@ -32,7 +32,7 @@
                                         <i class="fa fa-user" aria-hidden="true"></i>
                                         <i class="fa fa-user" aria-hidden="true"></i>
                                     </div>
-                                    <div class="name" data-text="Profil"><?php echo $_SESSION['user']['nom']; ?></div>
+                                    <div class="name"><span data-text="<?php echo $_SESSION['user']['nom']; ?>"><?php echo $_SESSION['user']['nom']; ?></span></div>
                                 </a>
                             </li>
                             <!-- <li class="profil-text nav-item">

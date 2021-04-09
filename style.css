@@ -2,13 +2,13 @@
 
 /******Login ******M*/
 
-.body{
+.body {
 
-  background         : url('images/jaune.jpg') no-repeat;
-  width              : 100%;
-  height             : 100vh;
-  background-size    : cover;
-  background-repeat  : repeat;
+  background: url('images/jaune.jpg') no-repeat;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-repeat: repeat;
   background-position: left;
 
 }
@@ -16,134 +16,139 @@
 
 /**header logo Login**/
 
- .logo{
-  padding-top : 5px;
+.logo {
+  padding-top: 5px;
   padding-left: 5px;
- }
- .logop{
+}
+
+.logop {
 
   height: 40px;
- }
+}
 
 
 /**section Formulaire login**/
-.titre{
- color        : white;
- margin-bottom: 32px;
- font-size    : 39px;
+.titre {
+  color: white;
+  margin-bottom: 32px;
+  font-size: 39px;
 
 }
 
-.bg{
- background        : rgb(0 0 0 / 71%) ;
- border            : 1px solid;
- padding           : 44px 30px;
- margin-top        : 20vh;
- -webkit-box-shadow: 0px 6px 21px 3px rgba(0,0,0,1);
- -moz-box-shadow   : 0px 6px 21px 3px rgba(0,0,0,1);
- box-shadow        : 0px 6px 21px 3px rgba(0,0,0,1);
+.bg {
+  background: rgb(0 0 0 / 71%);
+  border: 1px solid;
+  padding: 44px 30px;
+  margin-top: 20vh;
+  -webkit-box-shadow: 0px 6px 21px 3px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 0px 6px 21px 3px rgba(0, 0, 0, 1);
+  box-shadow: 0px 6px 21px 3px rgba(0, 0, 0, 1);
 
 }
 
-.conten{
- max-width: 105%;
- min-width: 60%;
+.conten {
+  max-width: 105%;
+  min-width: 60%;
 }
 
-.champ .controle-champ{
+.champ .controle-champ {
 
- color     : white;
- background: rgb(0 0 0 / 23%);
+  color: white;
+  background: rgb(0 0 0 / 23%);
 }
+
 .form-outline .form-control~.form-label {
 
- color: white;
-}
- 
-/**Lien  login**/
-.lien .a  {
- color     : white;
- transition: color 1s ease-in-out;
+  color: white;
 }
 
-#free{
- transition: color 1s ease-in-out;
- color     : black;
+/**Lien  login**/
+.lien .a {
+  color: white;
+  transition: color 1s ease-in-out;
+}
+
+#free {
+  transition: color 1s ease-in-out;
+  color: black;
 }
 
 .lien .a:hover {
- color: #dea702;
+  color: #dea702;
 }
 
-#free:hover{
- color: white;
+#free:hover {
+  color: white;
 }
 
- 
+
 /**footer login**/
- .copyright{
+.copyright {
 
-   height     : 100px;
-   display    : flex;
-   align-items: flex-end;
-   
+  height: 100px;
+  display: flex;
+  align-items: flex-end;
+
 }
 
 /*****form-compte-modificaion et form- compte****/
 
 
-.corp{
+.corp {
 
-  background     : #dea702;
+  background: #dea702;
   background-size: cover;
-  
+
 }
 
-.cadre{
+.cadre {
 
-  background   : white;
+  background: white;
   border-radius: 5px;
 }
 
-.pic{
-height: 100px;
+.pic {
+  height: 100px;
 
 }
-.titre-creation{
-  text-align : center;
+
+.titre-creation {
+  text-align: center;
   padding-top: 10px;
 }
 
-.groupe-form{
+.groupe-form {
 
- display       : flex;
- flex-direction: column;
- align-items   : center;
- padding-top   : 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 10px;
 }
 
 
-.groupe-button{
+.groupe-button {
 
- text-align: center;
+  text-align: center;
 }
 
 
-.copyrigth{
- 
-  display    : flex;
-  height     : 46px;
+.copyrigth {
+
+  display: flex;
+  height: 46px;
   align-items: flex-end;
-  
+
 }
-#foot  {
-  color     : black;
+
+#foot {
+  color: black;
   transition: color 1s ease-in-out;
 }
-#foot:hover{
+
+#foot:hover {
   color: white;
 }
- 
+
 
 
 
@@ -154,17 +159,17 @@ height: 100px;
 /*****Home Page ******/
 
 .card {
-  border       : 3px solid #dea702;
+  border: 3px solid #dea702;
   margin-bottom: 25px;
 }
 
 .bodyHome {
-  font-family   : 'Barlow', sans-serif;
-  font-weight   : 400;
-  color         : #083B4C;
-  font-size     : 1.35rem;
+  font-family: 'Barlow', sans-serif;
+  font-weight: 400;
+  color: #083B4C;
+  font-size: 1.35rem;
   letter-spacing: .01rem;
-  line-height   : 1.7;
+  line-height: 1.7;
 }
 
 .footerHome {
@@ -173,22 +178,22 @@ height: 100px;
 
 .footerHome h5 {
   color: white;
-} 
+}
 
 .para {
   font-weight: 400;
-  color      : #083B4C;
-  font-size  : 1.2rem;
+  color: #083B4C;
+  font-size: 1.2rem;
 }
 
 .footerHome>p {
   margin-bottom: 3rem;
-} 
+}
 
 a.nav-link-home {
-  display       : block;
-  color         : #083b4c;
-  padding-top   : 18px;
+  display: block;
+  color: #083b4c;
+  padding-top: 18px;
   padding-bottom: 16px;
 }
 
@@ -206,20 +211,20 @@ a.nav-link-home:hover {
 
 li.btnHome {
   background-color: #dea702;
-  font-weight     : 800;
-  font-size       : .8rem;
-  letter-spacing  : .15rem;
+  font-weight: 800;
+  font-size: .8rem;
+  letter-spacing: .15rem;
   text-align: center;
   display: block;
 }
 
 .btnHome {
   background-color: #083B4C;
-  color           : #dea702;
-  font-weight     : 900;
-  font-size       : .95rem;
-  letter-spacing  : .13rem;
-} 
+  color: #dea702;
+  font-weight: 900;
+  font-size: .95rem;
+  letter-spacing: .13rem;
+}
 
 .btnHome:hover {
   color: white;
@@ -233,47 +238,47 @@ h2,
 span>b {
   text-transform: uppercase;
 
-} 
+}
 
 span>b {
-  font-size     : .8rem;
+  font-size: .8rem;
   letter-spacing: .15rem;
-  font-weight   : 800;
+  font-weight: 800;
 
 }
 
 .h1Home {
-  color         : #dea702;
-  font-size     : 3.5rem;
+  color: #dea702;
+  font-size: 3.5rem;
   letter-spacing: .4rem;
-  margin-bottom : 3rem;
-  line-height   : 1.1;
+  margin-bottom: 3rem;
+  line-height: 1.1;
 }
 
- h2 {
-  color         : #083B4C;
-  font-size     : 2rem;
+h2 {
+  color: #083B4C;
+  font-size: 2rem;
   letter-spacing: .1rem;
-  line-height   : 1.3;
-} 
+  line-height: 1.3;
+}
 
 h3 {
-  font-size  : 26px;
+  font-size: 26px;
   font-weight: 500;
-  overflow   : hidden;
+  overflow: hidden;
   white-space: nowrap;
 }
 
 .h1Home,
 h2 {
   font-weight: 800;
-} 
+}
 
 h5 {
-  font-size     : 2.5rem;
+  font-size: 2.5rem;
   letter-spacing: .1rem;
-  margin-bottom : 1.5rem;
-  font-weight   : 300;
+  margin-bottom: 1.5rem;
+  font-weight: 300;
 }
 
 .card-text {
@@ -282,28 +287,28 @@ h5 {
 }
 
 .clamp {
-  overflow          : hidden;
-  display           : -webkit-box;
+  overflow: hidden;
+  display: -webkit-box;
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
-  min-height        : 100px;
+  min-height: 100px;
 }
 
 .clamp:hover {
-  display           : -webkit-box;
+  display: -webkit-box;
   -webkit-line-clamp: initial;
   -webkit-box-orient: vertical;
 }
 
 
 #empty {
-  padding    : 60px 30px;
-  text-align : center;
-  font-size  : 26px;
+  padding: 60px 30px;
+  text-align: center;
+  font-size: 26px;
   line-height: 1.5;
 }
 
-.profil-icon > a {
+.profil-icon>a {
   padding: 0;
 }
 
@@ -315,7 +320,7 @@ ul li {
 }
 
 
-ul li a  {
+ul li a {
   text-decoration: none;
   padding: 0 50px;
   display: block;
@@ -328,6 +333,7 @@ ul li a .icon {
   overflow: hidden;
   margin: 0 auto 10px;
 }
+
 ul li a .icon .fa {
   width: 100%;
   height: 100%;
@@ -337,6 +343,10 @@ ul li a .icon .fa {
   color: #dea702;
 }
 
+ul li a .icon .fa:last-child {
+  color: #083B4C;
+}
+
 ul li a:hover .icon .fa {
   transform: translateY(-100%);
 }
@@ -344,16 +354,43 @@ ul li a:hover .icon .fa {
 .name {
   text-transform: uppercase;
   font-weight: 800;
-font-size: .8rem;
-letter-spacing: .15rem;
-text-align: center;
-color: #083b4c;
+  font-size: .8rem;
+  letter-spacing: .15rem;
+  text-align: center;
+  color: #dea702;
+  position: relative;
+  height: 20px;
+  width: 100%;
+  display: block;
+  overflow: hidden;
+}
+
+ul li a .name span {
+  display: block;
+  position: relative;
+  line-height: 20px;
+  transition: 0.5s;
+  
+}
+
+ul li a .name span:before {
+  content: attr(data-text);
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: #083B4C;
+}
+
+ul li a:hover .name span {
+  transform: translateY(20px);
 }
 
 @media screen and (max-width: 1000px) {
   .bg-image {
-    background-image     : url("images/Hero.png");
-    height               : 400px;
+    background-image: url("images/Hero.png");
+    height: 400px;
     background-attachment: fixed;
   }
 
@@ -364,10 +401,10 @@ color: #083b4c;
 
 @media screen and (min-width: 1000px) {
   .bg-image {
-    background-image     : url("images/Hero.png");
-    height               : 400px;
+    background-image: url("images/Hero.png");
+    height: 400px;
     background-attachment: fixed;
-    background-size      : contain;
+    background-size: contain;
     /* background-position  : 0% 160%; */
   }
 
@@ -384,62 +421,61 @@ color: #083b4c;
 
 
 .btn-supprimer {
-  width : 32px;
+  width: 32px;
   height: 32px;
 }
 
 .btn-editer {
-  width : 32px;
+  width: 32px;
   height: 32px;
 }
 
 .btn-ajouter {
-  width : 64px;
+  width: 64px;
   height: 64px;
 }
 
 .ajouter-webinaire {
-  border       : 3px solid #dea702;
+  border: 3px solid #dea702;
   margin-bottom: 25px;
-  padding      : 30px;
-  margin-top   : 50px;
+  padding: 30px;
+  margin-top: 50px;
 }
 
-.fond-editer{
+.fond-editer {
   background-color: #083B4C;
-  color           : #FFFFFF
- }
- .fond-editer label
- {
-   color: #FFFFFF;
- }
- 
- .monform{
-   width          : 100%;
-   height         : 100vh;
-   display        : flex;
-   flex-direction : column;
-   justify-content: center;
-   align-items    : center;
-   text-align     : center;
- }
- 
- .form-label{
-   color: #FFFFFF;
- }
- 
- .form-outline .form-control~.form-label{
-   color: #FFFFFF;
- }
- 
- .contour-form
-  {
-    display        : flex;
-    flex-direction : column;
-    justify-content: center;
-    align-items    : center;
-    text-align     : center;
-    width          : 100%;
-    height         : 100vh;
- 
-  }
+  color: #FFFFFF
+}
+
+.fond-editer label {
+  color: #FFFFFF;
+}
+
+.monform {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.form-label {
+  color: #FFFFFF;
+}
+
+.form-outline .form-control~.form-label {
+  color: #FFFFFF;
+}
+
+.contour-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 100vh;
+
+}
