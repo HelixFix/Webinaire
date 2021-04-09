@@ -1,4 +1,4 @@
-![GitHub Logo](/images/logo-entreprise-4.png = 50x50)
+![GitHub Logo](/images/logo-entreprise-4.png){:height="36px" width="36px"}
 
 # Projet de stage
 
