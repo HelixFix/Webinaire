@@ -1,3 +1,5 @@
+![GitHub Logo](/images/logo-entreprise-4.png)
+
 # Projet de stage
 
 Projet réaliser par trois apprenants
