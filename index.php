@@ -1,6 +1,6 @@
 <?php session_start();
-// $_SESSION['user']['nom'] = "Utilisateur";
-// $_SESSION['user']['id'] = 9;
+$_SESSION['user']['nom'] = "Jérôme";
+$_SESSION['user']['id'] = 9;
 // $_SESSION['admin']['nom'] = "Admin";
 
 if (isset($_SESSION['user']['nom'])) echo "Ma variable de session " . $_SESSION['user']['nom'];
