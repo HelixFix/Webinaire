@@ -1,4 +1,4 @@
-<img src="https://github.com/HelixFix/Webinaire/blob/develop/images/logo-entreprise-4.png" width="160">
+<img src="https://github.com/HelixFix/Webinaire/blob/develop/images/logo-entreprise-4.png" width="170">
 
 # Projet de stage
 
