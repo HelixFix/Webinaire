@@ -1,5 +1,5 @@
 <?php session_start();
-$_SESSION['user']['nom'] = "Utilisateur";
+$_SESSION['user']['nom'] = "Jérôme";
 $_SESSION['user']['id'] = 9;
 // $_SESSION['admin']['nom'] = "Admin";
 
