@@ -16,33 +16,35 @@
   </head>
 
   <body class="fond-editer">
-    <?php require_once 'editer.php'; ?>
-    <?php
-    $mysqli = new mysqli('localhost', 'root','', 'webinaire' ) or die(mysqli_error($mysqli));
-    $result = $mysqli->query("SELECT * FROM webinar") or die($mysqli->error);
-//sert voir à quoi ça ressemble dans la bdd entre /**/ ci dessous
-    //pre_r($result);
-    //pre_r($result->fetch_assoc());
 
-    function pre_r($array)
-    {
-      echo '<pre>';
-      print_r($array);
-      echo'</pre>';
-    }
+    <?php require_once 'editer.php';
+    if(isset($_GET['edit'])){
+      $id = $_GET['edit'];
+      $result = $mysqli->query("SELECT * FROM webinar WHERE id=$id") or die($mysqli->error());
+
+        $ligne = $result->fetch_array();
+        $titre = $ligne['nomLive'];
+        $lien = $ligne['lienZoom'];
+        $date = $ligne['date'];
+        $appt = $ligne['heure'];
+        $descriptif = $ligne['resumer'];
+        $photo = $ligne['photo'];
+        $varcache = $ligne['id'];
+
+}
      ?>
 
     <div class="contour-form">
     <form class="monform" action="editer.php" method="POST">
   <!-- lien du zoom -->
   <div class="form-outline col-md-3 mb-4">
-    <input type="text" id="titre" class="form-control" name="titre" />
+    <input type="text" id="titre" class="form-control" name="titre" value="<?php echo $titre;?>" />
     <label class="form-label" for="form1Example1">Titre du webinaire</label>
   </div>
 
   <!-- Titre du zoom -->
   <div class="form-outline col-md-3 mb-4">
-    <input type="url" id="lien" class="form-control" name="lien" />
+    <input type="url" id="lien" class="form-control" name="lien" value="<?php echo $lien; ?>" />
     <label class="form-label" for="form1Example2">Lien vers le zoom</label>
   </div>
 <!--Date et heure-->
@@ -50,21 +52,23 @@
   <label for="start">Date du zoom :</label>
 
 <input type="date" id="start" name="trip-start"
-       value="2021-03-17"
+       value="<?php echo $date; ?>"
        min="2021-03-17" max="2030-03-17">
 </div>
 
 <div class="heure col-md-3 mb-3">
   <label class="form-label" for="appt">Heure de début du zoom :</label>
 
-<input type="time" id="appt" name="appt"
+<input value="<?php echo $appt; ?>" type="time" id="appt" name="appt"
        min="09:00" max="20:00" required>
 </div>
 
 <div class="descriptif col-md-3 mb-3">
   <div class="form-outline">
-  <textarea class="form-control" id="textAreaExample" rows="4" name="description"></textarea>
-  <label class="form-label" for="textAreaExample">Dscriptif de la réunion :</label>
+  <textarea class="form-control" id="textAreaExample" rows="4" name="description">
+  <?php echo $descriptif; ?>
+</textarea>
+  <label class="form-label" for="textAreaExample" >Dscriptif de la réunion :</label>
 </div>
 </div>
 
@@ -75,7 +79,8 @@
 
 <input type="file"
        id="avatar" name="avatar"
-       accept="image/png, image/jpeg">
+       accept="image/png, image/jpeg"
+       value="<?php echo $photo; ?>">
 </div>
 
 <button id="btn-confirmer" type="submit"name="confirmer">Confirmer</button>
@@ -87,6 +92,9 @@
       <!-- Checkbox -->
     </div>
   </div>
+
+  <input type="hidden" name="edit2" value="<?php echo $varcache; ?>">
+
 </form>
 </div>
   </body>
