@@ -18,20 +18,6 @@
   <body class="fond-editer">
 
     <?php require_once 'editer.php';
-    if(isset($_GET['edit'])){
-      $id = $_GET['edit'];
-      $result = $mysqli->query("SELECT * FROM webinar WHERE id=$id") or die($mysqli->error());
-
-        $ligne = $result->fetch_array();
-        $titre = $ligne['nomLive'];
-        $lien = $ligne['lienZoom'];
-        $date = $ligne['date'];
-        $appt = $ligne['heure'];
-        $descriptif = $ligne['resumer'];
-        $photo = $ligne['photo'];
-        $varcache = $ligne['id'];
-
-}
      ?>
 
     <div class="contour-form">
@@ -60,7 +46,7 @@
   <label class="form-label" for="appt">Heure de début du zoom :</label>
 
 <input value="<?php echo $appt; ?>" type="time" id="appt" name="appt"
-       min="09:00" max="20:00" required>
+       min="09:00" max="20:00">
 </div>
 
 <div class="descriptif col-md-3 mb-3">
@@ -83,8 +69,14 @@
        value="<?php echo $photo; ?>">
 </div>
 
-<button id="btn-confirmer" type="submit"name="confirmer">Confirmer</button>
-</div>
+
+<?php if ($uptdate == true) :?>
+    <button id="btn-confirmer" type="submit"name="sauvegarder"class="btn btn-primary">Sauvegarder</button>
+  <?php else: ?>
+          <button id="btn-confirmer" type="submit"name="confirmer"class="btn btn-primary">Confirmer</button>
+        <?php endif; ?>
+
+
 
   <!-- 2 column grid layout for inline styling -->
   <div class="row mb-4">
@@ -97,6 +89,7 @@
 
 </form>
 </div>
+
   </body>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.js"></script>
 </html>

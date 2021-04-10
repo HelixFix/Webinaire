@@ -85,7 +85,8 @@
 
                 <div class="card">
 
-                    <img class="card-img-top" src="https://loremflickr.com/640/360" alt="Card image cap">
+                    <img class="card-img-top" src="<?php echo base64_encode( $ligne['photo'] );?>" alt="Card image cap">
+
 
                     <div class="card-body">
 
