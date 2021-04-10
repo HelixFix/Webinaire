@@ -11,5 +11,4 @@ if(!$connexion){
 }
 else
   "connecion etablie"
-
 ?>

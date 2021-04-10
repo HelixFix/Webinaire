@@ -25,6 +25,20 @@
     <?php } ?>
 
 
+
+    <?php require_once 'editer.php'; ?>
+
+    <?php
+    if (isset($_SESSION['message'])) : ?>
+        <div class="alert alert-<?= $_SESSION['msg_type'] ?>">
+            <?php
+            echo $_SESSION['message'];
+            unset($_SESSION['message']);
+            ?>
+        </div>
+    <?php endif ?>
+
+
     <div class="row">
 
         <?php if (isset($_SESSION['admin']['nom'])) { ?>
@@ -41,6 +55,7 @@
         while ($ligne = $tblWebinaire->fetch()) {
             // var_dump($ligne)
             $date = utf8_encode(strftime("%A %d %B %G", strtotime($ligne['date'])));
+
         ?>
 
 
@@ -49,28 +64,42 @@
                 <?php if (isset($_SESSION['admin']['nom'])) { ?>
 
                     <!-- Supression -->
-                    <a href="index.php?page=form-edit&idwebinaire=<?php echo $ligne['id']; ?>" class="btn btnHome"><img class="btn-supprimer" src="images\x-supp.png" alt="supprimer"></a>
+
+
+                    <a href="index.php?delete=<?php echo $ligne['id']; ?>" class="btn btnHome">
+                        <img class="btn-supprimer" src="images\x-supp.png" alt="supprimer"></a>
+
+
 
                     <!-- Edition -->
-                    <a href="index.php?page=form-edit&idwebinaire=<?php echo $ligne['id']; ?>" class="btn btnHome"><img class="btn-editer " src="images\edition.png" alt="editer"></a>
+
+
+                    <a href="index.php?page=form-edit&edit=<?php echo $ligne['id']; ?>" class="btn btnHome">
+                        <img class="btn-editer" src="images\edition.png" alt="editer">
+                    </a>
+
+
+
+                    <!-- Edition -->
                 <?php } ?>
 
                 <?php if (isset($_SESSION)) { ?>
 
-                <div class="card">
-                    <img class="card-img-top" src="https://loremflickr.com/640/360" alt="Card image cap">
+                    <div class="card">
 
-                    <div class="card-body">
-                        <p class=""><small class="text-muted">Diffusé le <?php echo $date ?></small></p>
+                        <img class="card-img-top" src="https://loremflickr.com/640/360" alt="Card image cap">
 
-                        <h3 class="card-title"><?php echo $ligne['nomLive'] ?></h3>
+                        <div class="card-body">
 
-                        <p class="card-text clamp" onclick="(function(){classList.toggle('clamp')})()" ?><?php echo $ligne['resumer'] ?>
-                        </p>
+                            <p class=""><small class="text-muted">Sera diffusé le <?php echo $date ?> à <?php echo $ligne['heure'] ?></small></p>
 
-                        <a href="index.php?page=rejoindre&idwebinaire=<?php echo $ligne['id']; ?>" class="btn btnHome">Rejoindre le webinaire</a>
+                            <h3 class="card-title"><?php echo $ligne['nomLive'] ?></h3>
+
+                            <p class="card-text clamp" onclick="(function(){classList.toggle('clamp')})()"><?php echo $ligne['resumer'] ?></p>
+
+                            <a href="index.php?page=rejoindre&idwebinaire=<?php echo $ligne['id']; ?>" class="btn btnHome">Rejoindre le webinaire</a>
+                        </div>
                     </div>
-                </div>
                 <?php } ?>
             </div>
         <?php } ?>
