@@ -1,6 +1,7 @@
 <?php
 //session_start();
-
+$varcache=0;
+$uptdate=false;
 $titre = '';
 $lien = '';
 $date = '';
@@ -14,8 +15,24 @@ require_once 'dbconexion.php';
 $mysqli = new mysqli('localhost', 'root','', 'webinaire' ) or die(mysqli_error($mysqli));
 
 
+if(isset($_GET['edit'])){
+  $id = $_GET['edit'];
+  $uptdate=true;
+  $result = $mysqli->query("SELECT * FROM webinar WHERE id=$id") or die($mysqli->error());
 
-if(isset($_POST['confirmer'])){
+    $ligne = $result->fetch_array();
+    $titre = $ligne['nomLive'];
+    $lien = $ligne['lienZoom'];
+    $date = $ligne['date'];
+    $appt = $ligne['heure'];
+    $descriptif = $ligne['resumer'];
+    $photo = $ligne['photo'];
+    $varcache = $ligne['id'];
+
+}
+
+
+if(isset($_POST['sauvegarder'])){
 if($_POST['edit2'] > 0) {
 
   $mysqli->query("UPDATE `webinar` SET
@@ -24,12 +41,12 @@ if($_POST['edit2'] > 0) {
     `date` = '".($_POST['trip-start'])."',
     `heure` = '".($_POST['appt'])."',
     `resumer` = '".addslashes($_POST['description'])."',
-    `photo` = '".($_POST['avatar'])."' WHERE `id` = ".$_POST['edit2'])
-  or die($mysqli->error);
+    `photo` = '".($_POST['avatar'])."' WHERE `id` = ".$_POST['edit2']) or die($mysqli->error);
 
  }
  header('Location: index.php');
 }
+
   elseif (isset($_POST['confirmer'])){
       $titre = $_POST['titre'];
       $lien = $_POST['lien'];
@@ -41,14 +58,16 @@ if($_POST['edit2'] > 0) {
       $mysqli->query("INSERT INTO webinar(nomLive,lienZoom,date,heure,resumer,photo)VALUES('$titre','$lien','$date','$appt','$descriptif','$photo')")
       or die($mysqli->error);
 
-      $_SESSION['message'] = "Sauvegardé";
-      $_SESSION['msg_type'] = "success";
+      /*$_SESSION['message'] = "Sauvegardé";
+      $_SESSION['msg_type'] = "success";*/
+      header('Location: index.php');
 
 }
 
 if(isset($_GET['delete'])){
   $id = $_GET['delete'];
   $mysqli->query("DELETE FROM webinar WHERE id=$id")or die($mysqli->error());
+  header('Location: index.php');
 
 }
 
