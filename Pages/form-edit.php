@@ -21,17 +21,17 @@
      ?>
 
     <div class="contour-form">
-    <form class="monform" action="editer.php" method="POST">
-  <!-- lien du zoom -->
+    <form   class="monform" action="editer.php" method="POST">
+  <!-- lien du zoom enctype="multipart/form-data" -->
   <div class="form-outline col-md-3 mb-4">
-    <input type="text" id="titre" class="form-control" name="titre" value="<?php echo $titre;?>" />
-    <label class="form-label" for="form1Example1">Titre du webinaire</label>
+    <input type="text" id="titre" class="form-control" name="titre" required value="<?php echo $titre;?>" />
+    <label class="form-label" for="form1Example1" >Titre du webinaire</label>
   </div>
 
   <!-- Titre du zoom -->
   <div class="form-outline col-md-3 mb-4">
-    <input type="url" id="lien" class="form-control" name="lien" value="<?php echo $lien; ?>" />
-    <label class="form-label" for="form1Example2">Lien vers le zoom</label>
+    <input type="url" id="lien" class="form-control" name="lien" required value="<?php echo $lien; ?>" />
+    <label class="form-label" for="form1Example2" >Lien vers le zoom</label>
   </div>
 <!--Date et heure-->
 <div class="date col-md-3 mb-4" >
@@ -39,34 +39,36 @@
 
 <input type="date" id="start" name="trip-start"
        value="<?php echo $date; ?>"
-       min="2021-03-17" max="2030-03-17">
+       min="2021-03-17" max="2030-03-17" required>
 </div>
 
 <div class="heure col-md-3 mb-3">
   <label class="form-label" for="appt">Heure de début du zoom :</label>
 
 <input value="<?php echo $appt; ?>" type="time" id="appt" name="appt"
-       min="09:00" max="20:00">
+       min="09:00" max="20:00" required>
 </div>
 
 <div class="descriptif col-md-3 mb-3">
   <div class="form-outline">
-  <textarea class="form-control" id="textAreaExample" rows="4" name="description">
+  <textarea class="form-control" id="textAreaExample" rows="4" name="description" required>
   <?php echo $descriptif; ?>
 </textarea>
   <label class="form-label" for="textAreaExample" >Dscriptif de la réunion :</label>
 </div>
 </div>
 
-<!--Ajouter une image-->
+<!--Ajouter une image
 
 <div class="ajouter-image col-md-3 mb-3">
   <label for="avatar">Image pour le webinaire:</label>
 
 <input type="file"
        id="avatar" name="avatar"
-       value="<?php echo $photo; ?>">
+       accept="image/png, image/jpeg"
+       value="">
 </div>
+-->
 
 
 <?php if ($uptdate == true) :?>

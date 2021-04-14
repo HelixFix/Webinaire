@@ -87,7 +87,7 @@
 
                     <div class="card">
 
-                        <img class="card-img-top" src="https://loremflickr.com/640/360" alt="Card image cap">
+                    <img class="img-top" src="images\logo.jpg" height="150" width="150" alt="Card image cap">
 
 
                         <div class="card-body">

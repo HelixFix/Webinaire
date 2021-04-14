@@ -7,7 +7,6 @@ $lien = '';
 $date = '';
 $appt = '';
 $descriptif = '';
-$photo = '';
 
 
 require_once 'dbconexion.php';
@@ -27,7 +26,6 @@ if(isset($_GET['edit'])){
     $date = $ligne['date'];
     $appt = $ligne['heure'];
     $descriptif = $ligne['resumer'];
-    $photo = $ligne['photo'];
     $varcache = $ligne['id'];
 
 }
@@ -41,22 +39,20 @@ if($_POST['edit2'] > 0) {
     `lienZoom` = '".addslashes($_POST['lien'])."',
     `date` = '".($_POST['trip-start'])."',
     `heure` = '".($_POST['appt'])."',
-    `resumer` = '".addslashes($_POST['description'])."',
-    `photo` = '".($_POST['avatar'])."' WHERE `id` = ".$_POST['edit2']) or die($mysqli->error);
+    `resumer` = '".addslashes($_POST['description'])."' WHERE `id` = ".$_POST['edit2']) or die($mysqli->error);
 
  }
  header('Location: index.php');
 }
 
   elseif (isset($_POST['confirmer'])){
-      $titre = $_POST['titre'];
-      $lien = $_POST['lien'];
+      $titre = addslashes($_POST['titre']);
+      $lien = addslashes($_POST['lien']);
       $date = $_POST['trip-start'];
       $appt = $_POST['appt'];
-      $descriptif = $_POST['description'];
-      $photo = $_POST['avatar'];
+      $descriptif = addslashes($_POST['description']);
 
-      $mysqli->query("INSERT INTO webinar(nomLive,lienZoom,date,heure,resumer,photo)VALUES('$titre','$lien','$date','$appt','$descriptif','$photo')")
+      $mysqli->query("INSERT INTO webinar(nomLive,lienZoom,date,heure,resumer)VALUES('$titre','$lien','$date','$appt','$descriptif')")
       or die($mysqli->error);
 
       /*$_SESSION['message'] = "Sauvegardé";
