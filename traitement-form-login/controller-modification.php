@@ -27,7 +27,7 @@ $ville = premier_Controle(($_POST["ville"]));
   
   if(!preg_match("/^[a-zA-Z]*$/", $nom)){
      
-     header("Location:/index.php?page=form-modification&userId=$id&error=invalidnom");
+     header("Location:../index.php?page=form-modification&userId=$id&error=invalidnom");
    exit();
       }
   
@@ -37,7 +37,7 @@ $ville = premier_Controle(($_POST["ville"]));
   
   elseif(!preg_match("/^[a-zA-Z-']*$/", $prenom)){
      
-     header("Location:/index.php?page=form-modification&userId=$id&error=invalidprenom");
+     header("Location:../index.php?page=form-modification&userId=$id&error=invalidprenom");
    exit();
       }
   
@@ -46,7 +46,7 @@ $ville = premier_Controle(($_POST["ville"]));
   
   elseif (!filter_var($mail,FILTER_VALIDATE_EMAIL)){
      
-     header("Location:/index.php?page=form-modification&userId=$id&error=invalidmail");
+     header("Location:../index.php?page=form-modification&userId=$id&error=invalidmail");
      exit();
   }
   
@@ -55,24 +55,24 @@ $ville = premier_Controle(($_POST["ville"]));
 
 elseif (strlen( $password) <= 8) {
 
-header("Location:/index.php?page=form-modification&userId=$id&error=invalidpasswordc");
+header("Location:../index.php?page=form-modification&userId=$id&error=invalidpasswordc");
 exit();
 
 
 }
 elseif(!preg_match("#[0-9]+#",$password)) {
 
-header("Location:/index.php?page=form-modification&userId=$id&error=invalidpasswordn");
+header("Location:../index.php?page=form-modification&userId=$id&error=invalidpasswordn");
    exit();
 }
 elseif(!preg_match("#[A-Z]+#",$password)) {
 
-header("/index.php?page=form-modification&userId=$id&error=invalidpasswordL");
+header("Location:../index.php?page=form-modification&userId=$id&error=invalidpasswordL");
   exit();
 }
 elseif(!preg_match("#[a-z]+#",$password)) {
 
-header("Location:index.php?page=form-modification&userId=$id&error=invalidpasswordl");
+header("Location:../index.php?page=form-modification&userId=$id&error=invalidpasswordl");
    exit();
 }
 
@@ -83,7 +83,7 @@ header("Location:index.php?page=form-modification&userId=$id&error=invalidpasswo
   
   elseif(!is_numeric($telephone)){
     
-     header("Location:/index.php?page=form-modification&userId=$id&error=invalidtel");
+     header("Location:../index.php?page=form-modification&userId=$id&error=invalidtel");
    exit();
       }
   
@@ -94,7 +94,7 @@ header("Location:index.php?page=form-modification&userId=$id&error=invalidpasswo
 
   elseif(!preg_match("/^[a-zA-Z-']*$/", $emploi)){
   ;
-     header("Location:/index.php?page=form-modification&userId=$id&error=invalidemploi");
+     header("Location:../index.php?page=form-modification&userId=$id&error=invalidemploi");
    exit();
       }
   
@@ -102,7 +102,7 @@ header("Location:index.php?page=form-modification&userId=$id&error=invalidpasswo
 
   elseif(!preg_match("/^[a-zA-Z-']*$/", $ville)){
     
-     header("Location:/index.php?page=form-modification&userId=$id&error=invalidville");
+     header("Location:../index.php?page=form-modification&userId=$id&error=invalidville");
    exit();
       } 
      

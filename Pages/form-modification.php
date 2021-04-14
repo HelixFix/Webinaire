@@ -272,7 +272,7 @@
           
             <div class=" englobe col-lg-7 ">
                 <h1 class="titre-creation">Modification</h1>
-             <form action="/traitement-form-login/controller-modification.php" method="POST" class="groupe-form" Allow: OPTIONS, GET, HEAD, POST>
+             <form action="traitement-form-login/controller-modification.php" method="POST" class="groupe-form" Allow: OPTIONS, GET, HEAD, POST>
                 
 
 

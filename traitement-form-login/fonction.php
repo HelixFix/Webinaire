@@ -102,7 +102,7 @@ function modification_utilisateur($conn, $nom, $prenom, $mail, $password, $telep
    $declaration = mysqli_stmt_init($conn);
    if (!mysqli_stmt_prepare($declaration, $sql)) {
 
-    header("Location:/index.php?page=form-modification&userId=$id&error=echecenvoie2");
+    header("Location:../index.php?page=form-modification&userId=$id&error=echecenvoie2");
   
      exit();
    }
@@ -111,7 +111,7 @@ function modification_utilisateur($conn, $nom, $prenom, $mail, $password, $telep
      $hashpassword = password_hash($password, PASSWORD_DEFAULT);
      mysqli_stmt_bind_param($declaration, "sssssss", $nom, $prenom, $mail, $hashpassword, $telephone, $emploi, $ville);
      mysqli_stmt_execute($declaration);
-     header("Location:Location:index.php");
+     header("Location:Location:../index.php");
      
      
 
@@ -119,7 +119,7 @@ function modification_utilisateur($conn, $nom, $prenom, $mail, $password, $telep
       session_start();
       session_unset();
       session_destroy();
-     header("Location:index.php?page=login");
+     header("Location:../index.php?page=login");
      }
      
      mysqli_stmt_close($declaration);
@@ -226,7 +226,7 @@ function Login_admin($conn, $mail, $password)
 
   if ($adminexiste === false) {
 
-    header("Location:/index.php?page=login&error=loginadminexiste");
+    header("Location:../index.php?page=login&error=loginadminexiste");
     exit();
   }
 
@@ -237,13 +237,13 @@ function Login_admin($conn, $mail, $password)
   $checkpassword = password_verify($password, $passwordhashes);
   if ($checkpassword === false) {
 
-    header("Location:/index.php?page=login&error=logininpaspareil");
+    header("Location:../index.php?page=login&error=logininpaspareil");
   } else if ($checkpassword === true) {
 
     session_start();
 
     $_SESSION["admin"]['mail'] = $adminexiste["mail"];
-    header("location:/index.php");
+    header("location:../index.php");
     exit();
   }
 }
@@ -259,7 +259,7 @@ function admin_existe($conn, $mail)
   on a preparé la declration on va combiner l intruction sql a la declaration */
   $declaration = mysqli_stmt_init($conn);
   if (!mysqli_stmt_prepare($declaration, $sql)) {
-    header("Location:/index.php?page=login&error=echecrecupadmin");
+    header("Location:../index.php?page=login&error=echecrecupadmin");
     exit();
   }
 
@@ -298,7 +298,7 @@ function insertion_admin($conn, $mail, $password)
     $hashpassword = password_hash($password, PASSWORD_DEFAULT);
     mysqli_stmt_bind_param($declaration, "ss",  $mail, $hashpassword);
     mysqli_stmt_execute($declaration);
-    header("Location:/index.php?page=login");
+    header("Location:../index.php?page=login");
     mysqli_stmt_close($declaration);
   }
 }
