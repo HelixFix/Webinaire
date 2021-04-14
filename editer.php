@@ -18,7 +18,8 @@ $mysqli = new mysqli('localhost', 'root','', 'webinaire' ) or die(mysqli_error($
 if(isset($_GET['edit'])){
   $id = $_GET['edit'];
   $uptdate=true;
-  $result = $mysqli->query("SELECT * FROM webinar WHERE id=$id") or die($mysqli->error());
+  $result = $mysqli->query("SELECT * FROM webinar WHERE id=$id") or die(mysqli_error($mysqli));
+
 
     $ligne = $result->fetch_array();
     $titre = $ligne['nomLive'];
@@ -66,7 +67,8 @@ if($_POST['edit2'] > 0) {
 
 if(isset($_GET['delete'])){
   $id = $_GET['delete'];
-  $mysqli->query("DELETE FROM webinar WHERE id=$id")or die($mysqli->error());
+  $mysqli->query("DELETE FROM webinar WHERE id=$id")or die(mysqli_error($mysqli));
+
   header('Location: index.php');
 
 }
