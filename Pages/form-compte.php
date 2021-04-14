@@ -20,7 +20,7 @@
   <header>
     <div class="logo">
 
-      <a href="/index.php"><img class="logop" src="images/logop.png" alt="Logo Praxis"></a>
+      <a href="index.php"><img class="logop" src="images/logop.png" alt="Logo Praxis"></a>
     </div>
   </header>
 
@@ -265,9 +265,9 @@
             ?>
             </span>
 
-<!-- <?php  if($_GET["error"] = "invalidnom") + 'is-invalid'  ?> -->
 
-            <form action="/traitement-form-login/controller-inscription.php" method="POST" class="groupe-form" novalidate Allow: OPTIONS, GET, HEAD, POST>
+
+            <form action="traitement-form-login/controller-inscription.php" method="POST" class="groupe-form" novalidate Allow: OPTIONS, GET, HEAD, POST>
               <div class="form-row col-lg-7">
                 <div class="form-outline mb-4">
                   <input type="text" id="nom" name="nom" class="form-control " value="<?php if(isset($_GET['$nom'])){echo $_GET['$nom'];}  ?>" required="required"/>
@@ -286,13 +286,13 @@
               <div class="form-row col-lg-7">
                 <div class="form-outline mb-4">
                   <input type="mail" id="mail" name="mail" class="form-control" value="<?php if(isset($_POST['$mail'])){   echo $_POST['$mail'];} ?>" required="required" />
-                  <label class="form-label" for="mail">Adreese-Mail</label>
+                  <label class="form-label" for="mail">Adresse-Mail</label>
                 </div>
               </div>
 
               <div class="form-row col-lg-7">
                 <div class="form-outline mb-4">
-                  <input type="password" id="password" name="password" class="form-control"value="<?php if(isset($_POST['$ville'])){   echo $_POST['$ville'];} ?>" required="required" />
+                  <input type="password" id="password" name="password" class="form-control"value="<?php if(isset($_POST['$password'])){   echo $_POST['$password'];} ?>" required="required" />
                   <label class="form-label" for="password">Mot de passe</label>
                 </div>
               </div>
@@ -306,8 +306,8 @@
 
               <div class="form-row col-lg-7">
                 <div class="form-outline mb-4">
-                  <input type="text" id="job" name="job" class="form-control" value="<?php if(isset($_POST['$job'])){   echo $_POST['$job'];} ?>" required="required" />
-                  <label class="form-label" for="job">Emploie</label>
+                  <input type="text" id="emploi" name="emploi" class="form-control" value="<?php if(isset($_POST['$emploi'])){   echo $_POST['$emploi'];} ?>" required="required" />
+                  <label class="form-label" for="emploi">Emploie</label>
                 </div>
               </div>
 

@@ -3,7 +3,7 @@
 //$_SESSION['user']['id'] = 9;
 // $_SESSION['admin']['nom'] = "Admin";
 
-if (isset($_SESSION['user']['mail'])) echo "Ma variable de session " . $_SESSION['user']['mail'];
+// if (isset($_SESSION['user']['mail'])) echo "Ma variable de session " . $_SESSION['user']['mail'];
 $db = new PDO('mysql:host=localhost;dbname=webinaire', 'root', '');
 
 setlocale(LC_TIME, "fr_FR", "French");

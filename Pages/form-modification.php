@@ -44,7 +44,7 @@
              
   <?php
   
-  $mysqli2 = new mysqli('localhost', 'root','', 'user' ) or die(mysqli_error($mysqli2));
+  $mysqli2 = new mysqli('localhost', 'root','', 'webinaire' ) or die(mysqli_error($mysqli2));
 
  if (isset($_GET['userId'])) {
 
@@ -60,7 +60,7 @@
 //   $declaration = mysqli_stmt_init($conn);
 //   mysqli_stmt_prepare($declaration, $sql);
 
-//   mysqli_stmt_bind_param($declaration, "",$nom, $prenom, $mail, $password, $telephone, $job, $ville);
+//   mysqli_stmt_bind_param($declaration, "",$nom, $prenom, $mail, $password, $telephone, $emploi, $ville);
 //   mysqli_stmt_execute($declaration);
 //   /*on verifier si on recupere un resultat et si c'est le cas alors le alors le resulat
 //  true alors mla fonction sera exécuter parque un utilisateur existe alors il devra utiliser 

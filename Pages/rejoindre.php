@@ -5,7 +5,7 @@ if (!$_SESSION) {
 } else {
 
     $join = "INSERT INTO `participe`( `id`, `id_utilisateur`) 
-    VALUES ('" . $_GET['idwebinaire'] . "' , 9 )";
+    VALUES ('" . $_GET['idwebinaire'] . "' , ".$_SESSION['user']['id']. " )";
 
     $db->query($join); // Exécute la requete
 

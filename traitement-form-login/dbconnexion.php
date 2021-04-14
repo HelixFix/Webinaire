@@ -3,7 +3,7 @@
 $dbNomServeur = "localhost";
 $dbUserName = "root";
 $dbPassword = "";
-$dbName = "user";
+$dbName = "webinaire";
 
 
 $conn =  mysqli_connect($dbNomServeur, $dbUserName, $dbPassword, $dbName);

@@ -34,7 +34,7 @@
 
 
  
-    <form action="/traitement-form-login/controller-login.php" method="POST"  class="form-container bg "Allow: OPTIONS, GET, HEAD, POST>
+    <form action="traitement-form-login/controller-login.php" method="POST"  class="form-container bg "Allow: OPTIONS, GET, HEAD, POST>
     
       <h1 class="titre">Se Connecter</h1>
       <!--error condition-->
@@ -165,13 +165,13 @@ if(isset($_GET["error"])) {
             <!-- Checkbox -->
             <div class="col">
                 <!-- Simple link -->
-                <a class="a" href="#!">Mot de passe oublié?</a>
+                <a class="a" href="#">Mot de passe oublié?</a>
               </div>
           </div>
       
           <div class="col-mb-1 lien">
             <!-- lien -->
-            <a class="a" href="#!">Créer un compte</a>
+            <a class="a" href="index.php?page=form-compte">Créer un compte</a>
           </div>
         </div>
       

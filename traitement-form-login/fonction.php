@@ -64,18 +64,27 @@ function utilisateur_existe($conn, $mail){
   //Declaration preparer 
 
 
-  $sql = "INSERT INTO utilisateur ( nom, prenom, mail, motDePasse, telephone, emploi, ville, dateIncription) VALUES(?, ?, ?, ?, ?, ?, ?, NOW()) ";
+  $sql = "INSERT INTO utilisateur (nom, prenom, mail, motDePasse, telephone, emploi, ville, dateIncription) VALUES(?, ?, ?, ?, ?, ?, ?, NOW())";
   $declaration = mysqli_stmt_init($conn);
   if (!mysqli_stmt_prepare($declaration, $sql)) {
 
-    header("Location:/index.php?page=form-compte&error=echecenvoie");
+    header("Location:../index.php?page=form-compte&error=echecenvoie");
     exit();
   } else {
     $hashpassword = password_hash($password, PASSWORD_DEFAULT);
     mysqli_stmt_bind_param($declaration, "sssssss", $nom, $prenom, $mail, $hashpassword, $telephone, $emploi, $ville);
     mysqli_stmt_execute($declaration);
-    header("Location:/index.php?page=login");
+    // echo "Hashpass: $nom <br>";
+    // echo "Hashpass: $prenom <br>";
+    // echo "Hashpass: $mail <br>";
+    // echo "Hashpass: $password <br>";
+    // echo "Hashpass: $telephone <br>";
+    // echo "Hashpass: $emploi <br>";
+    // echo "Hashpass: $ville <br>";
+    echo "Hashpass: $hashpassword <br>";
+    header("Location:../index.php?page=login");
     mysqli_stmt_close($declaration);
+    
   }
 }
 
@@ -102,7 +111,7 @@ function modification_utilisateur($conn, $nom, $prenom, $mail, $password, $telep
      $hashpassword = password_hash($password, PASSWORD_DEFAULT);
      mysqli_stmt_bind_param($declaration, "sssssss", $nom, $prenom, $mail, $hashpassword, $telephone, $emploi, $ville);
      mysqli_stmt_execute($declaration);
-     header("Location:Location:/index.php");
+     header("Location:Location:index.php");
      
      
 
@@ -110,7 +119,7 @@ function modification_utilisateur($conn, $nom, $prenom, $mail, $password, $telep
       session_start();
       session_unset();
       session_destroy();
-     header("Location:/index.php?page=login");
+     header("Location:index.php?page=login");
      }
      
      mysqli_stmt_close($declaration);
@@ -137,11 +146,11 @@ function controle_login($mail, $password)
 
   if (empty($mail)) {
 
-    header("Location:/index.php?page=login?&error=champvidelog");
+    header("Location:../index.php?page=login&error=champvidelog");
     exit();
   } elseif (!filter_var($mail, FILTER_VALIDATE_EMAIL)) {
 
-    header("Location:/index.php?page=login?&error=maillog");
+    header("Location:../index.php?page=login&error=maillog");
     exit();
   }
 
@@ -150,23 +159,23 @@ function controle_login($mail, $password)
 
   if (empty($password)) {
 
-    header("Location:/index.php?page=login&error=passwordvidelog");
+    header("Location:../index.php?page=login&error=passwordvidelog");
     exit();
   } elseif (strlen($password) <= '8') {
 
-    header("Location:/index.php?page=login&error=passwordlogh");
+    header("Location:../index.php?page=login&error=passwordlogh");
     exit();
   } elseif (!preg_match("#[0-9]+#", $password)) {
 
-    header("Location:/index.php?page=login&error=passwordlogn");
+    header("Location:../index.php?page=login&error=passwordlogn");
     exit();
   } elseif (!preg_match("#[A-Z]+#", $password)) {
 
-    header("Location:/index.php?page=login&error=passwordlogL");
+    header("Location:../index.php?page=login&error=passwordlogL");
     exit();
   } elseif (!preg_match("#[a-z]+#", $password)) {
 
-    header("Location:/index.php?page=login&error=passwordlogn");
+    header("Location:../index.php?page=login&error=passwordlogn");
     exit();
   }
 }
@@ -179,7 +188,7 @@ function Login_user($conn, $mail, $password)
 
   if ($userexiste === false) {
 
-    header("Location:/index.php?page=login&error=loginincorrecte");
+    header("Location:../index.php?page=login&error=loginincorrecte");
     exit();
   }
 
@@ -189,14 +198,15 @@ function Login_user($conn, $mail, $password)
   //on compare les deux mot de passe 
   $checkpassword = password_verify($password, $passwordhashes);
   if ($checkpassword === false)
-    header("Location:/index.php?page=login&error=loginincorrecte2");
+    header("Location:../index.php?page=login&error=loginincorrecte2");
   else if ($checkpassword === true) {
 
     session_start();
 
     $_SESSION["user"]["mail"] = $userexiste["mail"];
     $_SESSION["user"]["id"] = $userexiste["id"];
-    header("Location:/index.php");
+    $_SESSION['user']['nom'] = $userexiste["nom"];
+    header("Location:../index.php");
     exit();
   }
 }
