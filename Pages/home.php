@@ -85,7 +85,7 @@
 
                 <div class="card">
 
-                    <img class="card-img-top" src="<?php echo base64_encode( $ligne['photo'] );?>" alt="Card image cap">
+                    <img class="card-img-top" src="images\logo.jpg" alt="Card image cap">
 
 
                     <div class="card-body">
