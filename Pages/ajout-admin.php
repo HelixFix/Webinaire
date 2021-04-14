@@ -1,5 +1,9 @@
+<?php 
+  if(isset($_SESSION['admin']['mail'])){
 
 
+
+?>
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -35,7 +39,7 @@
           </div>
 
           <div class="englobe col-lg-7">
-            <h1 class="titre-creation">Rajouter un nouveau Admin</h1>
+            <h1 class="titre-creation">Ajouter un nouvel Admin</h1>
             
             
             <span class="text-center h-25">
@@ -161,31 +165,23 @@
             ?>
             </span>
 
-            <form action="/configajouteadmin.php" method="POST" class="groupe-form" novalidate Allow: OPTIONS, GET, HEAD, POST>
+            <form action="/traitement-form-login/Controller-rajout-admin.php" method="POST" class="groupe-form" novalidate Allow: OPTIONS, GET, HEAD, POST>
              
                
 
               <div class="form-row col-lg-7">
                 <div class="form-outline mb-4">
-                  <input type="mail" id="mail" name="mail" class="form-control" value="<?php if(isset($_POST['$mail'])) echo $_POST['$mail']; ?>" required="required" />
-                  <label class="form-label" for="mail">Adreese-Mail</label>
-                    <div class="invalid-feedback">
-                    <? php echo isset($_GET["error"] == "invalidtel") ?>
-                  </div>
+                  <input type="mail" id="mail" name="mail" class="form-control" value="<?php if(isset($_POST['$mail'])){ echo $_POST['$mail'];} ?>" required="required" />
+                  <label class="form-label" for="mail">Adresse mail</label>
                 </div>
               </div>
 
               <div class="form-row col-lg-7">
                 <div class="form-outline mb-4">
-                  <input type="password" id="password" name="password" class="form-control"value="<?php if(isset($_POST['$password'])) echo $_POST['$password']; ?>" required="required" />
+                  <input type="password" id="password" name="password" class="form-control"value="" required="required" />
                   <label class="form-label" for="password">Mot de passe</label>
-                    <div class="invalid-feedback">
-                  <? php echo isset($_GET["error"] == "invalidpassword") ?>
-                  </div>
                 </div>
               </div>
-
-              
 
                 <div class="form-outline mb-4">
                   <div class="button3">
@@ -212,3 +208,4 @@
 </body>
 
 </html>
+<?php } ?>

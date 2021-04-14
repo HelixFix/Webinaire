@@ -34,7 +34,7 @@
 
 
  
-    <form action="/login_controle.php" method="POST"  class="form-container bg "Allow: OPTIONS, GET, HEAD, POST>
+    <form action="/traitement-form-login/controller-login.php" method="POST"  class="form-container bg "Allow: OPTIONS, GET, HEAD, POST>
     
       <h1 class="titre">Se Connecter</h1>
       <!--error condition-->
@@ -44,25 +44,25 @@
 if(isset($_GET["error"])) {
 
     if ($_GET["error"] == "champvidelog") {
-                echo "<div class=\"text-center mb-3  alert alert-danger erreur bg-danger text-warning
+                echo "<div class=\"text-center mb-3  alert alert-danger erreur bg-danger text-white
 
                 \" role=\"alert\" data-mdb-color=\"danger\">
-              Entrer votre mail</div>";
+              Entrer votre mail !</div>";
               } 
               elseif ($_GET["error"] == "maillog") {
-                echo "<div class=\"text-center mb-3  alert alert-danger erreur bg-danger text-warning
+                echo "<div class=\"text-center mb-3  alert alert-danger erreur bg-danger text-white
 
                 \" role=\"alert\" data-mdb-color=\"danger\">
-              Mail incorrecte</div>";
+              Mail incorrecte !</div>";
                 
               } 
               
               
               elseif ($_GET["error"] == "passwordvidelog") {
-                echo "<div class=\"text-center mb-3  alert alert-danger erreur bg-danger text-warning
+                echo "<div class=\"text-center mb-3  alert alert-danger erreur bg-danger text-white
 
                 \" role=\"alert\" data-mdb-color=\"danger\">
-                Entrer votre mot de passe
+                Entrer votre mot de passe !
               </div>";
                 
                
@@ -70,9 +70,9 @@ if(isset($_GET["error"])) {
              
               
               elseif ($_GET["error"] == "passwordlogh") {
-                echo "<div class=\"text-center mb-3  alert alert-danger erreur bg-danger text-warning
+                echo "<div class=\"text-center mb-3  alert alert-danger erreur bg-danger text-white
 
-                \" role=\"alert\" data-mdb-color=\"danger\">Mot de passe : il faut minimun 8 caractères!
+                \" role=\"alert\" data-mdb-color=\"danger\">Mot de passe : il faut minimun 8 caractères !
               </div>";
                 
                 
@@ -81,7 +81,7 @@ if(isset($_GET["error"])) {
               
               elseif ($_GET["error"] == "passwordlogn") {
 
-                echo "<div class=\"text-center mb-3  alert alert-danger erreur bg-danger text-warning
+                echo "<div class=\"text-center mb-3  alert alert-danger erreur bg-danger text-white
 
                 \" role=\"alert\" data-mdb-color=\"danger\">Mot de passe :  il faut minimun 1 nombre !
               </div>";
@@ -89,7 +89,7 @@ if(isset($_GET["error"])) {
               } 
 
               elseif ($_GET["error"] == "passwordlogL") {
-                 echo "<div class=\"text-center mb-3  alert alert-danger erreur bg-danger text-warning
+                 echo "<div class=\"text-center mb-3  alert alert-danger erreur bg-danger text-white
 
                 \" role=\"alert\" data-mdb-color=\"danger\">Mot de passe :  il faut minimun 1 majuscule !
               </div>";
@@ -98,7 +98,7 @@ if(isset($_GET["error"])) {
               } 
               
               elseif ($_GET["error"] == "passwordlogn") {
-                 echo "<div class=\"text-center mb-3  alert alert-danger erreur bg-danger text-warning
+                 echo "<div class=\"text-center mb-3  alert alert-danger erreur bg-danger text-white
 
                 \" role=\"alert\" data-mdb-color=\"danger\"> Mot de passe : il faut minimun 1 minuscule !
               </div>";
@@ -107,9 +107,9 @@ if(isset($_GET["error"])) {
                             } 
 
                             elseif ($_GET["error"] == "echecrecupadmin") {
-                               echo "<div class=\"text-center mb-3  alert alert-danger erreur bg-danger text-warning
+                               echo "<div class=\"text-center mb-3  alert alert-danger erreur bg-danger text-white
 
-                \" role=\"alert\" data-mdb-color=\"danger\">Echec de recuperation des données admin
+                \" role=\"alert\" data-mdb-color=\"danger\">Echec de recuperation des données admin !
               </div>";
                 
                               
@@ -117,26 +117,26 @@ if(isset($_GET["error"])) {
 
                             
                             elseif ($_GET["error"] == "loginadminexiste") {
-                               echo "<div class=\"text-center mb-3  alert alert-danger erreur bg-danger text-warning
+                               echo "<div class=\"text-center mb-3  alert alert-danger erreur bg-danger text-white
 
-                \" role=\"alert\" data-mdb-color=\"danger\">Il n existe pas dans la base de donnee
+                \" role=\"alert\" data-mdb-color=\"danger\">Il n existe pas dans la base de donnee !
               </div>";
                 
                               
                             } 
                             elseif ($_GET["error"] == "logininpaspareil") {
-                               echo "<div class=\"text-center mb-3  alert alert-danger erreur bg-danger text-warning
+                               echo "<div class=\"text-center mb-3  alert alert-danger erreur bg-danger text-white
 
-                \" role=\"alert\" data-mdb-color=\"danger\">Mot de passe n'est pas identique
+                \" role=\"alert\" data-mdb-color=\"danger\"> Le mot de passe fournie ne sont pas identique !
               </div>";
                 
                              
                             } 
                             
                 elseif ($_GET["error"] == "loginincorrecte2") {
-                   echo "<div class=\"text-center mb-3  alert alert-danger erreur bg-danger text-warning
+                   echo "<div class=\"text-center mb-3  alert alert-danger erreur bg-danger text-white
 
-                \" role=\"alert\" data-mdb-color=\"danger\">les identifiant sont incorrect
+                \" role=\"alert\" data-mdb-color=\"danger\">Les identifiant fournis sont incorrecte !
               </div>";
                 
                   

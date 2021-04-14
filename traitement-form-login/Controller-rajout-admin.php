@@ -1,7 +1,7 @@
 <?php
 
 require_once 'dbconnexion.php';
-require_once 'validation.php';
+require_once 'fonction.php';
 
 if (isset($_POST['submit'])){
 
@@ -11,15 +11,15 @@ if (isset($_POST['submit'])){
     
     
 
-if (verife($conn, $mail) == !false){
-  echo "c est faux";
+if (admin_existe($conn, $mail) == !false){
+  echo " Error";
     exit();
   }
   else{  
      
-creation($conn, $mail, $password);
+insertion_admin($conn, $mail, $password);
 
 }
-var_dump($_POST);
+
 }
 
