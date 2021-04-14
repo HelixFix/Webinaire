@@ -1,9 +1,9 @@
 <?php session_start();
-// $_SESSION['user']['nom'] = "Jérôme";
-// $_SESSION['user']['id'] = 9;
-$_SESSION['admin']['nom'] = "Admin";
+//$_SESSION['user']['nom'] = "Jérôme";
+//$_SESSION['user']['id'] = 9;
+// $_SESSION['admin']['nom'] = "Admin";
 
-if (isset($_SESSION['user']['nom'])) echo "Ma variable de session " . $_SESSION['user']['nom'];
+if (isset($_SESSION['user']['mail'])) echo "Ma variable de session " . $_SESSION['user']['mail'];
 $db = new PDO('mysql:host=localhost;dbname=webinaire', 'root', '');
 
 setlocale(LC_TIME, "fr_FR", "French");
@@ -41,7 +41,7 @@ if (!isset($_GET['page'])) $_GET['page'] = 'home'; ?>
 
 
 <?php if ($_GET['page'] == 'home') include('menu.php');
-elseif ($_GET['page'] == 'form-modfication') include('menu.php')
+elseif ($_GET['page'] == 'form-modification') include('menu.php')
 ?>
 
 <?php if (file_exists('pages/' . $_GET['page'] . '.php')) include('pages/' . $_GET['page'] . '.php');

@@ -1,7 +1,7 @@
 <?php
 
 include 'dbconnexion.php';
-include 'validation.php';
+include 'fonction.php';
 //varaible definit avec aucune valeur null
  $mail = $password ="";
 
@@ -23,7 +23,7 @@ $check = premier_Controle(($_POST["check"]));
   
 
 
-    deuxieme_controle_champ( $mail, $password);
+    controle_login( $mail, $password);
     Login_user($conn,$mail,$password);
 
   }elseif ($check == 1){
@@ -31,32 +31,10 @@ $check = premier_Controle(($_POST["check"]));
   
  
 
-  deuxieme_controle_champ( $mail, $password);
+  controle_login( $mail, $password);
  Login_admin($conn,$mail,$password);
 
 
 }
 
 }
-print_r($check);
-
-
- 
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -14,7 +14,7 @@
                             <a class="nav-link active" aria-current="page" href="#">Home</a>
                         </li>-->
 
-                        <?php if (isset($_SESSION['user']['id'])) { ?>
+                        <?php if (isset($_SESSION['user']['mail'])) { ?>
                             <li class="nav-item">
                                 <!-- <a class="nav-link" href="index.php?page=listparticipe">Mes webinaires</a> -->
                                 <a href="index.php?page=listparticipe">
@@ -26,8 +26,8 @@
                                 </a>
                             </li>
                             <li class="nav-item ">
-                                <!-- <a class="nav-link" href="index.php?page=form-modfication&userID=<?php echo $_SESSION['user']['id']; ?>"><img height="58px" src="images/profile-default.svg"></img> -->
-                                <a href="index.php?page=form-modfication&userID=<?php echo $_SESSION['user']['id']; ?>">
+                                 <a class="nav-link" href="/index.php?page=form-modification&userId=<?php echo $_SESSION['user']['id']; ?>"><img height="58px" src="images/profile-default.svg"></img> 
+                                <a href="/index.php?page=form-modification&userId=<?php echo $_SESSION['user']['id']; ?>">
                                     <div class="icon">
                                         <i class="fa fa-user" aria-hidden="true"></i>
                                         <i class="fa fa-user" aria-hidden="true"></i>
@@ -36,7 +36,7 @@
                                 </a>
                             </li>
                             <!-- <li class="profil-text nav-item">
-                                <a class="nav-link" href="index.php?page=form-modfication&userID=<?php echo $_SESSION['user']['id']; ?>">Mon profil
+                                <a class="nav-link" href="index.php?page=form-modification&userID=<?php echo $_SESSION['user']['id']; ?>">Mon profil
                                 </a>
                             </li> -->
                         <?php } ?>
