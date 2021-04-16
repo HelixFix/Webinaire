@@ -16,7 +16,7 @@
 <br>
 
 <body class="bodyHome">
-    <h2>
+    <h2 id="webinaires">
         Les prochains webinaires
     </h2>
 
@@ -40,6 +40,8 @@
 
 
     <div class="row">
+
+                    <!-- Ajout -->
 
         <?php if (isset($_SESSION['admin']['mail'])) { ?>
             <div class="col-lg-4 col-md-6 col-sm-6 col-12">
@@ -80,7 +82,7 @@
 
 
 
-                    <!-- Edition -->
+                   
                 <?php } ?>
 
                 <?php if (isset($_SESSION)) { ?>
