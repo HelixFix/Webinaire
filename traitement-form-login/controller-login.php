@@ -14,9 +14,6 @@ $password = premier_Controle(($_POST["password"]));
 $check = premier_Controle(($_POST["check"]));
 
 
-
- 
-  //  header("Location:Pages/form-compte.php?error=incorrect");
   
    if( $check == 0){
 

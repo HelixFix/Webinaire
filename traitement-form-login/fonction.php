@@ -17,8 +17,8 @@ function premier_Controle($dataclean)
 //**************************** Fonction utilisateur************************************ */
 
 
-function utilisateur_existe($conn, $mail){
-
+function utilisateur_existe($conn, $mail)
+{
   $sql = "SELECT * FROM utilisateur WHERE  mail = ?;";
   /* c'est pour securiser le code contre les attaques injection
   on a preparé la declration on va combiner l intruction sql a la declaration */
@@ -27,19 +27,14 @@ function utilisateur_existe($conn, $mail){
     header("Location:/index.php?page=form-compte&error=echecrecup");
     exit();
   }
-
   mysqli_stmt_bind_param($declaration, "s", $mail);
   mysqli_stmt_execute($declaration);
-  /*on verifier si on recupere un resultat et si c'est le cas alors le alors le resulat
- true alors mla fonction sera exécuter parque un utilisateur existe alors il devra utiliser 
- d'autre valeur */
+  /*on verifier si on recupere un resultat et si c'est le cas alors le resulat */
   //si on recuperer la valeur = true cela veut dire qu il existe deja
-
   $resultData = mysqli_stmt_get_result($declaration);
   //on a créer un varaible row juste pour prendre les valeurs true et false
   //si on obtien false c'est parfait pour formulaire  
   if ($row = mysqli_fetch_assoc($resultData)) {
-    
     return $row;
   } else {
     $result = false;
@@ -49,103 +44,62 @@ function utilisateur_existe($conn, $mail){
 }
 
 
- 
 
-
-       /* $sql = "SELECT * FROM personne WHERE nom= ''".$_POST['mail']."'");
-        if(mysqli_num_rows($sql)){
-            exit('ce nom d'utilisateur existe déjà');*/
-    
-
-
-  function insertion_utilisateur($conn, $nom, $prenom, $mail, $password, $telephone, $emploi, $ville)
+function insertion_utilisateur($conn, $nom, $prenom, $mail, $password, $telephone, $emploi, $ville)
 {
-
   //Declaration preparer 
-
-
-  $sql = "INSERT INTO utilisateur (nom, prenom, mail, motDePasse, telephone, emploi, ville, dateIncription) VALUES(?, ?, ?, ?, ?, ?, ?, NOW())";
+  $sql = "INSERT INTO utilisateur (nom, prenom, mail, motDePasse, telephone, emploi, ville, dateInsription) 
+  VALUES(?, ?, ?, ?, ?, ?, ?, NOW())";
   $declaration = mysqli_stmt_init($conn);
   if (!mysqli_stmt_prepare($declaration, $sql)) {
-
     header("Location:../index.php?page=form-compte&error=echecenvoie");
-    exit();
-  } else {
+    exit(); 
+  }else {
     $hashpassword = password_hash($password, PASSWORD_DEFAULT);
     mysqli_stmt_bind_param($declaration, "sssssss", $nom, $prenom, $mail, $hashpassword, $telephone, $emploi, $ville);
     mysqli_stmt_execute($declaration);
-    // echo "Hashpass: $nom <br>";
-    // echo "Hashpass: $prenom <br>";
-    // echo "Hashpass: $mail <br>";
-    // echo "Hashpass: $password <br>";
-    // echo "Hashpass: $telephone <br>";
-    // echo "Hashpass: $emploi <br>";
-    // echo "Hashpass: $ville <br>";
-    echo "Hashpass: $hashpassword <br>";
     header("Location:../index.php?page=login");
     mysqli_stmt_close($declaration);
-    
   }
 }
 
 
 
-function modification_utilisateur($conn, $nom, $prenom, $mail, $password, $telephone, $emploi, $ville)
-{
-  
- $email = $_POST['mail'];
- $id = $_POST['id'];
- 
+function modification_utilisateur($conn, $nom, $prenom, $mail, $password, $telephone, $emploi, $ville){
+  $id = $_POST['id'];
   //Declaration preparer
   $sql = "UPDATE utilisateur SET nom = ?, prenom = ?, mail = ? , motDePasse= ?, telephone = ?,
   emploi = ?, ville = ?  WHERE id = $id  ;";
-   $declaration = mysqli_stmt_init($conn);
-   if (!mysqli_stmt_prepare($declaration, $sql)) {
-
+  $declaration = mysqli_stmt_init($conn);
+  if (!mysqli_stmt_prepare($declaration, $sql)) {
     header("Location:../index.php?page=form-modification&userId=$id&error=echecenvoie2");
-  
-     exit();
-   }
-   
-   else {
-     $hashpassword = password_hash($password, PASSWORD_DEFAULT);
-     mysqli_stmt_bind_param($declaration, "sssssss", $nom, $prenom, $mail, $hashpassword, $telephone, $emploi, $ville);
-     mysqli_stmt_execute($declaration);
-     header("Location:Location:../index.php");
-     
-     
-
-     if($mail !== $_GET['userId']){
+    exit();
+  } else {
+    $hashpassword = password_hash($password, PASSWORD_DEFAULT);
+    mysqli_stmt_bind_param($declaration, "sssssss", $nom, $prenom, $mail, $hashpassword, $telephone,
+     $emploi, $ville);
+    mysqli_stmt_execute($declaration);
+    header("Location:Location:../index.php");
+    if ($mail !== $_GET['userId']) {
       session_start();
       session_unset();
       session_destroy();
-     header("Location:../index.php?page=login");
-     }
-     
-     mysqli_stmt_close($declaration);
-     
-   }
-
-   
+      header("Location:../index.php?page=login");}
+    mysqli_stmt_close($declaration);
+  }
 }
 
 
 
 
 
- 
+
 
 
 //*****************************Function login utilisateur et admin************************************ */
 //controle des entrées
-function controle_login($mail, $password)
-{
-
-
-
-
+function controle_login($mail, $password){
   if (empty($mail)) {
-
     header("Location:../index.php?page=login&error=champvidelog");
     exit();
   } elseif (!filter_var($mail, FILTER_VALIDATE_EMAIL)) {
@@ -154,9 +108,7 @@ function controle_login($mail, $password)
     exit();
   }
 
-  // //password
-
-
+  // password
   if (empty($password)) {
 
     header("Location:../index.php?page=login&error=passwordvidelog");
@@ -191,7 +143,6 @@ function Login_user($conn, $mail, $password)
     header("Location:../index.php?page=login&error=loginincorrecte");
     exit();
   }
-
   //on verifie que le password de l utilisateur est égal au passwordcrypté dans la base de donnée
   //et on utlise un tableau associative qui veut dire qu on fera la recherche par le nom colonne
   $passwordhashes = $userexiste["motDePasse"];
@@ -200,10 +151,8 @@ function Login_user($conn, $mail, $password)
   if ($checkpassword === false)
     header("Location:../index.php?page=login&error=loginincorrecte2");
   else if ($checkpassword === true) {
-
     session_start();
-
-    $_SESSION["user"]["mail"] = $userexiste["mail"];
+     $_SESSION["user"]["mail"] = $userexiste["mail"];
     $_SESSION["user"]["id"] = $userexiste["id"];
     $_SESSION['user']['nom'] = $userexiste["nom"];
     header("Location:../index.php");
@@ -217,10 +166,8 @@ function Login_user($conn, $mail, $password)
 
 
 //login admin
-function Login_admin($conn, $mail, $password)
-{
+function Login_admin($conn, $mail, $password){
 
-    
   //on verifie si elle existe dans la base de donnée
   $adminexiste = admin_existe($conn, $mail);
 
@@ -250,10 +197,6 @@ function Login_admin($conn, $mail, $password)
 
 function admin_existe($conn, $mail)
 {
-
-
-
-
   $sql = "SELECT * FROM  admins WHERE  mail = ?;";
   /* c'est pour securiser le code contre les attaques injection
   on a preparé la declration on va combiner l intruction sql a la declaration */
@@ -262,12 +205,9 @@ function admin_existe($conn, $mail)
     header("Location:../index.php?page=login&error=echecrecupadmin");
     exit();
   }
-
   mysqli_stmt_bind_param($declaration, "s", $mail);
   mysqli_stmt_execute($declaration);
-
   $resultDataAdmin = mysqli_stmt_get_result($declaration);
-
   if ($result = mysqli_fetch_assoc($resultDataAdmin)) {
 
     return $result;
@@ -276,18 +216,12 @@ function admin_existe($conn, $mail)
     $result = false;
     return $result;
   }
-
-  
 }
 
 //*******************************Function  Ajout Admin********************************* */
 
-function insertion_admin($conn, $mail, $password)
-{
-
+function insertion_admin($conn, $mail, $password){
   //Declaration preparer 
-
-
   $sql = "INSERT INTO admins ( mail, motDePasse) VALUES(?, ?) ";
   $declaration = mysqli_stmt_init($conn);
   if (!mysqli_stmt_prepare($declaration, $sql)) {

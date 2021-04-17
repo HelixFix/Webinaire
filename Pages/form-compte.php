@@ -55,7 +55,7 @@
 
                 echo "<div class=\"text-center mb-3  alert alert-danger erreur bg-danger text-white
 
-                \" role=\"alert\" data-mdb-color=\"danger\">  Nom: Entrer uniquement des lettres !
+                \" role=\"alert\" data-mdb-color=\"danger\">  Nom : Entrer uniquement des lettres !
               </div>";
                }
                   
@@ -128,7 +128,7 @@
 
                  echo "<div class=\"text-center mb-3  alert alert-danger erreur bg-danger text-white
 
-                \" role=\"alert\" data-mdb-color=\"danger\"> Mot de passe :Il faut minimun un nombre ! 
+                \" role=\"alert\" data-mdb-color=\"danger\"> Mot de passe : Il faut minimun un nombre ! 
               </div>";
                 
               } 
@@ -138,7 +138,7 @@
 
                  echo "<div class=\"text-center mb-3  alert alert-danger erreur bg-danger text-white
 
-                \" role=\"alert\" data-mdb-color=\"danger\">Mot de passe :Il faut minimun une majuscule !
+                \" role=\"alert\" data-mdb-color=\"danger\">Mot de passe : Il faut minimun une majuscule !
               </div>";
                 
               } 
@@ -148,7 +148,7 @@
 
                  echo "<div class=\"text-center mb-3  alert alert-danger erreur bg-danger text-white
 
-                \" role=\"alert\" data-mdb-color=\"danger\">Mot de passe :Il faut minimun 1 minuscule !   
+                \" role=\"alert\" data-mdb-color=\"danger\">Mot de passe : Il faut minimun 1 minuscule !   
               </div>";
                 
               } 
@@ -170,7 +170,7 @@
 
                  echo "<div class=\"text-center mb-3  alert alert-danger erreur bg-danger text-white
 
-                \" role=\"alert\" data-mdb-color=\"danger\"> Telephone: Entrer que des chiffres !
+                \" role=\"alert\" data-mdb-color=\"danger\"> Telephone : Entrer que des chiffres !
               </div>";
                 
               } 
@@ -191,7 +191,7 @@
 
                  echo "<div class=\"text-center mb-3  alert alert-danger erreur bg-danger text-white
 
-                \" role=\"alert\" data-mdb-color=\"danger\"> Emploi :Entrer uniquement des lettres !
+                \" role=\"alert\" data-mdb-color=\"danger\"> Emploi : Entrer uniquement des lettres !
               </div>";
                 
               }
@@ -213,7 +213,7 @@
 
                  echo "<div class=\"text-center mb-3  alert alert-danger erreur bg-danger text-white
 
-                \" role=\"alert\" data-mdb-color=\"danger\">Ville :Entrer uniquement des lettres !
+                \" role=\"alert\" data-mdb-color=\"danger\">Ville : Entrer uniquement des lettres !
               </div>";
                 
               } 
@@ -234,7 +234,7 @@
 
                  echo "<div class=\"text-center mb-3  alert alert-danger erreur bg-danger text-white
 
-                \" role=\"alert\" data-mdb-color=\"danger\"> Formulaire non recupérer !!
+                \" role=\"alert\" data-mdb-color=\"danger\"> Formulaire non envoyer !!
               </div>";
                 
               } 
@@ -246,7 +246,7 @@
 
                  echo "<div class=\"text-center mb-3  alert alert-danger erreur bg-danger text-white
 
-                \" role=\"alert\" data-mdb-color=\"danger\">  Le  Mail existe déjà choisir un nouveau mail !!
+                \" role=\"alert\" data-mdb-color=\"danger\">  Le  Mail existe déjà choisissez  un autre !!
               </div>";
                 
               } 
@@ -307,7 +307,7 @@
               <div class="form-row col-lg-7">
                 <div class="form-outline mb-4">
                   <input type="text" id="emploi" name="emploi" class="form-control" value="<?php if(isset($_POST['$emploi'])){   echo $_POST['$emploi'];} ?>" required="required" />
-                  <label class="form-label" for="emploi">Emploie</label>
+                  <label class="form-label" for="emploi">Emploi</label>
                 </div>
               </div>
 

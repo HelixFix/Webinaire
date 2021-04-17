@@ -39,54 +39,25 @@ if (isset($_SESSION['user']['id'])) {
  <div class="wrapper">
         <div class="container">
           <div class="row cadre">
-              <div class=" picture col-lg-5">
+              <div class=" picture d-flex justify-content-center" col-lg-5">
                  <img src="images/universite.jpg" alt="Image de etudiant praxis" class="img-fluid"/>
               </div>
 
 
 
 
-              <div class="info">
+              <div class="info d-flex justify-content-center">
              
   <?php
   
-  $mysqli2 = new mysqli('localhost', 'root','', 'user' ) or die(mysqli_error($mysqli2));
-
+  
+ include_once "traitement-form-login\dbconnexion.php";
  if (isset($_SESSION['user']['id'])) {
 
    $id = $_SESSION['user']['id'];
-  $result2 =  $mysqli2->query("SELECT * FROM utilisateur WHERE id = $id") or die(mysqli_error($mysqli2));
+   $result2 = $conn->query("SELECT * FROM utilisateur WHERE id = $id") or die(mysqli_error($conn));
 
-  $row2 = $result2->fetch_array();
-//
-//   $sql = mysqli_query($conn,"SELECT* fROM utilisateur   Where mail = $email ");
-//   // $all= mysqli_free_result($sql);
-//   // $row = mysqli_fetch_assoc($all);
-
-//   $declaration = mysqli_stmt_init($conn);
-//   mysqli_stmt_prepare($declaration, $sql);
-
-//   mysqli_stmt_bind_param($declaration, "",$nom, $prenom, $mail, $password, $telephone, $emploi, $ville);
-//   mysqli_stmt_execute($declaration);
-//   /*on verifier si on recupere un resultat et si c'est le cas alors le alors le resulat
-//  true alors mla fonction sera exécuter parque un utilisateur existe alors il devra utiliser 
-//  d'autre valeur */
-//   //si on recuperer la valeur = true cela veut dire qu il existe deja
-
-//   $resultData = mysqli_stmt_get_result($declaration);
-//   //on a créer un varaible row juste pour prendre les valeurs true et false
-//   //si on obtien false c'est parfait pour formulaire  
-//   if ($row = mysqli_fetch_assoc($resultData)) {
-    
-//     return $row;
-//   } else {
-//     $result = false;
-//     return $result;
-//   }
-//   mysqli_close($declaration);
-  
-  
-
+   $row2 = $result2->fetch_array();
 
   ?>
 
@@ -109,7 +80,7 @@ if (isset($_SESSION['user']['id'])) {
 
                 echo "<div class=\"text-center mb-3  alert alert-danger erreur bg-danger text-white
 
-                \" role=\"alert\" data-mdb-color=\"danger\">  Nom: Entrer uniquement des lettres !
+                \" role=\"alert\" data-mdb-color=\"danger\">  Nom : Entrer uniquement des lettres !
               </div>";
                }
                   
@@ -134,8 +105,7 @@ if (isset($_SESSION['user']['id'])) {
 
                 echo "<div class=\"text-center mb-3  alert alert-danger erreur bg-danger text-white
 
-                \" role=\"alert\" data-mdb-color=\"danger\">  format mail incorrecte
-              </div>";
+                \" role=\"alert\" data-mdb-color=\"danger\">  format mail incorrecte</div>";
                
               } 
 
@@ -160,7 +130,7 @@ if (isset($_SESSION['user']['id'])) {
 
                  echo "<div class=\"text-center mb-3  alert alert-danger erreur bg-danger text-white
 
-                \" role=\"alert\" data-mdb-color=\"danger\"> Mot de passe :Il faut minimun un nombre ! 
+                \" role=\"alert\" data-mdb-color=\"danger\"> Mot de passe : Il faut minimun un nombre ! 
               </div>";
                 
               } 
@@ -170,7 +140,7 @@ if (isset($_SESSION['user']['id'])) {
 
                  echo "<div class=\"text-center mb-3  alert alert-danger erreur bg-danger text-white
 
-                \" role=\"alert\" data-mdb-color=\"danger\">Mot de passe :Il faut minimun une majuscule !
+                \" role=\"alert\" data-mdb-color=\"danger\">Mot de passe : Il faut minimun une majuscule !
               </div>";
                 
               } 
@@ -180,7 +150,7 @@ if (isset($_SESSION['user']['id'])) {
 
                  echo "<div class=\"text-center mb-3  alert alert-danger erreur bg-danger text-white
 
-                \" role=\"alert\" data-mdb-color=\"danger\">Mot de passe :Il faut minimun 1 minuscule !   
+                \" role=\"alert\" data-mdb-color=\"danger\">Mot de passe : Il faut minimun 1 minuscule !   
               </div>";
                 
               } 
@@ -207,7 +177,7 @@ if (isset($_SESSION['user']['id'])) {
 
                  echo "<div class=\"text-center mb-3  alert alert-danger erreur bg-danger text-white
 
-                \" role=\"alert\" data-mdb-color=\"danger\"> Emploi :Entrer uniquement des lettres !
+                \" role=\"alert\" data-mdb-color=\"danger\"> Emploi : Entrer uniquement des lettres !
               </div>";
                 
               }
@@ -221,7 +191,7 @@ if (isset($_SESSION['user']['id'])) {
 
                  echo "<div class=\"text-center mb-3  alert alert-danger erreur bg-danger text-white
 
-                \" role=\"alert\" data-mdb-color=\"danger\">Ville :Entrer uniquement des lettres !
+                \" role=\"alert\" data-mdb-color=\"danger\">Ville : Entrer uniquement des lettres !
               </div>";
                 
               } 
@@ -242,7 +212,7 @@ if (isset($_SESSION['user']['id'])) {
 
                  echo "<div class=\"text-center mb-3  alert alert-danger erreur bg-danger text-white
 
-                \" role=\"alert\" data-mdb-color=\"danger\"> Formulaire non recupérer !!
+                \" role=\"alert\" data-mdb-color=\"danger\"> Formulaire non envoyer !!
               </div>";
                 
               } 
@@ -254,8 +224,7 @@ if (isset($_SESSION['user']['id'])) {
 
                  echo "<div class=\"text-center mb-3  alert alert-danger erreur bg-danger text-white
 
-                \" role=\"alert\" data-mdb-color=\"danger\">  Le  Mail existe déjà choisir un nouveau mail !!
-              </div>";
+                \" role=\"alert\" data-mdb-color=\"danger\">  Le  Mail existe déjà choisissez un nouveau mail !!</div>";
                 
               } 
               
