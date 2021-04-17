@@ -16,7 +16,7 @@
 <br>
 
 <body class="bodyHome">
-    <h2>
+    <h2 id="webinaires">
         Les prochains webinaires
     </h2>
 
@@ -41,7 +41,9 @@
 
     <div class="row">
 
-        <?php if (isset($_SESSION['admin']['nom'])) { ?>
+                    <!-- Ajout -->
+
+        <?php if (isset($_SESSION['admin']['mail'])) { ?>
             <div class="col-lg-4 col-md-6 col-sm-6 col-12">
                 <div class="ajouter-webinaire">
                     <a href="index.php?page=form-edit" class="btn btnHome"><img class="btn-ajouter" src="images\add.png" alt="ajouter un webiniare"></a>
@@ -61,7 +63,7 @@
 
             <div class="col-lg-4 col-md-6 col-sm-6 col-12">
 
-                <?php if (isset($_SESSION['admin']['nom'])) { ?>
+                <?php if (isset($_SESSION['admin']['mail'])) { ?>
 
                     <!-- Supression -->
 
@@ -80,7 +82,7 @@
 
 
 
-                    <!-- Edition -->
+                   
                 <?php } ?>
 
                 <?php if (isset($_SESSION)) { ?>

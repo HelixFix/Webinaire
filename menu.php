@@ -40,6 +40,18 @@
                                 </a>
                             </li> -->
                         <?php } ?>
+
+                        <?php if (isset($_SESSION['admin']['mail'])) { ?>
+                            <li class="nav-item">
+                                <a href="index.php?page=ajout-admin">
+                                    <div class="icon">
+                                        <i class="fa fa-user-lock" aria-hidden="true"></i>
+                                        <i class="fa fa-user-lock" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="name"><span data-text="Gestion">Gestion</span></div>
+                                </a>
+                            </li>
+                        <?php } ?>
             
                     </ul>            <?php if (!$_SESSION) { ?>
                             <li class="btn btnHome nav-item" id="connect">

@@ -65,7 +65,7 @@ if(isset($_GET['delete'])){
   $id = $_GET['delete'];
   $mysqli->query("DELETE FROM webinar WHERE id=$id")or die(mysqli_error($mysqli));
 
-  header('Location: index.php');
+  header('Location: index.php#webinaires');
 
 }
 
