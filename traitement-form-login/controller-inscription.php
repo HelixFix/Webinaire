@@ -94,7 +94,7 @@ elseif(!preg_match("#[a-z]+#",$password)) {
 header("Location:../index.php?page=form-compte&error=invalidpasswordl");
    exit();
 }
-var_dump($password);
+
 
   
   // telephone

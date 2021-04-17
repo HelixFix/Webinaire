@@ -270,7 +270,7 @@
             <form action="traitement-form-login/controller-inscription.php" method="POST" class="groupe-form" novalidate Allow: OPTIONS, GET, HEAD, POST>
               <div class="form-row col-lg-7">
                 <div class="form-outline mb-4">
-                  <input type="text" id="nom" name="nom" class="form-control " value="<?php if(isset($_GET['$nom'])){echo $_GET['$nom'];}  ?>" required="required"/>
+                  <input type="text" id="nom" name="nom" class="form-control " value="<?php if(isset($_GET['$nom'])){echo $_GET['$nom'];}  ?>" required/>
                   <label class="form-label" for="nom">Nom</label>
                  
                 </div>

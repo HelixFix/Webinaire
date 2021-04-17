@@ -1,5 +1,11 @@
 
-<?php   include 'C:\laragon\www\Webinaire\traitement-form-login\dbconnexion.php'; 
+<?php 
+
+
+if (isset($_SESSION['user']['id'])) {
+ 
+
+
  
 
 ?>
@@ -44,11 +50,11 @@
              
   <?php
   
-  $mysqli2 = new mysqli('localhost', 'root','', 'webinaire' ) or die(mysqli_error($mysqli2));
+  $mysqli2 = new mysqli('localhost', 'root','', 'user' ) or die(mysqli_error($mysqli2));
 
- if (isset($_GET['userId'])) {
+ if (isset($_SESSION['user']['id'])) {
 
-   $id = $_GET['userId'];
+   $id = $_SESSION['user']['id'];
   $result2 =  $mysqli2->query("SELECT * FROM utilisateur WHERE id = $id") or die(mysqli_error($mysqli2));
 
   $row2 = $result2->fetch_array();
@@ -352,9 +358,6 @@
                     </div>
 
                   </div>
-                
-
-                
               </form>
             </div>
           </div>
@@ -374,3 +377,11 @@
     ></script>
   </body>
 </html>
+<?php
+  }
+
+  else {
+    header('Location: index.php');
+  }
+
+ ?>
